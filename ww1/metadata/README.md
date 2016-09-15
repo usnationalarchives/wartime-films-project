@@ -10,4 +10,4 @@ It includes:
 
 We encourage members of the public to enhance the CSV file with additional metadata to improve the accessibility of the images in the app.
 
-This metadata can also be accessed through a call to the National Archives Catalog API: https://catalog.archives.gov/api/v1?&description.item.localIdentifier=165-WW
+Metadata can also be accessed through [queries to the National Archives Catalog API](https://github.com/usnationalarchives/Wartime-Films-Project/tree/master/ww1#national-archives-catalog-api).
