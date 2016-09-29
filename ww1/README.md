@@ -5,9 +5,9 @@ The metadata posted and enriched on GitHub will feed into a U.S. National Archiv
 
 The intention is to dedicate the codebase of this software to the public domain in the United States, in addition to waiving copyright and related rights in the work worldwide with a CC0 license. The codebase will be extended as needed. It will be published here on NARA’s GitHub for others to further modify and repurpose following the beta release of the app in the fall of 2016 (see [Terms of Use](https://github.com/usnationalarchives/Wartime-Films-Project/blob/master/LICENSE)).
 
-### Metadata
+### [Metadata](https://github.com/usnationalarchives/wartime-films-project/blob/master/ww1/metadata)
 
-The photographic files contained in the series ["American Unofficial Collection of World War I Photographs, 1917-1918"](https://catalog.archives.gov/id/533461) are a mesmerizing slice of American life during the years leading up to and after the U.S. involvement in WWI. The collection is richly described and in many instances contains geographic location information contained within titles or descriptions. Subjects include bonds, savings stamps and war loan drives, public gatherings, peace demonstrations and parades. Also documented are activities of libraries, hospitals, first aid stations, training camps and forts, and groups such as African-Americans in the military, Women's Suffrage activities, and much more. 
+The photographic files contained in the series ["American Unofficial Collection of World War I Photographs, 1917-1918"](https://catalog.archives.gov/id/533461) are a mesmerizing slice of American life during the years leading up to and after the U.S. involvement in World War I. The collection is richly described and in many instances contains geographic location information contained within titles or descriptions. Subjects include bonds, savings stamps and war loan drives, public gatherings, peace demonstrations and parades. Also documented are activities of libraries, hospitals, first aid stations, training camps and forts, and groups such as African-Americans in the military, Women's Suffrage activities, and much more. 
 
 ### National Archives Catalog API 
 
