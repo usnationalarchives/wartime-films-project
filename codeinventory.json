@@ -1,0 +1,18 @@
+﻿{
+  "name": "Wartime Films Apps and Metadata Tools",
+  "description": "An app that highlights World War I content from the National Archives and from other institutions and individuals to increase the relevance and discoverability of this content for local communities.",
+  "license": "https://github.com/usnationalarchives/wartime-films-project/blob/master/LICENSE.md",
+  "openSourceProject": 1,
+  "governmentWideReuseProject": 1,
+  "tags": [
+    "NARA",
+    "App",
+    "Metadata",
+    "Records",
+    "WorldWarOne",
+    "WWI"
+  ],
+  "contact": {
+    "email": "leslie.johnston@nara.gov"
+  }
+}
