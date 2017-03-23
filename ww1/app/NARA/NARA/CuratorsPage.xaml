@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NARA.CuratorsPage" BackgroundColor="#1d1d1d">
+
+  
+  <StackLayout>
+    <ContentView Padding="0,0,0,0">
+      <StackLayout  Orientation="Horizontal" x:Name="icons">
+        <Image x:Name="img_Previous" Source="previous.png" WidthRequest="60" Aspect="AspectFit" Opacity="0.6"></Image>
+      </StackLayout>
+    </ContentView>
+
+
+    <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand" >
+
+      <StackLayout Orientation="Horizontal" Spacing="0" VerticalOptions="FillAndExpand">
+
+        <StackLayout Grid.Row="1" Grid.Column="0" x:Name="stack_Text" VerticalOptions="FillAndExpand">
+          <ContentView  Padding="40,20,10,20">
+            <Label Text="For Curators" FontFamily="Orpheus Pro" TextColor="White" FontSize="60"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label x:Name="lbl_Text2" Text="The Remembering WWI app provides local institutions with simple tools for sharing locally-resonant stories about World War I and its aftermath. Using freely reusable films and images from the US National Archives and partners as a basis for enrichment and narrative-building, this app will allow you to localize your own institutional content geographically and create collections in a way that compliments your existing WWI programming." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label x:Name="lbl_Text33" Text="We hope that this app can be a tool to accomplish shared goals with your community, and find points of local and organizational relevance." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="How can my institution use this app?" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="To promote community participation and enrichment around your collections" FontAttributes="Italic" TextColor="White" FontSize="15"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="By utilizing the American Stories app, you can encourage visitors and other community members to creatively adapt and use the WWI-related content in your collections. A few ideas for how you might utilize the app are:" FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+          </ContentView>
+
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="FillAndExpand">
+            <StackLayout>
+              <Label Text="- Providing sharable outputs for community engagement in the form of collections, which you can personalize to focus upon the themes you want to explore" FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+              <Label Text="- Creating collections within the app that act as extensions of a WWI exhibit, while allowing users such as teachers to explore particular research questions" FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+              <Label Text="- Explore local areas and local content using the app and utilizing this content in your collections" FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+            </StackLayout>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="What type of sources can I browse and use in my collections?" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="A majority of the primary source content within the app are from two of NARA’s major WWI repositories: Historical Films, ca. 1914 - ca. 1936 and the American Unofficial Collection of World War I Photographs, 1917 - 1918.  We have done our best to map this content out to their most clearly identifiable locations for better discoverability. We have also segmented the films into short clips to take advantage of varying subject-matter and geographical locations. You may reuse any of this content in your own collections." FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Registering" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="In order to start creating collections, you must first register an account by choosing “Sign-Up” from the Welcome screen. You may use an email, or an existing Facebook login. We recommend signing-up with an email accessible to multiple members of your staff for increased editing-capabilities." FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Creating collections with NARA and partner content" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Within the app, you can add NARA and other institutional content to your collections by clicking the “+” on the image or film of the presented item, and selecting “Create a collection” to start a collection with that item. Alternatively, you can add items to an existing collection using this button and selecting your collection from the drop-down list. You can view your existing collections from your app profile page." FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="You can view your existing collections from your app profile page." FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Community discussion space" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="We have provided a space on NARA’s new History Hub where you can connect with other institutions using the app, and discuss methods for best utilizing the app to engage your local community. Also, this is a space to ask general questions, report bugs, and more." FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label x:Name="lbl_Link" Text="https://historyhub.archives.gov/groups/remembering-ww1" FontFamily="TrebuchetMS" TextColor="#559FE3" FontSize="15"></Label>
+          </ContentView>
+          
+          
+          
+          
+          
+          <!--<ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="There are no pre-made activities or lessons within this app - we’ve provided the basic tools for collection-creation in a way that highlights the rarely-seen WWI content being digitized by NARA, and allows you as teachers to formulate relevant historical questions. This focus on the reuse and enrichment of primary sources allows for flexibility in creating new historical narratives." FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="A spotlight on geography" FontAttributes="Italic" TextColor="White" FontSize="15"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="All content added to this app must have a location attributed to it, whether that is a state, region, or even country. By adding a geo-spatial element to this primary source content, you can help students view the war through a geographical lens, exploring the global reaches of the war and its different arenas. In addition, this gives teachers the option of exploring or adding more localized content, and spotlighting on community WWI stories." FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Is this app primarily for teachers or for students?" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="When asking teachers how they would use this app in the classroom, the easiest route suggested was for teachers themselves to use the app to curate collections and have students explore what they’ve created. Considering the time restraints in teaching WWI, this option allows teachers to first and foremost focus on content. Another option for teachers who would like to see their students more involved with collection-creation is to create collections with vetted primary sources that students can then use to create their own collections." FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="What type of primary sources can I browse and use in my collections?" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="A majority of the primary source content within the app are from two of NARA’s major WWI repositories: Historical Films, ca. 1914 - ca. 1936 and the American Unofficial Collection of World War I Photographs, 1917 - 1918.  We have done our best to map out to their most clearly identifiable locations for better discoverability. We have also segmented the films into short clips to take advantage of varying subject-matter and geographical locations. You may reuse any of this content in your own collections, as well as those added by other users." FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="We have grouped a number of these sources into searchable thematic collections for inspiration, informed by WWI themes that our teacher focus groups would like to see surfaced in the app. These speak to diversity in people and places, with subjects including:" FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="FillAndExpand">
+            <StackLayout>
+              <Label Text="- Nationalism	" FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+              <Label Text="- Women’s roles	" FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+              <Label Text="- Imperialism	" FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+              <Label Text="- Minority roles  	" FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+              <Label Text="- Colonialism 	" FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+              <Label Text="- Revolution (technological, political, social)	" FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+              <Label Text="- Wartime propaganda 	" FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+            </StackLayout>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="In addition to film and photographic sources, you may also add images of objects, letters, etc. to further enrich the story being told." FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Registering" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="In order to start creating collections, you must first register an account. You may use an email, or an existing Facebook or Google+/Gmail login.  Upon sign-up, you will be able to indicate if you are a teacher, by checking the box next to “I’m a teacher.” [coming soon] This will allow users to filter by user-type within the “Curators” section of the app, so you can separate-out collections created by fellow teachers." FontFamily="TrebuchetMS" TextColor="White" FontSize="15"></Label>
+          </ContentView>-->
+          
+        </StackLayout>
+
+
+        <Grid Grid.Column="1" Padding="0,50,0,0" x:Name="grid_Logos" Grid.Row="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="120"></RowDefinition>
+            <RowDefinition Height="250"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="170"></RowDefinition>
+          </Grid.RowDefinitions>
+
+          <ContentView Padding="40,70,10,0" Grid.Row="0">
+            <Label Text="COORDINATED BY"  VerticalOptions="Center" HorizontalOptions="Center" FontFamily="TrebuchetMS" TextColor="#e0665e" FontSize="15"></Label>
+          </ContentView>
+
+
+          <ContentView Padding="40,10,10,20" Grid.Row="1">
+            <Image VerticalOptions="CenterAndExpand" Source="bs1.png" Aspect="AspectFit" ></Image>
+          </ContentView>
+
+
+          <ContentView Padding="40,20,10,20" Grid.Row="2">
+            <Label Text="IN PARTNERSHIP WITH" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="TrebuchetMS" TextColor="#e0665e" FontSize="15"></Label>
+          </ContentView>
+
+
+          <ContentView Grid.Row="3">
+
+            <ContentView Padding="40,20,10,20" Grid.Row="1">
+              <Image Source="bs2.png" Aspect="AspectFit"></Image>
+            </ContentView>
+
+          </ContentView>
+
+          <ContentView Padding="0,20,0,20" Grid.Row="4">
+            <StackLayout HorizontalOptions="CenterAndExpand" Spacing="50">
+              <Image Source="national.png" HorizontalOptions="CenterAndExpand" WidthRequest="200" Opacity="0.8" Aspect="AspectFit"></Image>
+              <Image Source="centennialLogo.png" HorizontalOptions="CenterAndExpand" WidthRequest="200" Opacity="0.8" Aspect="AspectFit"></Image>
+              <Image Source="AASLHLogo.png" HorizontalOptions="CenterAndExpand" WidthRequest="200" Opacity="0.8" Aspect="AspectFit"></Image>
+            </StackLayout>
+          </ContentView>
+
+        </Grid>
+      </StackLayout>
+
+    </ScrollView>
+
+
+  </StackLayout>
+  
+  
+</ContentPage>
