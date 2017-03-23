@@ -1,0 +1,3358 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XLabs.Forms.iOS</name>
+    </assembly>
+    <members>
+        <member name="T:XLabs.Forms.Controls.ImageButtonRenderer">
+            <summary>
+            Draws a button on the Android platform with the image shown in the right 
+            position with the right size.
+            </summary>
+            <summary>
+            Draws a button on the iOS platform with the image shown in the right 
+            position with the right size.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ImageButtonRenderer.CONTROL_PADDING">
+            <summary>
+            The padding to use in the control.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ImageButtonRenderer.IPAD">
+            <summary>
+            Identifies the iPad.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.GetHandler(Xamarin.Forms.ImageSource)">
+            <summary>
+            Returns the proper <see cref="T:Xamarin.Forms.Platform.iOS.IImageSourceHandler"/> based on the type of <see cref="T:Xamarin.Forms.ImageSource"/> provided.
+            </summary>
+            <param name="source">The <see cref="T:Xamarin.Forms.ImageSource"/> to get the handler for.</param>
+            <returns>The needed handler.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.GetWidth(System.Int32)">
+            <summary>
+            Gets the width based on the requested width, if request less than 0, returns 50.
+            </summary>
+            <param name="requestedWidth">The requested width.</param>
+            <returns>The width to use.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.GetHeight(System.Int32)">
+            <summary>
+            Gets the height based on the requested height, if request less than 0, returns 50.
+            </summary>
+            <param name="requestedHeight">The requested height.</param>
+            <returns>The height to use.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{Xamarin.Forms.Button})">
+            <summary>
+            Handles the initial drawing of the button.
+            </summary>
+            <param name="e">Information on the <see cref="P:XLabs.Forms.Controls.ImageButtonRenderer.ImageButton"/>.</param> 
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Called when the underlying model's properties are changed.
+            </summary>
+            <param name="sender">Model sending the change event.</param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.AlignToLeft(UIKit.UIButton)">
+            <summary>
+            Properly aligns the title and image on a button to the left.
+            </summary>
+            <param name="targetButton">The button to align.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.AlignToRight(System.Int32,UIKit.UIButton)">
+            <summary>
+            Properly aligns the title and image on a button to the right.
+            </summary>
+            <param name="widthRequest">The requested image width.</param>
+            <param name="targetButton">The button to align.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.AlignToTop(System.Int32,System.Int32,UIKit.UIButton)">
+            <summary>
+            Properly aligns the title and image on a button when the image is over the title.
+            </summary>
+            <param name="heightRequest">The requested image height.</param>
+            <param name="widthRequest">The requested image width.</param>
+            <param name="targetButton">The button to align.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.AlignToBottom(System.Int32,System.Int32,UIKit.UIButton)">
+            <summary>
+            Properly aligns the title and image on a button when the title is over the image.
+            </summary>
+            <param name="heightRequest">The requested image height.</param>
+            <param name="widthRequest">The requested image width.</param>
+            <param name="targetButton">The button to align.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.SetImageAsync(Xamarin.Forms.ImageSource,System.Int32,System.Int32,UIKit.UIButton,UIKit.UIControlState,UIKit.UIColor)">
+            <summary>
+            Loads an image from a bundle given the supplied image name, resizes it to the
+            height and width request and sets it into a <see cref="T:UIKit.UIButton"/>.
+            </summary>
+            <param name="source">The <see cref="T:Xamarin.Forms.ImageSource"/> to load the image from.</param>
+            <param name="widthRequest">The requested image width.</param>
+            <param name="heightRequest">The requested image height.</param>
+            <param name="targetButton">A <see cref="T:UIKit.UIButton"/> to set the image into.</param>
+            <param name="state">The state.</param>
+            <param name="tintColor">Color of the tint.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> for the awaited operation.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.LayoutSubviews">
+            <summary>
+            Layouts the subviews.
+            </summary>
+        </member>
+        <member name="P:XLabs.Forms.Controls.ImageButtonRenderer.ImageButton">
+            <summary>
+            Gets the underlying element typed as an <see cref="P:XLabs.Forms.Controls.ImageButtonRenderer.ImageButton"/>.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.HybridWebViewRenderer">
+            <summary>
+            The hybrid web view renderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.GetDesiredSize(System.Double,System.Double)">
+            <summary>
+            Gets the desired size of the view.
+            </summary>
+            <returns>The desired size.</returns>
+            <param name="widthConstraint">Width constraint.</param>
+            <param name="heightConstraint">Height constraint.</param>
+            <remarks>
+            We need to override this method and set the request to 0. Otherwise on view refresh
+            we will get incorrect view height and might lose the ability to scroll the webview
+            completely.
+            </remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.DidFinishNavigation(WebKit.WKWebView,WebKit.WKNavigation)">
+            <summary>
+            Handles <see cref="T:WebKit.WKWebView"/> load finished event.
+            </summary>
+            <param name="webView">Web view who has finished loading.</param>
+            <param name="navigation">Navigation object.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.DidStartProvisionalNavigation(WebKit.WKWebView,WebKit.WKNavigation)">
+            <summary>
+            Handles <see cref="T:WebKit.WKWebView"/> load start event.
+            </summary>
+            <param name="webView">Web view who has started loading.</param>
+            <param name="navigation">Navigation object.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.LayoutSubviews">
+            <summary>
+            Layouts the subviews.
+            This is a hack to because the base wasn't working 
+            when within a stacklayout
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.DidReceiveScriptMessage(WebKit.WKUserContentController,WebKit.WKScriptMessage)">
+            <summary>
+            Implements a method from interface <see cref="T:WebKit.IWKScriptMessageHandler"/>.
+            </summary>
+            <param name="userContentController">User controller sending the message.</param>
+            <param name="message">The message being sent.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.HybridWebView})">
+            <summary>
+            The on element changed callback.
+            </summary>
+            <param name="e">
+            The event arguments.
+            </param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.CopyBundleDirectory(System.String)">
+            <summary>
+            Copies bundle directory to temp directory.
+            </summary>
+            <param name="path">Directory to copy.</param>
+        </member>
+        <member name="T:XLabs.Forms.Services.FontManager">
+            <summary>
+            Class FontManager.
+            </summary>
+            <summary>
+            Class FontManager.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Services.FontManager.FindClosest(System.String,System.Double)">
+            <summary>
+            Finds the closest.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="desiredHeight">Height of the desired.</param>
+            <returns>Font.</returns>
+        </member>
+        <member name="F:XLabs.Forms.Services.FontManager.display">
+            <summary>
+            The _display
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Services.FontManager.#ctor(XLabs.Platform.Device.IDisplay)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Services.FontManager"/> class.
+            </summary>
+            <param name="display">The display.</param>
+        </member>
+        <member name="M:XLabs.Forms.Services.FontManager.GetHeight(Xamarin.Forms.Font)">
+            <summary>
+            Gets height for the font.
+            </summary>
+            <param name="font">Font whose height is calculated.</param>
+            <returns>Height of the font in inches.</returns>
+        </member>
+        <member name="P:XLabs.Forms.Services.FontManager.AvailableFonts">
+            <summary>
+            Gets all available system fonts.
+            </summary>
+            <value>The available fonts.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.AccessoryViewCellRenderer">
+            <summary>
+            Class AccessoryViewCellRenderer.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedTextCellRenderer">
+            <summary>
+            Class ExtendedTextCellRenderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedTextCellRenderer.DefaultDetailColor">
+            <summary>
+            The default detail color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedTextCellRenderer.DefaultTextColor">
+            <summary>
+            The default text color
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTextCellRenderer.GetCell(Xamarin.Forms.Cell,UIKit.UITableViewCell,UIKit.UITableView)">
+            <summary>
+            Gets the cell.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="reusableCell">The reusable TableView cell.</param>
+            <param name="tv">The TableView.</param>
+            <returns>UITableViewCell.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.AccessoryViewCellRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.AccessoryViewCellRenderer"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.AccessoryViewCellRenderer.GetCell(Xamarin.Forms.Cell,UIKit.UITableViewCell,UIKit.UITableView)">
+            <summary>
+            Gets the cell.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="reusableCell">The reusable table view cell.</param>
+            <param name="tv">The table view.</param>
+            <returns>MonoTouch.UIKit.UITableViewCell.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.BindablePickerRenderer">
+            <summary>
+            Class BindablePickerRenderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.BindablePickerRenderer._picker">
+            <summary>
+            The _picker
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.BindablePickerRenderer._popOver">
+            <summary>
+            The _pop over
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.BindablePickerRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.BindablePicker})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.BindablePickerRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.BindablePickerRenderer.OnEnded(System.Object,System.EventArgs)">
+            <summary>
+            Handles the <see cref="E:Ended"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="eventArgs">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.BindablePickerRenderer.OnStarted(System.Object,System.EventArgs)">
+            <summary>
+            Handles the <see cref="E:Started"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="eventArgs">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.BindablePickerRenderer.RowsCollectionChanged(System.Object,System.EventArgs)">
+            <summary>
+            Rowses the collection changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.BindablePickerRenderer.HandleValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the value changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.BindablePickerRenderer.UpdatePicker">
+            <summary>
+            Updates the picker.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.BindablePickerRenderer.SetBorder(XLabs.Forms.Controls.BindablePicker)">
+            <summary>
+            Sets the border.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.BindablePickerRenderer.PickerSource">
+            <summary>
+            Class PickerSource.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.BindablePickerRenderer.PickerSource._model">
+            <summary>
+            The _model
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.BindablePickerRenderer.PickerSource.#ctor(XLabs.Forms.Controls.BindablePicker)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.BindablePickerRenderer.PickerSource"/> class.
+            </summary>
+            <param name="model">The model.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.BindablePickerRenderer.PickerSource.GetRowsInComponent(UIKit.UIPickerView,System.nint)">
+            <summary>
+            Gets the rows in component.
+            </summary>
+            <param name="picker">The picker.</param>
+            <param name="component">The component.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.BindablePickerRenderer.PickerSource.GetComponentCount(UIKit.UIPickerView)">
+            <summary>
+            Gets the component count.
+            </summary>
+            <param name="picker">The picker.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.BindablePickerRenderer.PickerSource.GetTitle(UIKit.UIPickerView,System.nint,System.nint)">
+            <summary>
+            Gets the title.
+            </summary>
+            <param name="picker">The picker.</param>
+            <param name="row">The row.</param>
+            <param name="component">The component.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.BindablePickerRenderer.PickerSource.Selected(UIKit.UIPickerView,System.nint,System.nint)">
+            <summary>
+            Selecteds the specified picker.
+            </summary>
+            <param name="picker">The picker.</param>
+            <param name="row">The row.</param>
+            <param name="component">The component.</param>
+        </member>
+        <member name="E:XLabs.Forms.Controls.BindablePickerRenderer.PickerSource.ValueChanged">
+            <summary>
+            Occurs when [value changed].
+            </summary>
+        </member>
+        <member name="P:XLabs.Forms.Controls.BindablePickerRenderer.PickerSource.SelectedItem">
+            <summary>
+            Gets or sets the selected item.
+            </summary>
+            <value>The selected item.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.BindablePickerRenderer.PickerSource.SelectedIndex">
+            <summary>
+            Gets or sets the index of the selected.
+            </summary>
+            <value>The index of the selected.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.NoCaretField">
+            <summary>
+            Class NoCaretField.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.NoCaretField.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.NoCaretField"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.NoCaretField.GetCaretRectForPosition(UIKit.UITextPosition)">
+            <summary>
+            Gets the caret rect for position.
+            </summary>
+            <param name="position">The position.</param>
+            <returns>RectangleF.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CalendarArrowView">
+            <summary>
+            Class CalendarArrowView.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarArrowView._arrowDirection">
+            <summary>
+            The _arrow direction
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarArrowView._color">
+            <summary>
+            The _color
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarArrowView.#ctor(CoreGraphics.CGRect)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.CalendarArrowView"/> class.
+            </summary>
+            <param name="frame">The frame.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarArrowView.Draw(CoreGraphics.CGRect)">
+            <summary>
+            Draws the specified rect.
+            </summary>
+            <param name="rect">The rect.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarArrowView.GenerateImageForButton(CoreGraphics.CGRect)">
+            <summary>
+            Generates the image for button.
+            </summary>
+            <param name="rect">The rect.</param>
+            <returns>UIImage.</returns>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CalendarArrowView.Direction">
+            <summary>
+            Gets or sets the direction.
+            </summary>
+            <value>The direction.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CalendarArrowView.Color">
+            <summary>
+            Sets the color.
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CalendarArrowView.ArrowDirection">
+            <summary>
+            Enum ArrowDirection
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarArrowView.ArrowDirection.Right">
+            <summary>
+            The right arrow direction.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarArrowView.ArrowDirection.Left">
+            <summary>
+            The left arrow direction.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CalendarDayView">
+            <summary>
+            Class CalendarDayView.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarDayView.paragraphStyle">
+            <summary>
+            The paragraph style
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarDayView._text">
+            <summary>
+            The _text
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarDayView._oldBackgorundColor">
+            <summary>
+            The _old backgorund color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarDayView._active">
+            <summary>
+            The _active
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarDayView._today">
+            <summary>
+            The _active
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarDayView._selected">
+            <summary>
+            The _active
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarDayView._marked">
+            <summary>
+            The _active
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarDayView._available">
+            <summary>
+            The _active
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarDayView._highlighted">
+            <summary>
+            The _active
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarDayView._mv">
+            <summary>
+            The _MV
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarDayView.#ctor(XLabs.Forms.Controls.CalendarMonthView)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.CalendarDayView"/> class.
+            </summary>
+            <param name="mv">The mv.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarDayView.Draw(CoreGraphics.CGRect)">
+            <summary>
+            Draws the specified rect.
+            </summary>
+            <param name="rect">The rect.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarDayView.DrawDateString(Foundation.NSString,UIKit.UIColor,CoreGraphics.CGRect)">
+            <summary>
+            Draws the date string.
+            </summary>
+            <param name="dateString">The date string.</param>
+            <param name="color">The color.</param>
+            <param name="rect">The rect.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CalendarDayView.Available">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:XLabs.Forms.Controls.CalendarDayView"/> is available.
+            </summary>
+            <value><c>true</c> if available; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CalendarDayView.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CalendarDayView.Active">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:XLabs.Forms.Controls.CalendarDayView"/> is active.
+            </summary>
+            <value><c>true</c> if active; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CalendarDayView.Today">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:XLabs.Forms.Controls.CalendarDayView"/> is today.
+            </summary>
+            <value><c>true</c> if today; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CalendarDayView.Selected">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:XLabs.Forms.Controls.CalendarDayView"/> is selected.
+            </summary>
+            <value><c>true</c> if selected; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CalendarDayView.Marked">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:XLabs.Forms.Controls.CalendarDayView"/> is marked.
+            </summary>
+            <value><c>true</c> if marked; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CalendarDayView.Highlighted">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:XLabs.Forms.Controls.CalendarDayView"/> is highlighted.
+            </summary>
+            <value><c>true</c> if highlighted; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CalendarDayView.Date">
+            <summary>
+            Gets or sets the date.
+            </summary>
+            <value>The date.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.DateSelected">
+            <summary>
+            Delegate DateSelected
+            </summary>
+            <param name="date">The date.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonthChanged">
+            <summary>
+            Delegate MonthChanged
+            </summary>
+            <param name="monthSelected">The month selected.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CalendarMonthView">
+            <summary>
+            Class CalendarMonthView.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView._calendarIsLoaded">
+            <summary>
+            The _calendar is loaded
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView._leftArrow">
+            <summary>
+            The _left arrow
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView._maxDateTime">
+            <summary>
+            The _max date time
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView._minDateTime">
+            <summary>
+            The _min date time
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView._monthGridView">
+            <summary>
+            The _month grid view
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView._rightArrow">
+            <summary>
+            The _right arrow
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView._scrollView">
+            <summary>
+            The _scroll view
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView._headerHeight">
+            <summary>
+            The _header height
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView._showHeader">
+            <summary>
+            The _show header
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView._showNavArrows">
+            <summary>
+            The _show nav arrows
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.#ctor(System.DateTime,System.Boolean,System.Boolean,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.CalendarMonthView"/> class.
+            </summary>
+            <param name="selectedDate">The selected date.</param>
+            <param name="showHeader">if set to <c>true</c> [show header].</param>
+            <param name="showNavArrows">if set to <c>true</c> [show nav arrows].</param>
+            <param name="width">The width.</param>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView.BoxHeight">
+            <summary>
+            The box height
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView.BoxWidth">
+            <summary>
+            The box width
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView.CurrentMonthYear">
+            <summary>
+            The current month year
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView.CurrentSelectedDate">
+            <summary>
+            The current selected date
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView.IsDateAvailable">
+            <summary>
+            The is date available
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView.IsDayMarkedDelegate">
+            <summary>
+            The is day marked delegate
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView.MonthChanged">
+            <summary>
+            The month changed
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView.OnDateSelected">
+            <summary>
+            The on date selected
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView.OnFinishedDateSelection">
+            <summary>
+            The on finished date selection
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarMonthView.SwipedUp">
+            <summary>
+            The swiped up
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.Draw(CoreGraphics.CGRect)">
+            <summary>
+            Draws the specified rect.
+            </summary>
+            <param name="rect">The rect.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.SetDate(System.DateTime,System.Boolean)">
+            <summary>
+            Sets the date.
+            </summary>
+            <param name="newDate">The new date.</param>
+            <param name="animated">if set to <c>true</c> [animated].</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.SetMaxAllowedDate(System.Nullable{System.DateTime})">
+            <summary>
+            Sets the maximum allowed date.
+            </summary>
+            <param name="maxDate">The maximum date.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.SetMinAllowedDate(System.Nullable{System.DateTime})">
+            <summary>
+            Sets the minimum allowed date.
+            </summary>
+            <param name="minDate">The minimum date.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.HighlightDaysOfWeeks(System.DayOfWeek[])">
+            <summary>
+            Highlights the days of weeks.
+            </summary>
+            <param name="daysOfWeeks">The days of weeks.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.SetDisplayedMonthYear(System.DateTime,System.Boolean)">
+            <summary>
+            Sets the displayed month year.
+            </summary>
+            <param name="newDate">The new date.</param>
+            <param name="animated">if set to <c>true</c> [animated].</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.SetNeedsDisplay">
+            <summary>
+            Sets the needs display.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.LayoutSubviews">
+            <summary>
+            Layouts the subviews.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.DeselectDate">
+            <summary>
+            Deselects the date.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.MoveCalendarMonths(System.Boolean,System.Boolean)">
+            <summary>
+            Moves the calendar months.
+            </summary>
+            <param name="right">if set to <c>true</c> [right].</param>
+            <param name="animated">if set to <c>true</c> [animated].</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.RebuildGrid(System.Boolean,System.Boolean)">
+            <summary>
+            Rebuilds the grid.
+            </summary>
+            <param name="right">if set to <c>true</c> [right].</param>
+            <param name="animated">if set to <c>true</c> [animated].</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.LoadNavArrows">
+            <summary>
+            Loads the nav arrows.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.HandlePreviousMonthTouch(System.Object,System.EventArgs)">
+            <summary>
+            Handles the previous month touch.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.HandleNextMonthTouch(System.Object,System.EventArgs)">
+            <summary>
+            Handles the next month touch.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.SetNavigationArrows(System.Boolean)">
+            <summary>
+            Sets the navigation arrows.
+            </summary>
+            <param name="animated">if set to <c>true</c> [animated].</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.MonthViewSwipedUp(UIKit.UISwipeGestureRecognizer)">
+            <summary>
+            ps the month view swiped up.
+            </summary>
+            <param name="ges">The ges.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.MonthViewSwipedRight(UIKit.UISwipeGestureRecognizer)">
+            <summary>
+            ps the month view swiped right.
+            </summary>
+            <param name="ges">The ges.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.MonthViewSwipedLeft(UIKit.UISwipeGestureRecognizer)">
+            <summary>
+            ps the month view swiped left.
+            </summary>
+            <param name="ges">The ges.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.CreateNewGrid(System.DateTime)">
+            <summary>
+            Creates the new grid.
+            </summary>
+            <param name="date">The date.</param>
+            <returns>MonthGridView.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.LoadInitialGrids">
+            <summary>
+            Loads the initial grids.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.DrawMonthLabel(CoreGraphics.CGRect)">
+            <summary>
+            Draws the month label.
+            </summary>
+            <param name="rect">The rect.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.DrawDayLabels(CoreGraphics.CGRect)">
+            <summary>
+            Draws the day labels.
+            </summary>
+            <param name="rect">The rect.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarMonthView.DrawCenteredString(Foundation.NSString,UIKit.UIColor,CoreGraphics.CGRect,UIKit.UIFont)">
+            <summary>
+            Draws the centered string.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="color">The color.</param>
+            <param name="rect">The rect.</param>
+            <param name="font">The font.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CalendarMonthView.HighlightedDaysOfWeek">
+            <summary>
+            Gets the highlighted days of week.
+            </summary>
+            <value>The highlighted days of week.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CalendarMonthView.CurrentDate">
+            <summary>
+            Gets or sets the current date.
+            </summary>
+            <value>The current date.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CalendarMonthView.StyleDescriptor">
+            <summary>
+            Gets the style descriptor.
+            </summary>
+            <value>The style descriptor.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CalendarViewRenderer">
+            <summary>
+            Class CalendarViewRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.CalendarViewRenderer"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.CalendarView})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.ProtectFromEventCycle(System.Action)">
+            <summary>
+            Protects from event cycle.
+            </summary>
+            <param name="action">The action.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.SetFonts">
+            <summary>
+            Sets the fonts.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.SetColors">
+            <summary>
+            Sets the colors.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonthGridView">
+            <summary>
+            Class MonthGridView.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonthGridView._calendarMonthView">
+            <summary>
+            The _calendar month view
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonthGridView._currentMonth">
+            <summary>
+            The _current month
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonthGridView.DayTiles">
+            <summary>
+            The day tiles
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonthGridView.WeekdayOfFirst">
+            <summary>
+            The weekday of first
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonthGridView.#ctor(XLabs.Forms.Controls.CalendarMonthView,System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonthGridView"/> class.
+            </summary>
+            <param name="calendarMonthView">The calendar month view.</param>
+            <param name="month">The month.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonthGridView.PTapped(UIKit.UITapGestureRecognizer)">
+            <summary>
+            ps the tapped.
+            </summary>
+            <param name="tapRecg">The tap recg.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonthGridView.Update">
+            <summary>
+            Updates this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonthGridView.UpdateDayView(XLabs.Forms.Controls.CalendarDayView)">
+            <summary>
+            Updates the day view.
+            </summary>
+            <param name="dayView">The day view.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonthGridView.BuildGrid">
+            <summary>
+            Builds the grid.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonthGridView.SelectDayView(CoreGraphics.CGPoint)">
+            <summary>
+            Selects the day view.
+            </summary>
+            <param name="p">The p.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonthGridView.DeselectDayView">
+            <summary>
+            Deselects the day view.
+            </summary>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonthGridView.CurrentDate">
+            <summary>
+            Gets or sets the current date.
+            </summary>
+            <value>The current date.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonthGridView.Lines">
+            <summary>
+            Gets or sets the lines.
+            </summary>
+            <value>The lines.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonthGridView.SelectedDayView">
+            <summary>
+            Gets or sets the selected day view.
+            </summary>
+            <value>The selected day view.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonthGridView.Marks">
+            <summary>
+            Gets or sets the marks.
+            </summary>
+            <value>The marks.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.StyleDescriptor">
+            <summary>
+            Class StyleDescriptor.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.BackgroundColor">
+            <summary>
+            The background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.DateForegroundColor">
+            <summary>
+            The date foreground color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.DateBackgroundColor">
+            <summary>
+            The date background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.InactiveDateForegroundColor">
+            <summary>
+            The inactive date foreground color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.InactiveDateBackgroundColor">
+            <summary>
+            The inactive date background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.SelectedDateForegroundColor">
+            <summary>
+            The selected date foreground color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.SelectedDateBackgroundColor">
+            <summary>
+            The selected date background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.TitleForegroundColor">
+            <summary>
+            The title foreground color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.TitleBackgroundColor">
+            <summary>
+            The title background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.TodayForegroundColor">
+            <summary>
+            The today foreground color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.TodayBackgroundColor">
+            <summary>
+            The today background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.DayOfWeekLabelForegroundColor">
+            <summary>
+            The day of week label foreground color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.DayOfWeekLabelBackgroundColor">
+            <summary>
+            The day of week label background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.HighlightedDateForegroundColor">
+            <summary>
+            The highlighted date foreground color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.HighlightedDateBackgroundColor">
+            <summary>
+            The highlighted date background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.DateSeparatorColor">
+            <summary>
+            The date separator color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.SelectionBackgroundStyle">
+            <summary>
+            The selection background style
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.TodayBackgroundStyle">
+            <summary>
+            The today background style
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.DateLabelFont">
+            <summary>
+            The date label font
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.MonthTitleFont">
+            <summary>
+            The month title font
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.StyleDescriptor.ShouldHighlightDaysOfWeekLabel">
+            <summary>
+            The should highlight days of week label
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CameraViewRenderer">
+            <summary>
+            Class CameraViewRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraViewRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.CameraView})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CameraPreview">
+            <summary>
+            Class CameraPreview.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CameraPreview._previewLayer">
+            <summary>
+            The _preview layer
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraPreview.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.CameraPreview"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraPreview.#ctor(CoreGraphics.CGRect)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.CameraPreview"/> class.
+            </summary>
+            <param name="bounds">The bounds.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraPreview.Draw(CoreGraphics.CGRect)">
+            <summary>
+            Draws the specified rect.
+            </summary>
+            <param name="rect">The rect.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraPreview.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CheckBoxCellRenderer">
+            <summary>
+            Class CheckBoxCellRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxCellRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.CheckBoxCellRenderer"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxCellRenderer.GetCell(Xamarin.Forms.Cell,UIKit.UITableViewCell,UIKit.UITableView)">
+            <summary>
+            Gets the cell.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="reusableCell">The reusable cell.</param>
+            <param name="tv">The table view.</param>
+            <returns>UITableViewCell.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CheckBoxRenderer">
+            <summary>
+            The check box renderer for iOS.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.CheckBox})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxRenderer.ResizeText">
+            <summary>
+            Resizes the text.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxRenderer.Draw(CoreGraphics.CGRect)">
+            <summary>
+            Draws the specified rect.
+            </summary>
+            <param name="rect">The rect.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxRenderer.UpdateFont">
+            <summary>
+            Updates the font.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CheckBoxView">
+            <summary>
+            Class CheckBoxView.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.CheckBoxView"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxView.#ctor(CoreGraphics.CGRect)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.CheckBoxView"/> class.
+            </summary>
+            <param name="bounds">The bounds.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxView.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxView.AdjustEdgeInsets">
+            <summary>
+            Adjusts the edge insets.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxView.ApplyStyle">
+            <summary>
+            Applies the style.
+            </summary>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CheckBoxView.CheckedTitle">
+            <summary>
+            Sets the checked title.
+            </summary>
+            <value>The checked title.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CheckBoxView.UncheckedTitle">
+            <summary>
+            Sets the unchecked title.
+            </summary>
+            <value>The unchecked title.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CheckBoxView.Checked">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:XLabs.Forms.Controls.CheckBoxView"/> is checked.
+            </summary>
+            <value><c>true</c> if checked; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CircleImageRenderer">
+            <summary>
+            Class CircleImageRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CircleImageRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{Xamarin.Forms.Image})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CircleImageRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CircleImageRenderer.DrawOther">
+            <summary>
+            Draws the other.
+            </summary>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CircleImageRenderer.DrawFill">
+            <summary>
+            Draws the fill.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CircleImageRenderer.MakeSquare(System.Int32,System.Int32@)">
+            <summary>
+            Makes the square.
+            </summary>
+            <param name="height">The height.</param>
+            <param name="width">The width.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.DragContentViewRenderer">
+            <summary>
+            Class DragContentViewRenderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DragContentViewRenderer.touchedView">
+            <summary>
+            The touched view
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DragContentViewRenderer.touchedElement">
+            <summary>
+            The touched element
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DragContentViewRenderer.offsetLocation">
+            <summary>
+            The offset location
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DragContentViewRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.DragContentView})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DragContentViewRenderer.TouchesBegan(Foundation.NSSet,UIKit.UIEvent)">
+            <summary>
+            Toucheses the began.
+            </summary>
+            <param name="touches">The touches.</param>
+            <param name="evt">The evt.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DragContentViewRenderer.TouchesCancelled(Foundation.NSSet,UIKit.UIEvent)">
+            <summary>
+            Toucheses the cancelled.
+            </summary>
+            <param name="touches">The touches.</param>
+            <param name="evt">The evt.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DragContentViewRenderer.TouchesEnded(Foundation.NSSet,UIKit.UIEvent)">
+            <summary>
+            Toucheses the ended.
+            </summary>
+            <param name="touches">The touches.</param>
+            <param name="evt">The evt.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DragContentViewRenderer.TouchesMoved(Foundation.NSSet,UIKit.UIEvent)">
+            <summary>
+            Toucheses the moved.
+            </summary>
+            <param name="touches">The touches.</param>
+            <param name="evt">The evt.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DragContentViewRenderer.GetMovedElement(System.Object,Xamarin.Forms.View)">
+            <summary>
+            Gets the moved element.
+            </summary>
+            <param name="nativeView">The native view.</param>
+            <param name="view">The view.</param>
+            <returns>View.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DragContentViewRenderer.GetAccessibilityId(System.Object)">
+            <summary>
+            Gets the accessibility identifier.
+            </summary>
+            <param name="view">The view.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.DynamicUITableViewRenderer`1">
+            <summary>
+            Class DynamicUITableViewRenderer.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.DEFAULT_ROW_HEIGHT">
+            <summary>
+            The _default row height
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DynamicUITableViewRenderer`1._tableDelegate">
+            <summary>
+            The _table delegate
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DynamicUITableViewRenderer`1._dataSource">
+            <summary>
+            The _data source
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DynamicUITableViewRenderer`1._tableView">
+            <summary>
+            The _table view
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.DynamicListView{`0}})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.Unbind(XLabs.Forms.Controls.DynamicListView{`0})">
+            <summary>
+            Unbinds the specified old element.
+            </summary>
+            <param name="oldElement">The old element.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.Bind(XLabs.Forms.Controls.DynamicListView{`0})">
+            <summary>
+            Binds the specified new element.
+            </summary>
+            <param name="newElement">The new element.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.ElementPropertyChanging(System.Object,Xamarin.Forms.PropertyChangingEventArgs)">
+            <summary>
+            Elements the property changing.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Xamarin.Forms.PropertyChangingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.DataCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Datas the collection changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.ElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Elements the property changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.GetCell(UIKit.UITableView,Foundation.NSIndexPath)">
+            <summary>
+            Gets cell for UITableView
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+            <returns>The <see cref="T:UIKit.UITableViewCell"/>.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.GetCell(UIKit.UITableView,`0)">
+            <summary>
+            Gets the cell.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="item">The item.</param>
+            <returns>UITableViewCell.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.RowsInSection(UIKit.UITableView,System.nint)">
+            <summary>
+            The rows in section.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="section">The section.</param>
+            <returns>The <see cref="T:System.Int32"/>.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.RowSelected(UIKit.UITableView,Foundation.NSIndexPath)">
+            <summary>
+            Rows the selected.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.GetHeightForRow(UIKit.UITableView,Foundation.NSIndexPath)">
+            <summary>
+            Gets the height for row.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+            <returns>System.Single.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.GetHeightForRow(UIKit.UITableView,`0)">
+            <summary>
+            Gets the height for row.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="item">The item.</param>
+            <returns>System.Single.</returns>
+        </member>
+        <member name="P:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.DataSource">
+            <summary>
+            Gets the data source.
+            </summary>
+            <value>The data source.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableDelegate">
+            <summary>
+            Gets the table delegate.
+            </summary>
+            <value>The table delegate.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableDataSource">
+            <summary>
+            Class TableDataSource.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableDataSource._onGetCell">
+            <summary>
+            The _on get cell
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableDataSource._onRowsInSection">
+            <summary>
+            The _on rows in section
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableDataSource.#ctor(XLabs.Forms.Controls.DynamicUITableViewRenderer{`0}.TableDataSource.OnGetCell,XLabs.Forms.Controls.DynamicUITableViewRenderer{`0}.TableDataSource.OnRowsInSection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableDataSource"/> class.
+            </summary>
+            <param name="onGetCell">The on get cell.</param>
+            <param name="onRowsInSection">The on rows in section.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableDataSource.GetCell(UIKit.UITableView,Foundation.NSIndexPath)">
+            <summary>
+            Gets the cell.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+            <returns>UITableViewCell.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableDataSource.RowsInSection(UIKit.UITableView,System.nint)">
+            <summary>
+            Rowses the in section.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="section">The section.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableDataSource.OnGetCell">
+            <summary>
+            Delegate OnGetCell
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+            <returns>UITableViewCell.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableDataSource.OnRowsInSection">
+            <summary>
+            Delegate OnRowsInSection
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="section">The section.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableViewDelegate">
+            <summary>
+            Class TableViewDelegate.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableViewDelegate._onRowSelected">
+            <summary>
+            The _on row selected
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableViewDelegate._onGetHeightForRow">
+            <summary>
+            The _on get height for row
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableViewDelegate.#ctor(XLabs.Forms.Controls.DynamicUITableViewRenderer{`0}.TableViewDelegate.OnRowSelected,XLabs.Forms.Controls.DynamicUITableViewRenderer{`0}.TableViewDelegate.OnGetHeightForRow)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableViewDelegate"/> class.
+            </summary>
+            <param name="onRowSelected">The on row selected.</param>
+            <param name="onGetHeightForRow">The on get height for row.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableViewDelegate.GetHeightForRow(UIKit.UITableView,Foundation.NSIndexPath)">
+            <summary>
+            Gets the height for row.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+            <returns>System.Single.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableViewDelegate.RowSelected(UIKit.UITableView,Foundation.NSIndexPath)">
+            <summary>
+            Rows the selected.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableViewDelegate.OnRowSelected">
+            <summary>
+            Delegate OnRowSelected
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.DynamicUITableViewRenderer`1.TableViewDelegate.OnGetHeightForRow">
+            <summary>
+            Delegate OnGetHeightForRow
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+            <returns>System.Single.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.EditableListViewRenderer`1">
+            <summary>
+            Class EditableListViewRenderer.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:XLabs.Forms.Controls.EditableListViewRenderer`1.RowHeight">
+            <summary>
+            The row height
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.EditableListViewRenderer`1._editableListViewSource">
+            <summary>
+            The _editable ListView source
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.EditableListViewRenderer`1._tableView">
+            <summary>
+            The _table view
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.EditableListView{`0}})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.Unbind(XLabs.Forms.Controls.EditableListView{`0})">
+            <summary>
+            Unbinds the specified old element.
+            </summary>
+            <param name="oldElement">The old element.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.Bind(XLabs.Forms.Controls.EditableListView{`0})">
+            <summary>
+            Binds the specified new element.
+            </summary>
+            <param name="newElement">The new element.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.DataCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Datas the collection changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.ElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Elements the property changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.EditableListViewRenderer`1.EditableListViewSource">
+            <summary>
+            Class EditableListViewSource.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.EditableListViewRenderer`1.EditableListViewSource._containerRenderer">
+            <summary>
+            The _container renderer
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.EditableListViewSource.#ctor(XLabs.Forms.Controls.EditableListViewRenderer{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.EditableListViewRenderer`1.EditableListViewSource"/> class.
+            </summary>
+            <param name="containerRenderer">The container renderer.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.EditableListViewSource.GetCell(UIKit.UITableView,Foundation.NSIndexPath)">
+            <summary>
+            Gets the cell.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+            <returns>UITableViewCell.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.EditableListViewSource.CommitEditingStyle(UIKit.UITableView,UIKit.UITableViewCellEditingStyle,Foundation.NSIndexPath)">
+            <summary>
+            Commits the editing style.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="editingStyle">The editing style.</param>
+            <param name="indexPath">The index path.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.EditableListViewSource.EditingStyleForRow(UIKit.UITableView,Foundation.NSIndexPath)">
+            <summary>
+            Editings the style for row.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+            <returns>UITableViewCellEditingStyle.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.EditableListViewSource.RowsInSection(UIKit.UITableView,System.nint)">
+            <summary>
+            Rowses the in section.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="section">The section.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.EditableListViewSource.CanMoveRow(UIKit.UITableView,Foundation.NSIndexPath)">
+            <summary>
+            Determines whether this instance [can move row] the specified table view.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+            <returns><c>true</c> if this instance [can move row] the specified table view; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.EditableListViewSource.CustomizeMoveTarget(UIKit.UITableView,Foundation.NSIndexPath,Foundation.NSIndexPath)">
+            <summary>
+            Customizes the move target.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="sourceIndexPath">The source index path.</param>
+            <param name="proposedIndexPath">The proposed index path.</param>
+            <returns>NSIndexPath.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.EditableListViewSource.MoveRow(UIKit.UITableView,Foundation.NSIndexPath,Foundation.NSIndexPath)">
+            <summary>
+            Moves the row.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="sourceIndexPath">The source index path.</param>
+            <param name="destinationIndexPath">The destination index path.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.EditableListViewSource.GetHeightForRow(UIKit.UITableView,Foundation.NSIndexPath)">
+            <summary>
+            Gets the height for row.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+            <returns>System.Single.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.EditableListViewRenderer`1.EditableListViewSource.RowSelected(UIKit.UITableView,Foundation.NSIndexPath)">
+            <summary>
+            Rows the selected.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedDatePickerRenderer">
+            <summary>
+            Class ExtendedDatePickerRenderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedDatePickerRenderer._picker">
+            <summary>
+            The _picker
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedDatePickerRenderer._popOver">
+            <summary>
+            The _pop over
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedDatePickerRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.ExtendedDatePickerRenderer"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedDatePickerRenderer.SetBorder(XLabs.Forms.Controls.ExtendedDatePicker)">
+            <summary>
+            Sets the border.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedDatePickerRenderer.HandleValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the value changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedDatePickerRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.ExtendedDatePicker})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedDatePickerRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedDatePickerRenderer.OnEnded(System.Object,System.EventArgs)">
+            <summary>
+            Handles the <see cref="E:Ended"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="eventArgs">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedDatePickerRenderer.OnStarted(System.Object,System.EventArgs)">
+            <summary>
+            Handles the <see cref="E:Started"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="eventArgs">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedDatePickerRenderer.UpdateDateFromModel(System.Boolean)">
+            <summary>
+            Updates the date from model.
+            </summary>
+            <param name="animate">if set to <c>true</c> [animate].</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedDatePickerRenderer.UpdateMaximumDate">
+            <summary>
+            Updates the maximum date.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedDatePickerRenderer.UpdateMinimumDate">
+            <summary>
+            Updates the minimum date.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedEditorRenderer">
+            <summary>
+            Class ExtendedEditorRenderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedEditorRenderer._leftSwipeGestureRecognizer">
+            <summary>
+            The _left swipe gesture recognizer
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedEditorRenderer._rightSwipeGestureRecognizer">
+            <summary>
+            The _right swipe gesture recognizer
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEditorRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.ExtendedEditorRenderer"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEditorRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{Xamarin.Forms.Editor})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedEntryCellRenderer">
+            <summary>
+            Class ExtendedEntryCellRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryCellRenderer.GetCell(Xamarin.Forms.Cell,UIKit.UITableViewCell,UIKit.UITableView)">
+            <summary>
+            Gets the cell.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="reusableCell">The reusable TableView cell.</param>
+            <param name="tv">The TableView.</param>
+            <returns>UITableViewCell.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedEntryRenderer">
+            <summary>
+            A renderer for the ExtendedEntry control.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedEntryRenderer._leftSwipeGestureRecognizer">
+            <summary>
+            The _left swipe gesture recognizer
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedEntryRenderer._rightSwipeGestureRecognizer">
+            <summary>
+            The _right swipe gesture recognizer
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{Xamarin.Forms.Entry})">
+            <summary>
+            The on element changed callback.
+            </summary>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            The on element property changed callback
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.SetTextAlignment(XLabs.Forms.Controls.ExtendedEntry)">
+            <summary>
+            Sets the text alignment.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.SetFont(XLabs.Forms.Controls.ExtendedEntry)">
+            <summary>
+            Sets the font.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.SetBorder(XLabs.Forms.Controls.ExtendedEntry)">
+            <summary>
+            Sets the border.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.SetMaxLength(XLabs.Forms.Controls.ExtendedEntry)">
+            <summary>
+            Sets the maxLength.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.ResizeHeight">
+            <summary>
+            Resizes the height.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.SetPlaceholderTextColor(XLabs.Forms.Controls.ExtendedEntry)">
+            <summary>
+            Sets the color of the placeholder text.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedLabelRenderer">
+            <summary>
+            The extended label renderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedLabelRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{Xamarin.Forms.Label})">
+            <summary>
+            The on element changed callback.
+            </summary>
+            <param name="e">
+            The event arguments.
+            </param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedLabelRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Raises the element property changed event.
+            </summary>
+            <param name="sender">Sender</param>
+            <param name="e">The event arguments</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedLabelRenderer.UpdateUi(XLabs.Forms.Controls.ExtendedLabel)">
+            <summary>
+            Updates the UI.
+            </summary>
+            <param name="view">
+            The view.
+            </param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedScrollViewRenderer">
+            <summary>
+            Class ExtendedScrollViewRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedScrollViewRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.VisualElementChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementChanged"/> event.
+            </summary>
+            <param name="e">The <see cref="T:Xamarin.Forms.Platform.iOS.VisualElementChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedScrollViewRenderer._epsilon">
+            <summary>
+            The _epsilon
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedScrollViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedSwitchRenderer">
+            <summary>
+            Class ExtendedSwitchRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedSwitchRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.ExtendedSwitch})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedSwitchRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedSwitchRenderer.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedSwitchRenderer.SetTintColor(UIKit.UIColor)">
+            <summary>
+            Sets the color of the tint.
+            </summary>
+            <param name="color">The color.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedSwitchRenderer.ElementToggled(System.Object,Xamarin.Forms.ToggledEventArgs)">
+            <summary>
+            Elements the toggled.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Xamarin.Forms.ToggledEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedSwitchRenderer.ControlValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Controls the value changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedTabbedPageRenderer">
+            <summary>
+            Class ExtendedTabbedPageRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTabbedPageRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.ExtendedTabbedPageRenderer"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTabbedPageRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.VisualElementChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementChanged"/> event.
+            </summary>
+            <param name="e">The <see cref="T:Xamarin.Forms.Platform.iOS.VisualElementChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTabbedPageRenderer.ViewDidLoad">
+            <summary>
+            Views the did load.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTabbedPageRenderer.ViewWillAppear(System.Boolean)">
+            <summary>
+            Views the will appear.
+            </summary>
+            <param name="animated">if set to <c>true</c> [animated].</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedTableViewRenderer">
+            <summary>
+            Class ExtendedTableViewRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTableViewRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{Xamarin.Forms.TableView})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedTimePickerRenderer">
+            <summary>
+            Class ExtendedTimePickerRenderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedTimePickerRenderer._picker">
+            <summary>
+            The _picker
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedTimePickerRenderer._popOver">
+            <summary>
+            The _pop over
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTimePickerRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.ExtendedTimePicker})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTimePickerRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTimePickerRenderer.OnEnded(System.Object,System.EventArgs)">
+            <summary>
+            Handles the <see cref="E:Ended"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="eventArgs">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTimePickerRenderer.OnStarted(System.Object,System.EventArgs)">
+            <summary>
+            Handles the <see cref="E:Started"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="eventArgs">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTimePickerRenderer.UpdateTime">
+            <summary>
+            Updates the time.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTimePickerRenderer.SetBorder">
+            <summary>
+            Sets the border.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTimePickerRenderer.HandleValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the value changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTimePickerRenderer.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedViewCellRenderer">
+            <summary>
+            Class ExtendedViewCellRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedViewCellRenderer.GetCell(Xamarin.Forms.Cell,UIKit.UITableViewCell,UIKit.UITableView)">
+            <summary>
+            Gets the cell.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="reusableCell">The reusable TableView cell.</param>
+            <param name="tv">The TableView.</param>
+            <returns>UITableViewCell.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GesturesContentViewRenderer">
+            <summary>
+            Implements the renderer required by <see cref="T:XLabs.Forms.Controls.GesturesContentView"/>
+            </summary>
+            Element created at 07/11/2014,3:29 PM by Charles
+        </member>
+        <member name="F:XLabs.Forms.Controls.GesturesContentViewRenderer.AllDirections">
+            <summary>Swipre supports all diretions</summary>
+            Element created at 07/11/2014,3:30 PM by Charles
+        </member>
+        <member name="F:XLabs.Forms.Controls.GesturesContentViewRenderer._recognizers">
+            <summary>The List of recoginizers to be attached/detached to views as we go along</summary>
+            Element created at 07/11/2014,3:30 PM by Charles
+        </member>
+        <member name="F:XLabs.Forms.Controls.GesturesContentViewRenderer._swipeStart">
+            <summary>Store the start point of a swipe gesture</summary>
+            Element created at 07/11/2014,3:31 PM by Charles
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.GesturesContentViewRenderer"/> class.
+            </summary>
+            Element created at 07/11/2014,3:31 PM by Charles
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.GesturesContentView})">
+            <summary>When the underlying element is changed we detach from the old, and attach to the new</summary>
+            <param name="e">The <see cref="T:Xamarin.Forms.Platform.iOS.ElementChangedEventArgs`1"/> instance containing the event data.</param>
+            Element created at 07/11/2014,3:31 PM by Charles
+        </member>
+        <member name="M:XLabs.Forms.Controls.GradientContentViewRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{Xamarin.Forms.ContentView})">
+            <summary>
+            Setup the gradient layer
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GradientContentViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Update the underlying controls as needed
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.GradientContentViewRenderer.GradientContentView">
+            <summary>
+            Gets the underlying element typed as an <see cref="P:XLabs.Forms.Controls.GradientContentViewRenderer.GradientContentView"/>.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridCollectionView">
+            <summary>
+            Class GridCollectionView.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridCollectionView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.GridCollectionView"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridCollectionView.#ctor(CoreGraphics.CGRect)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.GridCollectionView"/> class.
+            </summary>
+            <param name="frm">The FRM.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridCollectionView.CellForItem(Foundation.NSIndexPath)">
+            <summary>
+            Cells for item.
+            </summary>
+            <param name="indexPath">The index path.</param>
+            <returns>UICollectionViewCell.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridCollectionView.Draw(CoreGraphics.CGRect)">
+            <summary>
+            Draws the specified rect.
+            </summary>
+            <param name="rect">The rect.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.GridCollectionView.SelectionEnable">
+            <summary>
+            Gets or sets a value indicating whether [selection enable].
+            </summary>
+            <value><c>true</c> if [selection enable]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.GridCollectionView.RowSpacing">
+            <summary>
+            Gets or sets the row spacing.
+            </summary>
+            <value>The row spacing.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.GridCollectionView.ColumnSpacing">
+            <summary>
+            Gets or sets the column spacing.
+            </summary>
+            <value>The column spacing.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.GridCollectionView.ItemSize">
+            <summary>
+            Gets or sets the size of the item.
+            </summary>
+            <value>The size of the item.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridDataSource">
+            <summary>
+            Class GridDataSource.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridDataSource._onGetCell">
+            <summary>
+            The _on get cell
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridDataSource._onRowsInSection">
+            <summary>
+            The _on rows in section
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridDataSource._onItemSelected">
+            <summary>
+            The _on item selected
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridDataSource.#ctor(XLabs.Forms.Controls.GridDataSource.OnGetCell,XLabs.Forms.Controls.GridDataSource.OnRowsInSection,XLabs.Forms.Controls.GridDataSource.OnItemSelected)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.GridDataSource"/> class.
+            </summary>
+            <param name="onGetCell">The on get cell.</param>
+            <param name="onRowsInSection">The on rows in section.</param>
+            <param name="onItemSelected">The on item selected.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridDataSource.GetItemsCount(UIKit.UICollectionView,System.nint)">
+            <summary>
+            Gets the items count.
+            </summary>
+            <param name="collectionView">The collection view.</param>
+            <param name="section">The section.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridDataSource.ItemSelected(UIKit.UICollectionView,Foundation.NSIndexPath)">
+            <summary>
+            Items the selected.
+            </summary>
+            <param name="collectionView">The collection view.</param>
+            <param name="indexPath">The index path.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridDataSource.GetCell(UIKit.UICollectionView,Foundation.NSIndexPath)">
+            <summary>
+            Gets the cell.
+            </summary>
+            <param name="collectionView">The collection view.</param>
+            <param name="indexPath">The index path.</param>
+            <returns>UICollectionViewCell.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridDataSource.OnGetCell">
+            <summary>
+            Delegate OnGetCell
+            </summary>
+            <param name="collectionView">The collection view.</param>
+            <param name="indexPath">The index path.</param>
+            <returns>UICollectionViewCell.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridDataSource.OnRowsInSection">
+            <summary>
+            Delegate OnRowsInSection
+            </summary>
+            <param name="collectionView">The collection view.</param>
+            <param name="section">The section.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridDataSource.OnItemSelected">
+            <summary>
+            Delegate OnItemSelected
+            </summary>
+            <param name="collectionView">The collection view.</param>
+            <param name="indexPath">The index path.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridViewCell">
+            <summary>
+            Class GridViewCell.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridViewCell.Key">
+            <summary>
+            The key
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridViewCell._viewCell">
+            <summary>
+            The _view cell
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridViewCell._view">
+            <summary>
+            The _view
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewCell.#ctor(CoreGraphics.CGRect)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.GridViewCell"/> class.
+            </summary>
+            <param name="frame">The frame.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewCell.LayoutSubviews">
+            <summary>
+            Layouts the subviews.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewCell.UpdateCell(Xamarin.Forms.ViewCell)">
+            <summary>
+            Updates the cell.
+            </summary>
+            <param name="cell">The cell.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewCell.HandlePropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the property changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewCell.UpdateView">
+            <summary>
+            Updates the view.
+            </summary>
+        </member>
+        <member name="P:XLabs.Forms.Controls.GridViewCell.ViewCell">
+            <summary>
+            Gets or sets the view cell.
+            </summary>
+            <value>The view cell.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridViewDelegate">
+            <summary>
+            Class GridViewDelegate.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridViewDelegate._onItemSelected">
+            <summary>
+            The _on item selected
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewDelegate.#ctor(XLabs.Forms.Controls.GridViewDelegate.OnItemSelected)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.GridViewDelegate"/> class.
+            </summary>
+            <param name="onItemSelected">The on item selected.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewDelegate.ItemSelected(UIKit.UICollectionView,Foundation.NSIndexPath)">
+            <summary>
+            Items the selected.
+            </summary>
+            <param name="collectionView">The collection view.</param>
+            <param name="indexPath">The index path.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewDelegate.ItemHighlighted(UIKit.UICollectionView,Foundation.NSIndexPath)">
+            <summary>
+            Items the highlighted.
+            </summary>
+            <param name="collectionView">The collection view.</param>
+            <param name="indexPath">The index path.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridViewDelegate.OnItemSelected">
+            <summary>
+            Delegate OnItemSelected
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridViewRenderer">
+            <summary>
+            Class GridViewRenderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridViewRenderer._dataSource">
+            <summary>
+            The data source
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.GridViewRenderer"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.RowsInSection(UIKit.UICollectionView,System.nint)">
+            <summary>
+            Rowses the in section.
+            </summary>
+            <param name="collectionView">The collection view.</param>
+            <param name="section">The section.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.ItemSelected(UIKit.UICollectionView,Foundation.NSIndexPath)">
+            <summary>
+            Items the selected.
+            </summary>
+            <param name="tableView">The table view.</param>
+            <param name="indexPath">The index path.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.GetCell(UIKit.UICollectionView,Foundation.NSIndexPath)">
+            <summary>
+            Gets the cell.
+            </summary>
+            <param name="collectionView">The collection view.</param>
+            <param name="indexPath">The index path.</param>
+            <returns>UICollectionViewCell.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.GetCell(UIKit.UICollectionView,Xamarin.Forms.ViewCell,Foundation.NSIndexPath)">
+            <summary>
+            Gets the cell.
+            </summary>
+            <param name="collectionView">The collection view.</param>
+            <param name="item">The item.</param>
+            <param name="indexPath">The index path.</param>
+            <returns>UICollectionViewCell.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.GridView})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.Unbind(XLabs.Forms.Controls.GridView)">
+            <summary>
+            Unbinds the specified old element.
+            </summary>
+            <param name="oldElement">The old element.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.Bind(XLabs.Forms.Controls.GridView)">
+            <summary>
+            Binds the specified new element.
+            </summary>
+            <param name="newElement">The new element.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.ElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Elements the property changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.ElementPropertyChanging(System.Object,Xamarin.Forms.PropertyChangingEventArgs)">
+            <summary>
+            Elements the property changing.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Xamarin.Forms.PropertyChangingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.DataCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Datas the collection changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.GridViewRenderer.DataSource">
+            <summary>
+            Gets the data source.
+            </summary>
+            <value>The data source.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.HyperLinkLabelRenderer">
+            <summary>
+            Class HyperLinkLabelRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HyperLinkLabelRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{Xamarin.Forms.Label})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HyperLinkLabelRenderer.GetNavigationUri(System.String)">
+            <summary>
+            Gets the navigation URI.
+            </summary>
+            <param name="uri">The URI.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.IconButtonRenderer">
+            <summary>
+            Draws a button on the iOS platform with an icon shown to the right or left of the button's text
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.IconButtonRenderer.GetButtonFont(XLabs.Forms.Controls.IconButton,UIKit.UIButton)">
+            <summary>
+            Gets the font for the button (applied to all button text EXCEPT the icon)
+            </summary>
+            <param name="iconButton"></param>
+            <param name="targetButton"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.IconButtonRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{Xamarin.Forms.Button})">
+            <summary>
+            Handles the initial drawing of the button
+            </summary>
+            <param name="e">Information on the <see cref="P:XLabs.Forms.Controls.IconButtonRenderer.IconButton"/></param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.IconButtonRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Called when the underlying model's properties are changed.
+            </summary>
+            <param name="sender">Model sending the change event.</param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.IconButtonRenderer.IconButton">
+            <summary>
+            Gets the underlying element typed as an <see cref="P:XLabs.Forms.Controls.IconButtonRenderer.IconButton"/>
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.IconLabelRenderer.GetButtonFont(XLabs.Forms.Controls.IconLabel,UIKit.UILabel,System.nfloat)">
+            <summary>
+            Gets the font for the button (applied to all button text EXCEPT the icon)
+            </summary>
+            <param name="iconLabel"></param>
+            <param name="targetLabel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ImageGalleryRenderer">
+            <summary>
+            Class ImageGalleryRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.ImageGalleryRenderer"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.ImageGallery})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.Bind(XLabs.Forms.Controls.ImageGallery)">
+            <summary>
+            Binds the specified new element.
+            </summary>
+            <param name="newElement">The new element.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.ElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Elements the property changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.ElementPropertyChanging(System.Object,Xamarin.Forms.PropertyChangingEventArgs)">
+            <summary>
+            Elements the property changing.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Xamarin.Forms.PropertyChangingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ImageGalleryView">
+            <summary>
+            Class ImageGalleryView.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ImageGalleryView._pageControl">
+            <summary>
+            The _page control
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ImageGalleryView._scroller">
+            <summary>
+            The _scroller
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryView.#ctor(System.Collections.ObjectModel.ObservableCollection{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.ImageGalleryView"/> class.
+            </summary>
+            <param name="images">The images.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryView.#ctor(CoreGraphics.CGRect,System.Collections.ObjectModel.ObservableCollection{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.ImageGalleryView"/> class.
+            </summary>
+            <param name="frame">The frame.</param>
+            <param name="images">The images.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryView.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryView.Draw(CoreGraphics.CGRect)">
+            <summary>
+            Draws the specified rect.
+            </summary>
+            <param name="rect">The rect.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryView.AddImage(CoreGraphics.CGRect,System.nint,System.String)">
+            <summary>
+            Adds the image.
+            </summary>
+            <param name="rect">The rect.</param>
+            <param name="position">The position.</param>
+            <param name="im">The im.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryView.LoadImageAsync(System.nint,System.String)">
+            <summary>
+            Loads the image asynchronous.
+            </summary>
+            <param name="position">The position.</param>
+            <param name="url">The URL.</param>
+            <returns>Task.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryView.ScrollChanged(System.Object,System.EventArgs)">
+            <summary>
+            Scrolls the changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryView.HandleCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Handles the collection changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryView.SetImage(UIKit.UIImageView,UIKit.UIImage)">
+            <summary>
+            Sets the image.
+            </summary>
+            <param name="imgView">The img view.</param>
+            <param name="img">The img.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryView.UpdateScrollPositionBasedOnPageControl">
+            <summary>
+            Updates the scroll position based on page control.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryView.FadeImageViewIn(UIKit.UIImageView,UIKit.UIImage)">
+            <summary>
+            Fades the image view in.
+            </summary>
+            <param name="imgView">The img view.</param>
+            <param name="img">The img.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.ImageGalleryView.FadeImages">
+            <summary>
+            Gets or sets a value indicating whether [fade images].
+            </summary>
+            <value><c>true</c> if [fade images]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.ImageGalleryView.Images">
+            <summary>
+            Gets or sets the images.
+            </summary>
+            <value>The images.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.Helpers">
+            <summary>
+            Class Helpers.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.Helpers.IsValidUrl(System.String)">
+            <summary>
+            Determines whether [is valid URL] [the specified URL string].
+            </summary>
+            <param name="urlString">The URL string.</param>
+            <returns><c>true</c> if [is valid URL] [the specified URL string]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.Helpers.LoadFromUrl(System.String)">
+            <summary>
+            Loads from URL.
+            </summary>
+            <param name="uri">The URI.</param>
+            <returns>UIImage.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.RadioButtonRenderer">
+            <summary>
+            The Radio button renderer for iOS.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.RadioButtonRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.CustomRadioButton})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.RadioButtonRenderer.ResizeText">
+            <summary>
+            Resizes the text.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.RadioButtonRenderer.Draw(CoreGraphics.CGRect)">
+            <summary>
+            Draws the specified rect.
+            </summary>
+            <param name="rect">The rect.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.RadioButtonRenderer.UpdateFont">
+            <summary>
+            Updates the font.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.RadioButtonRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.RadioButtonView">
+            <summary>
+            Class RadioButtonView.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.RadioButtonView.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.RadioButtonView"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.RadioButtonView.#ctor(CoreGraphics.CGRect)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.RadioButtonView"/> class.
+            </summary>
+            <param name="bounds">The bounds.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.RadioButtonView.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.RadioButtonView.AdjustEdgeInsets">
+            <summary>
+            Adjusts the edge insets.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.RadioButtonView.ApplyStyle">
+            <summary>
+            Applies the style.
+            </summary>
+        </member>
+        <member name="P:XLabs.Forms.Controls.RadioButtonView.Checked">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:XLabs.Forms.Controls.RadioButtonView"/> is checked.
+            </summary>
+            <value><c>true</c> if checked; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.RadioButtonView.Text">
+            <summary>
+            Sets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.SegmentedControlViewRenderer">
+            <summary>
+            Class SegmentedControlViewRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SegmentedControlViewRenderer.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SegmentedControlViewRenderer.HandleControlValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the control value changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SegmentedControlViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SegmentedControlViewRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.SegmentedControlView})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.SensorBarViewRenderer">
+            <summary>
+            The sensor bar view renderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SensorBarViewRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.SensorBar.SensorBarView})">
+            <summary>
+            The on element changed callback.
+            </summary>
+            <param name="e">
+            The event arguments.
+            </param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SensorBarViewRenderer.OnPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:PropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SensorBarViewRenderer.SetProperties">
+            <summary>
+            Sets the properties.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.UISensorBar">
+            <summary>
+            The UI sensor bar view.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.UISensorBar.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.UISensorBar"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.UISensorBar.#ctor(CoreGraphics.CGRect)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.UISensorBar"/> class.
+            </summary>
+            <param name="bounds">
+            The bounds.
+            </param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.UISensorBar.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.UISensorBar"/> class.
+            </summary>
+            <param name="handle">
+            The handle.
+            </param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.UISensorBar.Draw(CoreGraphics.CGRect)">
+            <summary>
+            The draw.
+            </summary>
+            <param name="rect">
+            The rectangle for draw.
+            </param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.UISensorBar.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="P:XLabs.Forms.Controls.UISensorBar.CurrentValue">
+            <summary>
+            Gets or sets the current value.
+            </summary>
+        </member>
+        <member name="P:XLabs.Forms.Controls.UISensorBar.Limit">
+            <summary>
+            Gets or sets the limit.
+            </summary>
+        </member>
+        <member name="P:XLabs.Forms.Controls.UISensorBar.PositiveColor">
+            <summary>
+            Gets or sets the positive color.
+            </summary>
+        </member>
+        <member name="P:XLabs.Forms.Controls.UISensorBar.NegativeColor">
+            <summary>
+            Gets or sets the negative color.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.SeparatorRenderer">
+            <summary>
+            Class SeparatorRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SeparatorRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{XLabs.Forms.Controls.Separator})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SeparatorRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SeparatorRenderer.SetProperties">
+            <summary>
+            Sets the properties.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.UISeparator">
+            <summary>
+            Class UISeparator.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.UISeparator._thickness">
+            <summary>
+            The _thickness
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.UISeparator._spacingBefore">
+            <summary>
+            The _spacing before
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.UISeparator._spacingAfter">
+            <summary>
+            The _spacing after
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.UISeparator._strokeColor">
+            <summary>
+            The _stroke color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.UISeparator._strokeType">
+            <summary>
+            The _stroke type
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.UISeparator._orientation">
+            <summary>
+            The _orientation
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.UISeparator.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.UISeparator.#ctor(CoreGraphics.CGRect)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.UISeparator"/> class.
+            </summary>
+            <param name="bounds">The bounds.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.UISeparator.#ctor(System.IntPtr)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.UISeparator"/> class.
+            </summary>
+            <param name="handle">The handle.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.UISeparator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.UISeparator"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.UISeparator.Draw(CoreGraphics.CGRect)">
+            <summary>
+            Draws the specified rect.
+            </summary>
+            <param name="rect">The rect.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.UISeparator.Thickness">
+            <summary>
+            Gets or sets the thickness.
+            </summary>
+            <value>The thickness.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.UISeparator.SpacingBefore">
+            <summary>
+            Gets or sets the spacing before.
+            </summary>
+            <value>The spacing before.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.UISeparator.SpacingAfter">
+            <summary>
+            Gets or sets the spacing after.
+            </summary>
+            <value>The spacing after.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.UISeparator.StrokeColor">
+            <summary>
+            Gets or sets the color of the stroke.
+            </summary>
+            <value>The color of the stroke.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.UISeparator.StrokeType">
+            <summary>
+            Gets or sets the type of the stroke.
+            </summary>
+            <value>The type of the stroke.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.UISeparator.Orientation">
+            <summary>
+            Gets or sets the orientation.
+            </summary>
+            <value>The orientation.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.WebImageRenderer">
+            <summary>
+            Class WebImageRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.WebImageRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{Xamarin.Forms.Image})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.WebImageRenderer.GetImageFromWeb(System.String)">
+            <summary>
+            Gets the image from web.
+            </summary>
+            <param name="url">The URL.</param>
+            <returns>UIImage.</returns>
+        </member>
+        <member name="P:XLabs.Forms.Controls.WebImageRenderer.WebImage">
+            <summary>
+            Gets the underlying control typed as an <see cref="P:XLabs.Forms.Controls.WebImageRenderer.WebImage"/>
+            </summary>
+            <value>The web image.</value>
+        </member>
+        <member name="T:XLabs.Forms.Extensions.LabelExtensions">
+            <summary>
+            Class LabelExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Extensions.LabelExtensions.AdjustHeight(Xamarin.Forms.Label)">
+            <summary>
+            Adjusts the height.
+            </summary>
+            <param name="label">The label.</param>
+        </member>
+        <member name="T:XLabs.Forms.Extensions.UiImageExtensions">
+            <summary>
+            Class UiImageExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Extensions.UiImageExtensions.AddText(Xamarin.Forms.StreamImageSource,System.String,CoreGraphics.CGPoint,Xamarin.Forms.Font,Xamarin.Forms.Color)">
+            <summary>
+            Adds the text.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="text">The text.</param>
+            <param name="point">The point.</param>
+            <param name="font">The font.</param>
+            <param name="color">The color.</param>
+            <returns>Task&lt;ImageSource&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Extensions.UiImageExtensions.AddText(UIKit.UIImage,System.String,CoreGraphics.CGPoint,UIKit.UIFont,UIKit.UIColor,UIKit.UITextAlignment)">
+            <summary>
+            Adds the text.
+            </summary>
+            <param name="image">The image.</param>
+            <param name="text">The text.</param>
+            <param name="point">The point.</param>
+            <param name="font">The font.</param>
+            <param name="color">The color.</param>
+            <param name="alignment">The alignment.</param>
+            <returns>UIImage.</returns>
+        </member>
+        <member name="T:XLabs.Forms.ViewExtensions">
+            <summary>
+            Class ViewExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.ViewExtensions.GetInternalChildren(Xamarin.Forms.View)">
+            <summary>
+            Gets the internal children.
+            </summary>
+            <param name="view">The view.</param>
+            <returns>ObservableCollection&lt;Element&gt;.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer">
+            <summary>
+            Class ExtendedTabletMasterDetailPageRenderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer.ShouldHideMenu">
+            <summary>
+            The should hide menu
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.VisualElementChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementChanged"/> event.
+            </summary>
+            <param name="e">The <see cref="T:Xamarin.Forms.Platform.iOS.VisualElementChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer.ShouldHide">
+            <summary>
+            Gets a value indicating whether [should hide].
+            </summary>
+            <value><c>true</c> if [should hide]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer.ExtendedDelegate">
+            <summary>
+            Class ExtendedDelegate.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer.ExtendedDelegate._buttonInfo">
+            <summary>
+            The button information
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer.ExtendedDelegate._baseDelegate">
+            <summary>
+            The base delegate
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer.ExtendedDelegate.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer.ExtendedDelegate"/> class.
+            </summary>
+            <param name="baseDelegate">The base delegate.</param>
+        </member>
+        <member name="M:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer.ExtendedDelegate.WillShowViewController(UIKit.UISplitViewController,UIKit.UIViewController,UIKit.UIBarButtonItem)">
+            <summary>
+            Wills the show view controller.
+            </summary>
+            <param name="svc">The SVC.</param>
+            <param name="aViewController">a view controller.</param>
+            <param name="button">The button.</param>
+        </member>
+        <member name="M:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer.ExtendedDelegate.WillHideViewController(UIKit.UISplitViewController,UIKit.UIViewController,UIKit.UIBarButtonItem,UIKit.UIPopoverController)">
+            <summary>
+            Wills the hide view controller.
+            </summary>
+            <param name="svc">The SVC.</param>
+            <param name="aViewController">a view controller.</param>
+            <param name="barButtonItem">The bar button item.</param>
+            <param name="pc">The pc.</param>
+        </member>
+        <member name="M:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer.ExtendedDelegate.ShouldHideViewController(UIKit.UISplitViewController,UIKit.UIViewController,UIKit.UIInterfaceOrientation)">
+            <summary>
+            Shoulds the hide view controller.
+            </summary>
+            <param name="svc">The SVC.</param>
+            <param name="viewController">The view controller.</param>
+            <param name="inOrientation">The in orientation.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="P:XLabs.Forms.Pages.ExtendedTabletMasterDetailPageRenderer.ExtendedDelegate.PresentButton">
+            <summary>
+            Gets or sets the present button.
+            </summary>
+            <value>The present button.</value>
+        </member>
+        <member name="T:XLabs.Forms.Pages.ExtendedPhoneMasterDetailPageRenderer">
+            <summary>
+            Class ExtendedPhoneMasterDetailPageRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Pages.ExtendedPhoneMasterDetailPageRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Pages.ExtendedPhoneMasterDetailPageRenderer"/> class.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.XFormsApplicationDelegate">
+            <summary>
+            Class XFormsApplicationDelegate.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.XFormsApplicationDelegate.FinishedLaunching(UIKit.UIApplication)">
+            <summary>
+            Finished the launching.
+            </summary>
+            <param name="application">The application.</param>
+            <remarks>Deprecated function</remarks>
+        </member>
+        <member name="M:XLabs.Forms.XFormsApplicationDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)">
+            <summary>
+            Finished the launching.
+            </summary>
+            <param name="app">The application.</param>
+            <param name="options">The options.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:XLabs.Forms.XFormsApplicationDelegate.WillTerminate(UIKit.UIApplication)">
+            <summary>
+            Wills the terminate.
+            </summary>
+            <param name="application">The application.</param>
+        </member>
+        <member name="M:XLabs.Forms.XFormsApplicationDelegate.OnActivated(UIKit.UIApplication)">
+            <summary>
+            Called when [activated].
+            </summary>
+            <param name="application">The application.</param>
+        </member>
+        <member name="M:XLabs.Forms.XFormsApplicationDelegate.DidEnterBackground(UIKit.UIApplication)">
+            <summary>
+            Dids the enter background.
+            </summary>
+            <param name="application">The application.</param>
+        </member>
+        <member name="M:XLabs.Forms.XFormsApplicationDelegate.WillEnterForeground(UIKit.UIApplication)">
+            <summary>
+            Wills the enter foreground.
+            </summary>
+            <param name="application">The application.</param>
+        </member>
+        <member name="P:XLabs.Forms.XFormsApplicationDelegate.FinishedLaunchingEvent">
+            <summary>
+            Gets or sets the finished launching event.
+            </summary>
+            <value>The finished launching event.</value>
+        </member>
+        <member name="P:XLabs.Forms.XFormsApplicationDelegate.WillTerminateEvent">
+            <summary>
+            Gets or sets the will terminate event.
+            </summary>
+            <value>The will terminate event.</value>
+        </member>
+        <member name="P:XLabs.Forms.XFormsApplicationDelegate.OnActivatedEvent">
+            <summary>
+            Gets or sets the on activated event.
+            </summary>
+            <value>The on activated event.</value>
+        </member>
+        <member name="P:XLabs.Forms.XFormsApplicationDelegate.DidEnterBackgroundEvent">
+            <summary>
+            Gets or sets the did enter background event.
+            </summary>
+            <value>The did enter background event.</value>
+        </member>
+        <member name="P:XLabs.Forms.XFormsApplicationDelegate.WillEnterForegroundEvent">
+            <summary>
+            Gets or sets the will enter foreground event.
+            </summary>
+            <value>The will enter foreground event.</value>
+        </member>
+        <member name="T:XLabs.Forms.XFormsAppiOS">
+            <summary>
+            Class XFormsAppiOS.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.XFormsAppiOS.Init">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.XFormsAppiOS.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.XFormsAppiOS"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.XFormsAppiOS.#ctor(XLabs.Forms.XFormsApplicationDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.XFormsAppiOS"/> class.
+            </summary>
+            <param name="appDelegate">The application delegate.</param>
+        </member>
+        <member name="M:XLabs.Forms.XFormsAppiOS.OnInit(XLabs.Forms.XFormsApplicationDelegate,System.Boolean)">
+            <summary>
+            Called when [initialize].
+            </summary>
+            <param name="app">The application.</param>
+            <param name="initServices">Should initialize services.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedButtonRenderer">
+            <summary>
+            Class ExtendedButtonRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedButtonRenderer.OnElementChanged(Xamarin.Forms.Platform.iOS.ElementChangedEventArgs{Xamarin.Forms.Button})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedButtonRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.ExtendedButtonRenderer.Element">
+            <summary>
+            Gets the element.
+            </summary>
+            <value>The element.</value>
+        </member>
+        <member name="T:XLabs.Forms.Extensions.AlignmentExtensions">
+            <summary>
+            Class AlignmentExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Extensions.AlignmentExtensions.ToContentVerticalAlignment(Xamarin.Forms.TextAlignment)">
+            <summary>
+            To the content vertical alignment.
+            </summary>
+            <param name="alignment">The alignment.</param>
+            <returns>UIControlContentVerticalAlignment.</returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:XLabs.Forms.Extensions.AlignmentExtensions.ToContentHorizontalAlignment(Xamarin.Forms.TextAlignment)">
+            <summary>
+            To the content horizontal alignment.
+            </summary>
+            <param name="alignment">The alignment.</param>
+            <returns>UIControlContentHorizontalAlignment.</returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+    </members>
+</doc>
