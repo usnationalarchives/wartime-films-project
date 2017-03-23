@@ -1,9 +1,9 @@
 # Wartime Films Project - World War I
 
-### App
+### [App](https://github.com/usnationalarchives/wartime-films-project/blob/master/ww1/app)
 The metadata posted and enriched on GitHub will feed into a U.S. National Archives World War I app that will highlight NARA wartime films content, improving content discoverability and relevance for local audiences. The primary purpose of the app is to highlight NARA World War I content specific to the Wartime Films digitization and preservation effort, as well as World War I content contributed from other institutions and individuals, increasing the relevance and discovery of this content for local communities.  
 
-The intention is to dedicate the codebase of this software to the public domain in the United States, in addition to waiving copyright and related rights in the work worldwide with a CC0 license. The codebase will be extended as needed. It will be published here on NARA’s GitHub for others to further modify and repurpose following the beta release of the app in the fall of 2016 (see [Terms of Use](https://github.com/usnationalarchives/Wartime-Films-Project/blob/master/LICENSE)).
+We dedicate the codebase of this software to the public domain in the United States, in addition to waiving copyright and related rights in the work worldwide with a CC0 license. The codebase will be extended as needed. It is published here on NARA’s GitHub for others to further modify and repurpose (see [Terms of Use](https://github.com/usnationalarchives/Wartime-Films-Project/blob/master/LICENSE)).
 
 ### [Metadata](https://github.com/usnationalarchives/wartime-films-project/blob/master/ww1/metadata)
 
