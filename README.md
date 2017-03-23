@@ -12,5 +12,5 @@ You can read more about the Wartime Films Project on our [NARAtions Blog](https:
 
 ## Subprojects
 
-###[World War I](https://github.com/usnationalarchives/Wartime-Films-Project/tree/master/ww1)
+### [World War I](https://github.com/usnationalarchives/Wartime-Films-Project/tree/master/ww1)
 * An app that highlights World War I content from the National Archives and from other institutions and individuals to increase the relevance and discoverability of this content for local communities.
