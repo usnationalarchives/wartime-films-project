@@ -1,0 +1,11 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\bostjan.kamenik\documents\visual studio 2013\projects\nara\nara\nara.windows\obj\debug\intermediatexaml\nara.windows.exe" HashGuid="925b0cd1-4a2c-d1a8-65e0-c550f2599dc1" />
+    <ReferenceAssembly PathName="c:\projects svn\nara\trunk\nara\nara\nara\bin\debug\nara.dll" HashGuid="ecd17d7a-01e8-82be-9f47-18ee9c966b39" />
+    <ReferenceAssembly PathName="c:\projects svn\nara\trunk\nara\packages\xamarin.forms.2.0.0.6482\lib\win81\xamarin.forms.core.dll" HashGuid="c8a30eb8-5ae8-352d-b94f-7c913a7557ba" />
+    <ReferenceAssembly PathName="c:\projects svn\nara\trunk\nara\packages\xamarin.forms.2.0.0.6482\lib\win81\xamarin.forms.platform.dll" HashGuid="d9389e38-8a39-bed5-406b-7a34fe4704ea" />
+    <ReferenceAssembly PathName="c:\projects svn\nara\trunk\nara\packages\xamarin.forms.2.0.0.6482\lib\win81\xamarin.forms.platform.winrt.dll" HashGuid="dbd728c2-e21b-4125-2be0-f7931b605baa" />
+    <ReferenceAssembly PathName="c:\projects svn\nara\trunk\nara\packages\xamarin.forms.2.0.0.6482\lib\win81\xamarin.forms.platform.winrt.tablet.dll" HashGuid="cc26105e-9714-a8a4-7460-d1885be1ee00" />
+    <ReferenceAssembly PathName="c:\projects svn\nara\trunk\nara\packages\xamarin.forms.2.0.0.6482\lib\win81\xamarin.forms.xaml.dll" HashGuid="2828b56a-3245-7d15-6650-dfb4f30cfa91" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

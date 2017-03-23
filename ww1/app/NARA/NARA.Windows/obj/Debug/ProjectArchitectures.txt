@@ -1,0 +1,3 @@
+C:\Users\bostjan.kamenik\documents\visual studio 2013\Projects\NARA\NARA.Common_p\NARA.Common_p.csproj;neutral
+C:\Users\bostjan.kamenik\documents\visual studio 2013\Projects\NARA\NARA\NARA.Windows\NARA.Windows.csproj;neutral
+C:\Users\bostjan.kamenik\documents\visual studio 2013\Projects\NARA\NARA\NARA\NARA.csproj;neutral
