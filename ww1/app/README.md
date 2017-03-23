@@ -1,6 +1,6 @@
 # Remembering WWI App
 
-![Remembering WWI](/images/rememberingwwi.png)
+![Remembering WWI](/rememberingwwi.png)
 
 ## Structure
 
@@ -8,7 +8,7 @@ The Remembering WWI app is developed with the Xamarin platform, founded by the e
 
 With a C#-shared codebase, developers can use Xamarin tools to write native Android, iOS, and Windows apps with native user interfaces and share code across multiple platforms, including Windows and macOS.
 
-![Structure](/images/structure.png)
+![Structure](/structure.png)
 
 ## NARA (Portable class library) UI
 
@@ -21,7 +21,7 @@ Portable class library that contains the UI structure and common settings:
 * **(Custom controls)** Controls used for custom renderers
 * **(Content)** Static web content, such as loader control (deprecated) that are used on all of the supported platforms (iOS / Android).
 
-![NARA (Portable class library) UI](/images/naraui.png)
+![NARA (Portable class library) UI](/naraui.png)
 
 ## NARA.Common (Portable class library)
 
@@ -46,7 +46,7 @@ Project consists of:
 * **(Util)** Platform specific code, such as implementation of reachability (network access)
 * Activities (**Main ->** main entry point of the application, Splashscreeen activity)
 
-![NARA.Droid (Xamarin.Droid project)](/images/naradroid.png)
+![NARA.Droid (Xamarin.Droid project)](/naradroid.png)
 
 ## NARA.iOS (Xamarin.iOS project)
 
@@ -59,4 +59,4 @@ Project consists of:
 * (Util) Platform specific code, such as implementation of reachability (network access)
 * Main entry point of the application (Main.cs with AppDelegate.cs)
 
-![NARA.iOS (Xamarin.iOS project)](/images/naraios.png)
+![NARA.iOS (Xamarin.iOS project)](/naraios.png)
