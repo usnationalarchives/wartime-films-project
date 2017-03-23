@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+  <style name="App_EditTextStyle" parent="@android:style/Widget.EditText">
+    <item name="android:layout_width">fill_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textColor">#00FF00</item>
+    <item name="android:gravity">center</item>
+    <item name="android:background">@drawable/edittext_bg</item>
+  <item name="android:textCursorDrawable">@drawable/cursorcolor</item>
+  </style>
+</resources>
