@@ -2,6 +2,12 @@
 
 ![Remembering WWI](/ww1/images/rememberingwwi.png)
 
+## About the App
+
+The National Archives and Records Administration (NARA) has recently launched Remembering WWI, an iPad and Android application that invites audiences to explore, collaborate, and engage with the our extensive collection of digitized World War I moving and still images. These include photographs and films originally shot by the US Signal Corps on behalf of various armed forces units in between 1914 and 1920.
+
+Remembering WWI also invites people nationwide to contribute their own stories and play a part in the centennial commemoration of the US entry into World War I. Using the archival content within the app, the public can create their own collections and build and share new narratives around the people, events, and themes they're exploring. Thematic collections from NARA, Library of Congress, and the Smithsonian are featured to serve as inspiration or provide jumping off points for content discovery and reuse.
+
 ## Structure
 
 The Remembering WWI app is developed with the Xamarin platform, founded by the engineers that created Mono, Mono for Android and MonoTouch, which are cross-platform implementations of the Common Language Infrastructure (CLI) and Common Language Specifications (often called Microsoft .NET).
