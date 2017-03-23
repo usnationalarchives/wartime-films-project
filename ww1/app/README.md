@@ -59,4 +59,4 @@ Project consists of:
 * (Util) Platform specific code, such as implementation of reachability (network access)
 * Main entry point of the application (Main.cs with AppDelegate.cs)
 
-![NARA.iOS (Xamarin.iOS project)](/naraios.png)
+![NARA.iOS (Xamarin.iOS project)](/ww1/app/naraios.png)
