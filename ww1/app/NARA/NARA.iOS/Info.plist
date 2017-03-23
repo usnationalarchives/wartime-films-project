@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>OrpheusPro.otf</string>
+	</array>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>2</integer>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>MinimumOSVersion</key>
+	<string>9.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>Remembering</string>
+	<key>CFBundleIdentifier</key>
+	<string>gov.archives.rememberingwwi</string>
+	<key>CFBundleVersion</key>
+	<string>1.2.89</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Application would like to access your photo library</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+    <string>Icon-72@2x.png</string>
+    <string>Icon-72.png</string>
+    <string>Icon-57@2x.png</string>
+    <string>Icon-57.png</string>
+    <string>Icon-120.png</string>
+    <string>Icon-76.png</string>
+    <string>Icon-76@2x.png</string>
+    <string>Icon-152.png</string>
+    <string>Icon-167.png</string>
+    <string>Icon-512.png</string>
+    <string>Icon-1024.png</string>
+    <string>Default.png</string>
+    <string>Default@2x.png</string>
+    <string>Default-568h@2x.png</string>
+    <string>Default-Portrait.png</string>
+    <string>Default-Portrait@2x.png</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.2.89</string>
+	<key>UIPrerenderedIcon</key>
+	<false/>
+	<key>UIMainStoryboardFile~ipad</key>
+	<string>LaunchScreen</string>
+</dict>
+</plist>
