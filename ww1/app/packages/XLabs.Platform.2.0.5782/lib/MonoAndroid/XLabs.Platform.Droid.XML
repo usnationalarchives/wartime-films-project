@@ -1,0 +1,2786 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XLabs.Platform.Droid</name>
+    </assembly>
+    <members>
+        <member name="T:XLabs.Platform.Device.Accelerometer">
+            <summary>
+                Class Accelerometer.
+            </summary>
+            <summary>
+            Class Accelerometer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Accelerometer.Gravitation">
+            <summary>
+            Gravitational force is 9.81 m/s^2
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Accelerometer.accelerometer">
+            <summary>
+                The accelerometer
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Accelerometer.delay">
+            <summary>
+                The delay
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Accelerometer.sensorManager">
+            <summary>
+                The sensor manager
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Accelerometer.Android#Hardware#ISensorEventListener#OnAccuracyChanged(Android.Hardware.Sensor,Android.Hardware.SensorStatus)">
+            <summary>
+                Called when the accuracy of a sensor has changed.
+            </summary>
+            <param name="sensor">To be added.</param>
+            <param name="accuracy">The new accuracy of this sensor</param>
+            <since version="Added in API level 3" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">
+                    Called when the accuracy of a sensor has changed.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    See
+                    <c>
+                        <see cref="T:Android.Hardware.SensorManager" />
+                    </c>
+                    for details.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a
+                            href="http://developer.android.com/reference/android/hardware/SensorEventListener.html#onAccuracyChanged(android.hardware.Sensor, int)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:XLabs.Platform.Device.Accelerometer.Android#Hardware#ISensorEventListener#OnSensorChanged(Android.Hardware.SensorEvent)">
+            <summary>
+                Called when sensor values have changed.
+            </summary>
+            <param name="e">
+                the
+                <c>
+                    <see cref="T:Android.Hardware.SensorEvent" />
+                </c>
+                .
+            </param>
+            <since version="Added in API level 3" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">
+                    Called when sensor values have changed.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    See
+                    <c>
+                        <see cref="T:Android.Hardware.SensorManager" />
+                    </c>
+                    for details on possible sensor types.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    See also
+                    <c>
+                        <see cref="T:Android.Hardware.SensorEvent" />
+                    </c>
+                    .
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <b>NOTE:</b>
+                    </format>
+                    The application doesn't own the
+                    <c>
+                        <see cref="T:Android.Hardware.SensorEvent" />
+                    </c>
+                    object passed as a parameter and therefore cannot hold on to it.
+                    The object may be part of an internal pool and may be reused by
+                    the framework.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a
+                            href="http://developer.android.com/reference/android/hardware/SensorEventListener.html#onSensorChanged(android.hardware.SensorEvent)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:XLabs.Platform.Device.Accelerometer.Start">
+            <summary>
+                Starts this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Accelerometer.Stop">
+            <summary>
+                Stops this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Accelerometer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Device.Accelerometer"/> class.
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.Accelerometer.IsSupported">
+            <summary>
+                Gets a value indicating whether this instance is supported.
+            </summary>
+            <value><c>true</c> if this instance is supported; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.Accelerometer.Interval">
+            <summary>
+                Gets or sets the interval.
+            </summary>
+            <value>The interval.</value>
+        </member>
+        <member name="E:XLabs.Platform.Device.Accelerometer.ReadingAvailable">
+            <summary>
+            The reading available event handler.
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Device.Accelerometer.readingAvailable">
+            <summary>
+            Occurs when [reading available].
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.Accelerometer.LatestReading">
+            <summary>
+            Gets the latest reading.
+            </summary>
+            <value>The latest reading.</value>
+        </member>
+        <member name="T:XLabs.Platform.Device.AndroidDevice">
+            <summary>
+            Android device implements <see cref="T:XLabs.Platform.Device.IDevice"/>.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.AndroidDevice.#ctor">
+            <summary>
+            Creates a default instance of <see cref="T:XLabs.Platform.Device.AndroidDevice"/>. 
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.AndroidDevice.LaunchUriAsync(System.Uri)">
+            <summary>
+            Starts the default app associated with the URI for the specified URI.
+            </summary>
+            <param name="uri">The URI.</param>
+            <returns>The launch operation.</returns>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.CurrentDevice">
+            <summary>
+            Gets the current device.
+            </summary>
+            <value>
+            The current device.
+            </value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.Id">
+            <summary>
+            Gets Unique Id for the device.
+            </summary>
+            <value>
+            The id for the device.
+            </value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.PhoneService">
+            <summary>
+            Gets the phone service for this device.
+            </summary>
+            <value>Phone service instance if available, otherwise null.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.Display">
+            <summary>
+            Gets the display information for the device.
+            </summary>
+            <value>
+            The display.
+            </value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.Battery">
+            <summary>
+            Gets the battery.
+            </summary>
+            <value>
+            The battery.
+            </value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.MediaPicker">
+            <summary>
+            Gets the picture chooser.
+            </summary>
+            <value>The picture chooser.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.Network">
+            <summary>
+            Gets the network service.
+            </summary>
+            <value>The network service.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.Accelerometer">
+            <summary>
+            Gets the accelerometer for the device if available.
+            </summary>
+            <value>Instance of IAccelerometer if available, otherwise null.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.Gyroscope">
+            <summary>
+            Gets the gyroscope.
+            </summary>
+            <value>The gyroscope instance if available, otherwise null.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.BluetoothHub">
+            <summary>
+            Gets the bluetooth hub service.
+            </summary>
+            <value>The bluetooth hub service if available, otherwise null.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.Microphone">
+            <summary>
+            Gets the default microphone for the device
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.FileManager">
+            <summary>
+            Gets the file manager for the device.
+            </summary>
+            <value>Device file manager.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.Name">
+            <summary>
+            Gets the name of the device.
+            </summary>
+            <value>
+            The name of the device.
+            </value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.FirmwareVersion">
+            <summary>
+            Gets the firmware version.
+            </summary>
+            <value>
+            The firmware version.
+            </value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.HardwareVersion">
+            <summary>
+            Gets the hardware version.
+            </summary>
+            <value>
+            The hardware version.
+            </value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.Manufacturer">
+            <summary>
+            Gets the manufacturer.
+            </summary>
+            <value>
+            The manufacturer.
+            </value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.LanguageCode">
+            <summary>
+            Gets the language code.
+            </summary>
+            <value>The language code.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.TimeZoneOffset">
+            <summary>
+            Gets the time zone offset.
+            </summary>
+            <value>The time zone offset.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.TimeZone">
+            <summary>
+            Gets the time zone.
+            </summary>
+            <value>The time zone.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.Orientation">
+            <summary>
+            Gets the orientation.
+            </summary>
+            <value>The orientation.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidDevice.TotalMemory">
+            <summary>
+            Gets the total memory in bytes.
+            </summary>
+            <value>The total memory in bytes.</value>
+        </member>
+        <member name="T:XLabs.Platform.Device.Battery">
+            <summary>
+            Battery information class.
+            </summary>
+            <summary>
+            Class Battery.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Battery.level">
+            <summary>
+            The level
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Battery.levelMonitor">
+            <summary>
+            The level monitor
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Battery.chargerMonitor">
+            <summary>
+            The charger monitor
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Battery.chargerConnected">
+            <summary>
+            The charger connected
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.StartLevelMonitoring">
+            <summary>
+            Starts the level monitoring.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.StopLevelMonitoring">
+            <summary>
+            Stops the level monitoring.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.StartChargerMonitoring">
+            <summary>
+            Starts the charger monitoring.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.StopChargerMonitoring">
+            <summary>
+            Stops the charger monitoring.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.GetLevel">
+            <summary>
+            Gets the level.
+            </summary>
+            <returns>The level.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.GetChargerState">
+            <summary>
+            Gets the state of the charger.
+            </summary>
+            <returns><c>true</c>, if charger state was gotten, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="P:XLabs.Platform.Device.Battery.Level">
+            <summary>
+            Gets the level percentage from 0-100.
+            </summary>
+            <value>The level.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.Battery.Charging">
+            <summary>
+            Gets a value indicating whether this <see cref="T:XLabs.Platform.Device.Battery"/> is charging.
+            </summary>
+            <value><c>true</c> if charging; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:XLabs.Platform.Device.Battery.OnLevelChange">
+            <summary>
+            Event handler for battery level changes.
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Device.Battery.OnChargerStatusChanged">
+            <summary>
+            Event handler for charger connection changes.
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Device.Battery.onLevelChange">
+            <summary>
+            Private event handler for battery level changes.
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Device.Battery.onChargerStatusChanged">
+            <summary>
+            Private event handler for charger connection changes.
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Device.Battery.LevelMonitor">
+            <summary>
+            Class LevelMonitor.
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Device.BroadcastMonitor">
+            <summary>
+            Broadcast monitor.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.BroadcastMonitor.Start">
+            <summary>
+             Start monitoring. 
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.BroadcastMonitor.Stop">
+            <summary>
+             Stop monitoring. 
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.BroadcastMonitor.Filter">
+            <summary>
+            Gets the intent filter to use for monitoring.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Battery.LevelMonitor._battery">
+            <summary>
+            The battery
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.LevelMonitor.#ctor(XLabs.Platform.Device.Battery)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Device.Battery.LevelMonitor"/> class.
+            </summary>
+            <param name="battery">The battery.</param>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.LevelMonitor.OnReceive(Android.Content.Context,Android.Content.Intent)">
+            <summary>
+            This method is called when the BroadcastReceiver is receiving an Intent
+            broadcast.
+            </summary>
+            <param name="context">The Context in which the receiver is running.</param>
+            <param name="intent">The Intent being received.</param>
+            <since version="Added in API level 1" />
+            <remarks><para tool="javadoc-to-mdoc">This method is called when the BroadcastReceiver is receiving an Intent
+            broadcast.  During this time you can use the other methods on
+            BroadcastReceiver to view/modify the current result values.  This method
+            is always called within the main thread of its process, unless you
+            explicitly asked for it to be scheduled on a different thread using
+            <c><see cref="M:Android.Content.Context.RegisterReceiver(Android.Content.BroadcastReceiver, Android.Content.IntentFilter, Android.Content.IntentFilter, Android.Content.IntentFilter)" /></c>. When it runs on the main
+            thread you should
+            never perform long-running operations in it (there is a timeout of
+            10 seconds that the system allows before considering the receiver to
+            be blocked and a candidate to be killed). You cannot launch a popup dialog
+            in your implementation of onReceive().
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <b>If this BroadcastReceiver was launched through a &lt;receiver&gt; tag,
+            then the object is no longer alive after returning from this
+            function.</b>
+              </format>  This means you should not perform any operations that
+            return a result to you asynchronously -- in particular, for interacting
+            with services, you should use
+            <c><see cref="M:Android.Content.Context.StartService(Android.Content.Intent)" /></c> instead of
+            <c><see cref="M:Android.Content.Context.BindService(Android.Content.Intent, Android.Content.IServiceConnection, Android.Content.IServiceConnection)" /></c>.  If you wish
+            to interact with a service that is already running, you can use
+            <c><see cref="M:Android.Content.BroadcastReceiver.PeekService(Android.Content.Context, Android.Content.Intent)" /></c>.
+            </para>
+            <para tool="javadoc-to-mdoc">The Intent filters used in <c><see cref="M:Android.Content.Context.RegisterReceiver(Android.Content.BroadcastReceiver, Android.Content.IntentFilter)" /></c>
+            and in application manifests are <i>not</i> guaranteed to be exclusive. They
+            are hints to the operating system about how to find suitable recipients. It is
+            possible for senders to force delivery to specific recipients, bypassing filter
+            resolution.  For this reason, <c><see cref="M:Android.Content.BroadcastReceiver.OnReceive(Android.Content.Context, Android.Content.Intent)" /></c>
+            implementations should respond only to known actions, ignoring any unexpected
+            Intents that they may receive.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/content/BroadcastReceiver.html#onReceive(android.content.Context, android.content.Intent)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.LevelMonitor.GetMonitorLevel(Android.Content.Intent)">
+            <summary>
+            Gets the monitor level.
+            </summary>
+            <param name="intent">The intent.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="P:XLabs.Platform.Device.Battery.LevelMonitor.Filter">
+            <summary>
+            Gets the intent filter to use for monitoring.
+            </summary>
+            <value>The filter.</value>
+        </member>
+        <member name="T:XLabs.Platform.Device.Battery.ChargerMonitor">
+            <summary>
+            Class ChargerMonitor.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Battery.ChargerMonitor._battery">
+            <summary>
+            The battery
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.ChargerMonitor.#ctor(XLabs.Platform.Device.Battery)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Device.Battery.ChargerMonitor"/> class.
+            </summary>
+            <param name="battery">The battery.</param>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.ChargerMonitor.OnReceive(Android.Content.Context,Android.Content.Intent)">
+            <summary>
+            This method is called when the BroadcastReceiver is receiving an Intent
+            broadcast.
+            </summary>
+            <param name="context">The Context in which the receiver is running.</param>
+            <param name="intent">The Intent being received.</param>
+            <since version="Added in API level 1" />
+            <remarks><para tool="javadoc-to-mdoc">This method is called when the BroadcastReceiver is receiving an Intent
+            broadcast.  During this time you can use the other methods on
+            BroadcastReceiver to view/modify the current result values.  This method
+            is always called within the main thread of its process, unless you
+            explicitly asked for it to be scheduled on a different thread using
+            <c><see cref="M:Android.Content.Context.RegisterReceiver(Android.Content.BroadcastReceiver, Android.Content.IntentFilter, Android.Content.IntentFilter, Android.Content.IntentFilter)" /></c>. When it runs on the main
+            thread you should
+            never perform long-running operations in it (there is a timeout of
+            10 seconds that the system allows before considering the receiver to
+            be blocked and a candidate to be killed). You cannot launch a popup dialog
+            in your implementation of onReceive().
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <b>If this BroadcastReceiver was launched through a &lt;receiver&gt; tag,
+            then the object is no longer alive after returning from this
+            function.</b>
+              </format>  This means you should not perform any operations that
+            return a result to you asynchronously -- in particular, for interacting
+            with services, you should use
+            <c><see cref="M:Android.Content.Context.StartService(Android.Content.Intent)" /></c> instead of
+            <c><see cref="M:Android.Content.Context.BindService(Android.Content.Intent, Android.Content.IServiceConnection, Android.Content.IServiceConnection)" /></c>.  If you wish
+            to interact with a service that is already running, you can use
+            <c><see cref="M:Android.Content.BroadcastReceiver.PeekService(Android.Content.Context, Android.Content.Intent)" /></c>.
+            </para>
+            <para tool="javadoc-to-mdoc">The Intent filters used in <c><see cref="M:Android.Content.Context.RegisterReceiver(Android.Content.BroadcastReceiver, Android.Content.IntentFilter)" /></c>
+            and in application manifests are <i>not</i> guaranteed to be exclusive. They
+            are hints to the operating system about how to find suitable recipients. It is
+            possible for senders to force delivery to specific recipients, bypassing filter
+            resolution.  For this reason, <c><see cref="M:Android.Content.BroadcastReceiver.OnReceive(Android.Content.Context, Android.Content.Intent)" /></c>
+            implementations should respond only to known actions, ignoring any unexpected
+            Intents that they may receive.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/content/BroadcastReceiver.html#onReceive(android.content.Context, android.content.Intent)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="P:XLabs.Platform.Device.Battery.ChargerMonitor.Filter">
+            <summary>
+            Gets the intent filter to use for monitoring.
+            </summary>
+            <value>The filter.</value>
+        </member>
+        <member name="T:XLabs.Platform.Device.AndroidBluetoothDevice">
+            <summary>
+                Class AndroidBluetoothDevice.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.AndroidBluetoothDevice.BT_UUID">
+            <summary>
+                The bt UUID
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.AndroidBluetoothDevice._socket">
+            <summary>
+                The socket
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.AndroidBluetoothDevice._device">
+            <summary>
+                The device
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.AndroidBluetoothDevice._uuid">
+            <summary>
+                The UUID
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.AndroidBluetoothDevice.#ctor(Android.Bluetooth.BluetoothDevice)">
+            <summary>
+                Initializes a new instance of the <see cref="T:XLabs.Platform.Device.AndroidBluetoothDevice"/> class.
+            </summary>
+            <param name="device">The device.</param>
+        </member>
+        <member name="M:XLabs.Platform.Device.AndroidBluetoothDevice.Connect">
+            <summary>
+                Connects this instance.
+            </summary>
+            <returns>Task.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Device.AndroidBluetoothDevice.Disconnect">
+            <summary>
+                Disconnects this instance.
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidBluetoothDevice.Name">
+            <summary>
+                Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidBluetoothDevice.Address">
+            <summary>
+                Gets the address.
+            </summary>
+            <value>The address.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidBluetoothDevice.InputStream">
+            <summary>
+                Gets the input stream.
+            </summary>
+            <value>The input stream.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.AndroidBluetoothDevice.OutputStream">
+            <summary>
+                Gets the output stream.
+            </summary>
+            <value>The output stream.</value>
+        </member>
+        <member name="T:XLabs.Platform.Device.BluetoothHub">
+            <summary>
+            Class BluetoothHub.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.BluetoothHub._adapter">
+            <summary>
+            The _adapter
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.BluetoothHub.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Device.BluetoothHub"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.BluetoothHub.#ctor(Android.Bluetooth.BluetoothAdapter)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Device.BluetoothHub"/> class.
+            </summary>
+            <param name="adapter">The adapter.</param>
+        </member>
+        <member name="M:XLabs.Platform.Device.BluetoothHub.GetPairedDevices">
+            <summary>
+            Gets the paired devices.
+            </summary>
+            <returns>Task&lt;IReadOnlyList&lt;IBluetoothDevice&gt;&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Device.BluetoothHub.OpenSettings">
+            <summary>
+            Gets the open settings.
+            </summary>
+            <value>The open settings.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.BluetoothHub.Enabled">
+            <summary>
+            Gets a value indicating whether this <see cref="T:XLabs.Platform.Device.IBluetoothHub"/> is enabled.
+            </summary>
+            <value><c>true</c> if enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:XLabs.Platform.Device.Display">
+            <summary>
+                Android Display implements <see cref="T:XLabs.Platform.Device.IDisplay"/>.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Display.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:XLabs.Platform.Device.Display"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Display.ToString">
+            <summary>
+                Returns a <see cref="T:System.String"/> that represents the current <see cref="T:XLabs.Platform.Device.Display"/>.
+            </summary>
+            <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:XLabs.Platform.Device.Display"/>.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Device.Display.WidthRequestInInches(System.Double)">
+            <summary>
+                Convert width in inches to runtime pixels
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Display.HeightRequestInInches(System.Double)">
+            <summary>
+                Convert height in inches to runtime pixels
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.Display.Metrics">
+            <summary>
+                Gets the metrics.
+            </summary>
+            <value>The metrics.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.Display.Height">
+            <summary>
+                Gets the screen height in pixels
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.Display.Width">
+            <summary>
+                Gets the screen width in pixels
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.Display.Xdpi">
+            <summary>
+                Gets the screens X pixel density per inch
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.Display.Ydpi">
+            <summary>
+                Gets the screens Y pixel density per inch
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Device.Gyroscope">
+            <summary>
+            Class Gyroscope.
+            </summary>
+            <summary>
+            Class Gyroscope.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Gyroscope.delay">
+            <summary>
+            The _delay
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Gyroscope.gyroscope">
+            <summary>
+            The _gyroscope
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Gyroscope.sensorManager">
+            <summary>
+            The _sensor manager
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Gyroscope.Start">
+            <summary>
+            Starts this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Gyroscope.Stop">
+            <summary>
+            Stops this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Gyroscope.Android#Hardware#ISensorEventListener#OnAccuracyChanged(Android.Hardware.Sensor,Android.Hardware.SensorStatus)">
+            <summary>
+            Called when the accuracy of a sensor has changed.
+            </summary>
+            <param name="sensor">To be added.</param>
+            <param name="accuracy">The new accuracy of this sensor</param>
+            <exception cref="T:System.NotImplementedException"></exception>
+            <since version="Added in API level 3"/>
+            <remarks><para tool="javadoc-to-mdoc">Called when the accuracy of a sensor has changed.
+            </para>
+            <para tool="javadoc-to-mdoc">See <c><see cref="T:Android.Hardware.SensorManager"/></c>
+            for details.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/hardware/SensorEventListener.html#onAccuracyChanged(android.hardware.Sensor, int)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Platform.Device.Gyroscope.Android#Hardware#ISensorEventListener#OnSensorChanged(Android.Hardware.SensorEvent)">
+            <summary>
+            Called when sensor values have changed.
+            </summary>
+            <param name="e">the <c><see cref="T:Android.Hardware.SensorEvent" /></c>.</param>
+            <since version="Added in API level 3" />
+            <remarks><para tool="javadoc-to-mdoc">Called when sensor values have changed.
+            </para>
+            <para tool="javadoc-to-mdoc">See <c><see cref="T:Android.Hardware.SensorManager" /></c>
+            for details on possible sensor types.
+            </para>
+            <para tool="javadoc-to-mdoc">See also <c><see cref="T:Android.Hardware.SensorEvent" /></c>.
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <b>NOTE:</b>
+              </format> The application doesn't own the
+            <c><see cref="T:Android.Hardware.SensorEvent" /></c>
+            object passed as a parameter and therefore cannot hold on to it.
+            The object may be part of an internal pool and may be reused by
+            the framework.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/hardware/SensorEventListener.html#onSensorChanged(android.hardware.SensorEvent)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Platform.Device.Gyroscope.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Device.Gyroscope"/> class.
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.Gyroscope.IsSupported">
+            <summary>
+            Gets a value indicating whether this instance is supported.
+            </summary>
+            <value><c>true</c> if this instance is supported; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.Gyroscope.Interval">
+            <summary>
+            Gets or sets the interval.
+            </summary>
+            <value>The interval.</value>
+        </member>
+        <member name="E:XLabs.Platform.Device.Gyroscope.readingAvailable">
+            <summary>
+            Occurs when [reading available].
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Device.Gyroscope.ReadingAvailable">
+            <summary>
+            Occurs when [reading available].
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.Gyroscope.LatestReading">
+            <summary>
+            Gets the latest reading vector
+            </summary>
+            <value>Rotation values in radians per second</value>
+        </member>
+        <member name="T:XLabs.Platform.BroadcastReceiverExtensions">
+            <summary>
+            Broadcast receiver extensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.BroadcastReceiverExtensions.RegisterReceiver(Android.Content.BroadcastReceiver,Android.Content.IntentFilter)">
+            <summary>
+            Registers the receiver using <see cref="P:Android.App.Application.Context"/>.
+            </summary>
+            <returns>The receiver intent.</returns>
+            <param name="receiver">Receiver.</param>
+            <param name="intentFilter">Intent filter.</param>
+        </member>
+        <member name="M:XLabs.Platform.BroadcastReceiverExtensions.UnregisterReceiver(Android.Content.BroadcastReceiver)">
+            <summary>
+            Unregisters the receiver using <see cref="P:Android.App.Application.Context"/>.
+            </summary>
+            <param name="receiver">Receiver to unregister.</param>
+        </member>
+        <member name="T:XLabs.Platform.IntentExtensions">
+            <summary>
+            Class IntentExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.IntentExtensions.AddAttachments(Android.Content.Intent,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Adds the attachments.
+            </summary>
+            <param name="intent">The intent.</param>
+            <param name="attachments">The attachments.</param>
+        </member>
+        <member name="T:XLabs.Platform.IntentFilterExtensions">
+            <summary>
+            Intent filter extensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.IntentFilterExtensions.RegisterReceiver(Android.Content.IntentFilter)">
+            <summary>
+            Gets a single result for the intent filter using <see cref="P:Android.App.Application.Context"/>
+            </summary>
+            <param name="intentFilter">Intent filter</param>
+            <returns>An intent result, null if not successful</returns>
+        </member>
+        <member name="T:XLabs.Platform.ObjectExtensions">
+            <summary>
+            Object extensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.ObjectExtensions.StartActivity(System.Object,Android.Content.Intent)">
+            <summary>
+            Starts the activity using either the object itself if it a type of <see cref="T:Android.Content.Context"/>
+            or alternatively using <see cref="P:Android.App.Application.Context"/>
+            </summary>
+            <param name="o">O.</param>
+            <param name="intent">Intent.</param>
+        </member>
+        <member name="M:XLabs.Platform.ObjectExtensions.ToJavaObject``1(``0)">
+            <summary>
+            Wraps the object to <see cref="T:XLabs.Platform.JavaObject`1"/> class.
+            </summary>
+            <param name="o">Object to wrap.</param>
+            <typeparam name="T">Type of object.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:XLabs.Platform.JavaObject`1">
+            <summary>
+            Java object wrapper.
+            </summary>
+            <typeparam name="T">Type of object to wrap.</typeparam>
+        </member>
+        <member name="M:XLabs.Platform.JavaObject`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.JavaObject`1"/> class.
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="P:XLabs.Platform.JavaObject`1.Value">
+            <summary>
+            The object that was wrapped.
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.UriExtensions">
+            <summary>
+            Class UriExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.UriExtensions.ToAndroidUri(System.Uri)">
+            <summary>
+            To the android URI.
+            </summary>
+            <param name="uri">The URI.</param>
+            <returns>Android.Net.Uri.</returns>
+        </member>
+        <member name="M:XLabs.Platform.UriExtensions.ToSystemUri(Android.Net.Uri)">
+            <summary>
+            To the system URI.
+            </summary>
+            <param name="uri">The URI.</param>
+            <returns>Uri.</returns>
+        </member>
+        <member name="T:XLabs.Platform.ViewExtensions">
+            <summary>
+            Class ViewExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.ViewExtensions.ToBitmap(Android.Views.View)">
+            <summary>
+            To the bitmap.
+            </summary>
+            <param name="view">The view.</param>
+            <returns>Android.Graphics.Bitmap.</returns>
+        </member>
+        <member name="M:XLabs.Platform.ViewExtensions.StreamToPng(Android.Views.View,System.IO.Stream)">
+            <summary>
+            Streams to PNG.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="stream">The stream.</param>
+            <returns>Task.</returns>
+        </member>
+        <member name="M:XLabs.Platform.ViewExtensions.IsHit(Android.Views.View,Android.Graphics.PointF)">
+            <summary>
+            Determines whether the specified point is hit.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="point">The point.</param>
+            <returns><c>true</c> if the specified point is hit; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:XLabs.Platform.ViewGroupExtensions">
+            <summary>
+            Class ViewGroupExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.ViewGroupExtensions.GetTouchedView(Android.Views.ViewGroup,Android.Graphics.PointF,Android.Graphics.PointF)">
+            <summary>
+            Gets the touched view.
+            </summary>
+            <param name="viewGroup">The view group.</param>
+            <param name="point">The point.</param>
+            <param name="offset">The offset.</param>
+            <returns>Tuple&lt;View, PointF&gt;.</returns>
+        </member>
+        <member name="T:XLabs.Platform.Services.Email.EmailService">
+            <summary>
+            Class EmailService.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Email.EmailService.ShowDraft(System.String,System.String,System.Boolean,System.String[],System.String[],System.String[],System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Shows the draft.
+            </summary>
+            <param name="subject">The subject.</param>
+            <param name="body">The body.</param>
+            <param name="html">if set to <c>true</c> [HTML].</param>
+            <param name="to">To.</param>
+            <param name="cc">The cc.</param>
+            <param name="bcc">The BCC.</param>
+            <param name="attachments">The attachments.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Email.EmailService.ShowDraft(System.String,System.String,System.Boolean,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Shows the draft.
+            </summary>
+            <param name="subject">The subject.</param>
+            <param name="body">The body.</param>
+            <param name="html">if set to <c>true</c> [HTML].</param>
+            <param name="to">To.</param>
+            <param name="attachments">The attachments.</param>
+        </member>
+        <member name="P:XLabs.Platform.Services.Email.EmailService.CanSend">
+            <summary>
+            Gets a value indicating whether this instance can send.
+            </summary>
+            <value><c>true</c> if this instance can send; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener">
+            <summary>
+                Class GeolocationContinuousListener.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener._activeProvider">
+            <summary>
+                The active provider
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener._lastLocation">
+            <summary>
+                The last location
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener._providers">
+            <summary>
+                The providers
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener._timePeriod">
+            <summary>
+                The time period
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener._activeProviders">
+            <summary>
+                The active providers
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener._manager">
+            <summary>
+                The manager
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener.#ctor(Android.Locations.LocationManager,System.TimeSpan,System.Collections.Generic.IList{System.String})">
+            <summary>
+                Initializes a new instance of the <see cref="T:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener"/> class.
+            </summary>
+            <param name="manager">The manager.</param>
+            <param name="timePeriod">The time period.</param>
+            <param name="providers">The providers.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener.OnLocationChanged(Android.Locations.Location)">
+            <summary>
+                Called when the location has changed.
+            </summary>
+            <param name="location">The new location, as a Location object.</param>
+            <since version="Added in API level 1" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">
+                    Called when the location has changed.
+                </para>
+                <para tool="javadoc-to-mdoc"> There are no restrictions on the use of the supplied Location object.</para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a
+                            href="http://developer.android.com/reference/android/location/LocationListener.html#onLocationChanged(android.location.Location)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener.OnProviderDisabled(System.String)">
+            <summary>
+                Called when the provider is disabled by the user.
+            </summary>
+            <param name="provider">
+                the name of the location provider associated with this
+                update.
+            </param>
+            <since version="Added in API level 1" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">
+                    Called when the provider is disabled by the user. If requestLocationUpdates
+                    is called on an already disabled provider, this method is called
+                    immediately.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a
+                            href="http://developer.android.com/reference/android/location/LocationListener.html#onProviderDisabled(java.lang.String)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener.OnProviderEnabled(System.String)">
+            <summary>
+                Called when the provider is enabled by the user.
+            </summary>
+            <param name="provider">
+                the name of the location provider associated with this
+                update.
+            </param>
+            <since version="Added in API level 1" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">Called when the provider is enabled by the user.</para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a
+                            href="http://developer.android.com/reference/android/location/LocationListener.html#onProviderEnabled(java.lang.String)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener.OnStatusChanged(System.String,Android.Locations.Availability,Android.OS.Bundle)">
+            <summary>
+                Called when the provider status changes.
+            </summary>
+            <param name="provider">
+                the name of the location provider associated with this
+                update.
+            </param>
+            <param name="status">
+                <c>
+                    <see cref="F:Android.Locations.Availability.OutOfService" />
+                </c>
+                if the
+                provider is out of service, and this is not expected to change in the
+                near future;
+                <c>
+                    <see cref="F:Android.Locations.Availability.TemporarilyUnavailable" />
+                </c>
+                if
+                the provider is temporarily unavailable but is expected to be available
+                shortly; and
+                <c>
+                    <see cref="F:Android.Locations.Availability.Available" />
+                </c>
+                if the
+                provider is currently available.
+            </param>
+            <param name="extras">
+                an optional Bundle which will contain provider specific
+                status variables.
+                <para tool="javadoc-to-mdoc" />
+                A number of common key/value pairs for the extras Bundle are listed
+                below. Providers that use any of the keys on this list must
+                provide the corresponding value as described below.
+                <list type="bullet">
+                    <item>
+                        <term>
+                            satellites - the number of satellites used to derive the fix
+                        </term>
+                    </item>
+                </list>
+            </param>
+            <since version="Added in API level 1" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">
+                    Called when the provider status changes. This method is called when
+                    a provider is unable to fetch a location or if the provider has recently
+                    become available after a period of unavailability.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a
+                            href="http://developer.android.com/reference/android/location/LocationListener.html#onStatusChanged(java.lang.String, int, android.os.Bundle)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener.GetTimeSpan(System.Int64)">
+            <summary>
+                Gets the time span.
+            </summary>
+            <param name="time">The time.</param>
+            <returns>TimeSpan.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener.OnPositionError(XLabs.Platform.Services.Geolocation.PositionErrorEventArgs)">
+            <summary>
+                Handles the <see cref="E:PositionError"/> event.
+            </summary>
+            <param name="e">The <see cref="T:XLabs.Platform.Services.Geolocation.PositionErrorEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="E:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener.PositionError">
+            <summary>
+                Occurs when [position error].
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Services.Geolocation.GeolocationContinuousListener.PositionChanged">
+            <summary>
+                Occurs when [position changed].
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Services.Geolocation.GeolocationSingleListener">
+            <summary>
+                Class GeolocationSingleListener.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.GeolocationSingleListener._bestLocation">
+            <summary>
+                The _best location
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.GeolocationSingleListener._activeProviders">
+            <summary>
+                The _active providers
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.GeolocationSingleListener._completionSource">
+            <summary>
+                The _completion source
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.GeolocationSingleListener._desiredAccuracy">
+            <summary>
+                The _desired accuracy
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.GeolocationSingleListener._finishedCallback">
+            <summary>
+                The _finished callback
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.GeolocationSingleListener._locationSync">
+            <summary>
+                The _location synchronize
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.GeolocationSingleListener._timer">
+            <summary>
+                The _timer
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationSingleListener.#ctor(System.Single,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.Action)">
+            <summary>
+                Initializes a new instance of the <see cref="T:XLabs.Platform.Services.Geolocation.GeolocationSingleListener"/> class.
+            </summary>
+            <param name="desiredAccuracy">The desired accuracy.</param>
+            <param name="timeout">The timeout.</param>
+            <param name="activeProviders">The active providers.</param>
+            <param name="finishedCallback">The finished callback.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationSingleListener.OnLocationChanged(Android.Locations.Location)">
+            <summary>
+                Called when the location has changed.
+            </summary>
+            <param name="location">The new location, as a Location object.</param>
+            <since version="Added in API level 1" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">
+                    Called when the location has changed.
+                </para>
+                <para tool="javadoc-to-mdoc"> There are no restrictions on the use of the supplied Location object.</para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a
+                            href="http://developer.android.com/reference/android/location/LocationListener.html#onLocationChanged(android.location.Location)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationSingleListener.OnProviderDisabled(System.String)">
+            <summary>
+                Called when the provider is disabled by the user.
+            </summary>
+            <param name="provider">
+                the name of the location provider associated with this
+                update.
+            </param>
+            <since version="Added in API level 1" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">
+                    Called when the provider is disabled by the user. If requestLocationUpdates
+                    is called on an already disabled provider, this method is called
+                    immediately.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a
+                            href="http://developer.android.com/reference/android/location/LocationListener.html#onProviderDisabled(java.lang.String)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationSingleListener.OnProviderEnabled(System.String)">
+            <summary>
+                Called when the provider is enabled by the user.
+            </summary>
+            <param name="provider">
+                the name of the location provider associated with this
+                update.
+            </param>
+            <since version="Added in API level 1" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">Called when the provider is enabled by the user.</para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a
+                            href="http://developer.android.com/reference/android/location/LocationListener.html#onProviderEnabled(java.lang.String)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationSingleListener.OnStatusChanged(System.String,Android.Locations.Availability,Android.OS.Bundle)">
+            <summary>
+                Called when the provider status changes.
+            </summary>
+            <param name="provider">
+                the name of the location provider associated with this
+                update.
+            </param>
+            <param name="status">
+                <c>
+                    <see cref="F:Android.Locations.Availability.OutOfService" />
+                </c>
+                if the
+                provider is out of service, and this is not expected to change in the
+                near future;
+                <c>
+                    <see cref="F:Android.Locations.Availability.TemporarilyUnavailable" />
+                </c>
+                if
+                the provider is temporarily unavailable but is expected to be available
+                shortly; and
+                <c>
+                    <see cref="F:Android.Locations.Availability.Available" />
+                </c>
+                if the
+                provider is currently available.
+            </param>
+            <param name="extras">
+                an optional Bundle which will contain provider specific
+                status variables.
+                <para tool="javadoc-to-mdoc" />
+                A number of common key/value pairs for the extras Bundle are listed
+                below. Providers that use any of the keys on this list must
+                provide the corresponding value as described below.
+                <list type="bullet">
+                    <item>
+                        <term>
+                            satellites - the number of satellites used to derive the fix
+                        </term>
+                    </item>
+                </list>
+            </param>
+            <since version="Added in API level 1" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">
+                    Called when the provider status changes. This method is called when
+                    a provider is unable to fetch a location or if the provider has recently
+                    become available after a period of unavailability.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a
+                            href="http://developer.android.com/reference/android/location/LocationListener.html#onStatusChanged(java.lang.String, int, android.os.Bundle)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationSingleListener.Cancel">
+            <summary>
+                Cancels this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationSingleListener.TimesUp(System.Object)">
+            <summary>
+                Timeses up.
+            </summary>
+            <param name="state">The state.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.GeolocationSingleListener.Finish(Android.Locations.Location)">
+            <summary>
+                Finishes the specified location.
+            </summary>
+            <param name="location">The location.</param>
+        </member>
+        <member name="P:XLabs.Platform.Services.Geolocation.GeolocationSingleListener.Task">
+            <summary>
+                Gets the task.
+            </summary>
+            <value>The task.</value>
+        </member>
+        <member name="T:XLabs.Platform.Services.Geolocation.Geolocator">
+            <summary>
+                Class Geolocator.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.Geolocator.Epoch">
+            <summary>
+                The epoch
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.Geolocator._headingProvider">
+            <summary>
+                The _heading provider
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.Geolocator._lastPosition">
+            <summary>
+                The _last position
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.Geolocator._listener">
+            <summary>
+                The _listener
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.Geolocator._manager">
+            <summary>
+                The _manager
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.Geolocator._positionSync">
+            <summary>
+                The _position synchronize
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.Geolocator._providers">
+            <summary>
+                The _providers
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:XLabs.Platform.Services.Geolocation.Geolocator"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.StopListening">
+            <summary>
+                Stop listening to location changes
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.GetPositionAsync(System.Threading.CancellationToken)">
+            <summary>
+                Gets the position asynchronous.
+            </summary>
+            <param name="cancelToken">The cancel token.</param>
+            <returns>Task&lt;Position&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.GetPositionAsync(System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+                Gets the position asynchronous.
+            </summary>
+            <param name="cancelToken">The cancel token.</param>
+            <param name="includeHeading">if set to <c>true</c> [include heading].</param>
+            <returns>Task&lt;Position&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.GetPositionAsync(System.Int32)">
+            <summary>
+                Gets the position asynchronous.
+            </summary>
+            <param name="timeout">The timeout.</param>
+            <returns>Task&lt;Position&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.GetPositionAsync(System.Int32,System.Boolean)">
+            <summary>
+                Gets the position asynchronous.
+            </summary>
+            <param name="timeout">The timeout.</param>
+            <param name="includeHeading">if set to <c>true</c> [include heading].</param>
+            <returns>Task&lt;Position&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.GetPositionAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+                Gets the position asynchronous.
+            </summary>
+            <param name="timeout">The timeout.</param>
+            <param name="cancelToken">The cancel token.</param>
+            <returns>Task&lt;Position&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.GetPositionAsync(System.Int32,System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+                Gets the position asynchronous.
+            </summary>
+            <param name="timeout">The timeout.</param>
+            <param name="cancelToken">The cancel token.</param>
+            <param name="includeHeading">if set to <c>true</c> [include heading].</param>
+            <returns>Task&lt;Position&gt;.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">timeout;timeout must be greater than or equal to 0</exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.StartListening(System.UInt32,System.Double)">
+            <summary>
+                Start listening to location changes
+            </summary>
+            <param name="minTime">Minimum interval in milliseconds</param>
+            <param name="minDistance">Minimum distance in meters</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.StartListening(System.UInt32,System.Double,System.Boolean)">
+            <summary>
+                Start listening to location changes
+            </summary>
+            <param name="minTime">Minimum interval in milliseconds</param>
+            <param name="minDistance">Minimum distance in meters</param>
+            <param name="includeHeading">Include heading information</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+                minTime
+                or
+                minDistance
+            </exception>
+            <exception cref="T:System.InvalidOperationException">This Geolocator is already listening</exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.OnListenerPositionChanged(System.Object,XLabs.Platform.Services.Geolocation.PositionEventArgs)">
+            <summary>
+                Handles the <see cref="E:ListenerPositionChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:XLabs.Platform.Services.Geolocation.PositionEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.OnListenerPositionError(System.Object,XLabs.Platform.Services.Geolocation.PositionErrorEventArgs)">
+            <summary>
+                Handles the <see cref="E:ListenerPositionError"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:XLabs.Platform.Services.Geolocation.PositionErrorEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.GetTimestamp(Android.Locations.Location)">
+            <summary>
+                Gets the timestamp.
+            </summary>
+            <param name="location">The location.</param>
+            <returns>DateTimeOffset.</returns>
+        </member>
+        <member name="P:XLabs.Platform.Services.Geolocation.Geolocator.IsListening">
+            <summary>
+                Gets a value indicating whether this instance is listening.
+            </summary>
+            <value><c>true</c> if this instance is listening; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Geolocation.Geolocator.DesiredAccuracy">
+            <summary>
+                Gets or sets the desired accuracy.
+            </summary>
+            <value>The desired accuracy.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Geolocation.Geolocator.SupportsHeading">
+            <summary>
+                Gets a value indicating whether [supports heading].
+            </summary>
+            <value><c>true</c> if [supports heading]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Geolocation.Geolocator.IsGeolocationAvailable">
+            <summary>
+                Gets a value indicating whether this instance is geolocation available.
+            </summary>
+            <value><c>true</c> if this instance is geolocation available; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Geolocation.Geolocator.IsGeolocationEnabled">
+            <summary>
+                Gets a value indicating whether this instance is geolocation enabled.
+            </summary>
+            <value><c>true</c> if this instance is geolocation enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:XLabs.Platform.Services.Geolocation.Geolocator.PositionError">
+            <summary>
+                Occurs when [position error].
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Services.Geolocation.Geolocator.PositionChanged">
+            <summary>
+                Occurs when [position changed].
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Services.KeyVaultStorage">
+            <summary>
+            Implementation of <see cref="T:XLabs.Platform.Services.ISecureStorage"/> using Android KeyStore.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.KeyVaultStorage.#ctor(System.Char[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Services.KeyVaultStorage"/> class.
+            </summary>
+            <param name="password">Password to use for encryption.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.KeyVaultStorage.Store(System.String,System.Byte[])">
+            <summary>
+            Stores data.
+            </summary>
+            <param name="key">Key for the data.</param>
+            <param name="dataBytes">Data bytes to store.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.KeyVaultStorage.Retrieve(System.String)">
+            <summary>
+            Retrieves stored data.
+            </summary>
+            <param name="key">Key for the data.</param>
+            <returns>Byte array of stored data.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.KeyVaultStorage.Delete(System.String)">
+            <summary>
+            Deletes data.
+            </summary>
+            <param name="key">Key for the data to be deleted.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.KeyVaultStorage.Contains(System.String)">
+            <summary>
+            Checks if the storage contains a key.
+            </summary>
+            <param name="key">The key to search.</param>
+            <returns>True if the storage has the key, otherwise false.</returns>
+        </member>
+        <member name="T:XLabs.Platform.Services.Media.MediaPicker">
+            <summary>
+                Class MediaPicker.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Services.Media.MediaPicker"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.SelectPhotoAsync(XLabs.Platform.Services.Media.CameraMediaStorageOptions)">
+            <summary>
+            Select a picture from library.
+            </summary>
+            <param name="options">The storage options.</param>
+            <returns>Task with a return type of MediaFile.</returns>
+            <exception cref="T:System.NotSupportedException">Throws an exception if feature is not supported.</exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.TakePhotoAsync(XLabs.Platform.Services.Media.CameraMediaStorageOptions)">
+            <summary>
+            Takes the picture.
+            </summary>
+            <param name="options">The storage options.</param>
+            <returns>Task with a return type of MediaFile.</returns>
+            <exception cref="T:System.NotSupportedException">Throws an exception if feature is not supported.</exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.SelectVideoAsync(XLabs.Platform.Services.Media.VideoMediaStorageOptions)">
+            <summary>
+            Selects the video asynchronous.
+            </summary>
+            <param name="options">Video storage options.</param>
+            <returns>Task with a return type of MediaFile.</returns>
+            <exception cref="T:System.NotSupportedException">Throws an exception if feature is not supported.</exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.TakeVideoAsync(XLabs.Platform.Services.Media.VideoMediaStorageOptions)">
+            <summary>
+            Takes the video asynchronous.
+            </summary>
+            <param name="options">The options.</param>
+            <returns>Task with a return type of MediaFile.</returns>
+            <exception cref="T:System.NotSupportedException">Throws an exception if feature is not supported.</exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.CreateMediaIntent(System.Int32,System.String,System.String,XLabs.Platform.Services.Media.MediaStorageOptions,System.Boolean)">
+            <summary>
+            Creates the media intent.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="type">The type of intent.</param>
+            <param name="action">The action.</param>
+            <param name="options">The options.</param>
+            <param name="tasked">if set to <c>true</c> [tasked].</param>
+            <returns>Intent to create media.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.GetRequestId">
+            <summary>
+            Gets the request identifier.
+            </summary>
+            <returns>Request id as integer.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.TakeMediaAsync(System.String,System.String,XLabs.Platform.Services.Media.MediaStorageOptions)">
+            <summary>
+            Takes the media asynchronous.
+            </summary>
+            <param name="type">The type of intent.</param>
+            <param name="action">The action.</param>
+            <param name="options">The options.</param>
+            <returns>Task with a return type of MediaFile.</returns>
+            <exception cref="T:System.InvalidOperationException">Only one operation can be active at a time.</exception>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.MediaPicker.IsCameraAvailable">
+            <summary>	
+            Gets a value indicating whether this instance is camera available.
+            </summary>
+            <value><c>true</c> if this instance is camera available; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.MediaPicker.IsPhotosSupported">
+            <summary>
+                Gets a value indicating whether this instance is photos supported.
+            </summary>
+            <value><c>true</c> if this instance is photos supported; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.MediaPicker.IsVideosSupported">
+            <summary>
+                Gets a value indicating whether this instance is videos supported.
+            </summary>
+            <value><c>true</c> if this instance is videos supported; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.MediaPicker.OnMediaSelected">
+            <summary>
+            Gets or sets the event that fires when media has been selected.
+            </summary>
+            <value>The on photo selected.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.MediaPicker.OnError">
+            <summary>
+                Gets or sets the on error.
+            </summary>
+            <value>The on error.</value>
+        </member>
+        <member name="T:XLabs.Platform.Services.Media.MediaPickerActivity">
+            <summary>
+            Class MediaPickerActivity.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity.ExtraPath">
+            <summary>
+            The extra path
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity.ExtraLocation">
+            <summary>
+            The extra location
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity.ExtraType">
+            <summary>
+            The extra type
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity.ExtraId">
+            <summary>
+            The extra identifier
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity.ExtraAction">
+            <summary>
+            The extra action
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity.ExtraTasked">
+            <summary>
+            The extra tasked
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity.MediaFileExtraName">
+            <summary>
+            The medi a_ fil e_ extr a_ name
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity._action">
+            <summary>
+            The action
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity._description">
+            <summary>
+            The description
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity._id">
+            <summary>
+            The identifier
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity._isPhoto">
+            <summary>
+            The is photo
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity._path">
+            <summary>
+            The user's destination path.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity._quality">
+            <summary>
+            The quality
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity._seconds">
+            <summary>
+            The seconds
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity._tasked">
+            <summary>
+            The tasked
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity._title">
+            <summary>
+            The title
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPickerActivity._type">
+            <summary>
+            The type
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickerActivity.OnSaveInstanceState(Android.OS.Bundle)">
+            <summary>
+            Called to retrieve per-instance state from an activity before being killed
+            so that the state can be restored in <c><see cref="M:Android.App.Activity.OnCreate(Android.OS.Bundle)" /></c> or
+            <c><see cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" /></c> (the <c><see cref="T:Android.OS.Bundle" /></c> populated by this method
+            will be passed to both).
+            </summary>
+            <param name="outState">Bundle in which to place your saved state.</param>
+            <since version="Added in API level 1" />
+            <altmember cref="M:Android.App.Activity.OnCreate(Android.OS.Bundle)" />
+            <altmember cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" />
+            <altmember cref="M:Android.App.Activity.OnPause" />
+            <remarks><para tool="javadoc-to-mdoc">Called to retrieve per-instance state from an activity before being killed
+            so that the state can be restored in <c><see cref="M:Android.App.Activity.OnCreate(Android.OS.Bundle)" /></c> or
+            <c><see cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" /></c> (the <c><see cref="T:Android.OS.Bundle" /></c> populated by this method
+            will be passed to both).
+            </para>
+            <para tool="javadoc-to-mdoc">This method is called before an activity may be killed so that when it
+            comes back some time in the future it can restore its state.  For example,
+            if activity B is launched in front of activity A, and at some point activity
+            A is killed to reclaim resources, activity A will have a chance to save the
+            current state of its user interface via this method so that when the user
+            returns to activity A, the state of the user interface can be restored
+            via <c><see cref="M:Android.App.Activity.OnCreate(Android.OS.Bundle)" /></c> or <c><see cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" /></c>.
+            </para>
+            <para tool="javadoc-to-mdoc">Do not confuse this method with activity lifecycle callbacks such as
+            <c><see cref="M:Android.App.Activity.OnPause" /></c>, which is always called when an activity is being placed
+            in the background or on its way to destruction, or <c><see cref="M:Android.App.Activity.OnStop" /></c> which
+            is called before destruction.  One example of when <c><see cref="M:Android.App.Activity.OnPause" /></c> and
+            <c><see cref="M:Android.App.Activity.OnStop" /></c> is called and not this method is when a user navigates back
+            from activity B to activity A: there is no need to call <c><see cref="M:Android.App.Activity.OnSaveInstanceState(Android.OS.Bundle)" /></c>
+            on B because that particular instance will never be restored, so the
+            system avoids calling it.  An example when <c><see cref="M:Android.App.Activity.OnPause" /></c> is called and
+            not <c><see cref="M:Android.App.Activity.OnSaveInstanceState(Android.OS.Bundle)" /></c> is when activity B is launched in front of activity A:
+            the system may avoid calling <c><see cref="M:Android.App.Activity.OnSaveInstanceState(Android.OS.Bundle)" /></c> on activity A if it isn't
+            killed during the lifetime of B since the state of the user interface of
+            A will stay intact.
+            </para>
+            <para tool="javadoc-to-mdoc">The default implementation takes care of most of the UI per-instance
+            state for you by calling <c><see cref="M:Android.Views.View.OnSaveInstanceState" /></c> on each
+            view in the hierarchy that has an id, and by saving the id of the currently
+            focused view (all of which is restored by the default implementation of
+            <c><see cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" /></c>).  If you override this method to save additional
+            information not captured by each individual view, you will likely want to
+            call through to the default implementation, otherwise be prepared to save
+            all of the state of each view yourself.
+            </para>
+            <para tool="javadoc-to-mdoc">If called, this method will occur before <c><see cref="M:Android.App.Activity.OnStop" /></c>.  There are
+            no guarantees about whether it will occur before or after <c><see cref="M:Android.App.Activity.OnPause" /></c>.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/app/Activity.html#onSaveInstanceState(android.os.Bundle)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickerActivity.OnCreate(Android.OS.Bundle)">
+            <summary>
+            Called when the activity is starting.
+            </summary>
+            <param name="savedInstanceState">If the activity is being re-initialized after
+            previously being shut down then this Bundle contains the data it most
+            recently supplied in <c><see cref="M:Android.App.Activity.OnSaveInstanceState(Android.OS.Bundle)" /></c>.  <format type="text/html"><b><i>Note: Otherwise it is null.</i></b></format></param>
+            <since version="Added in API level 1" />
+            <altmember cref="M:Android.App.Activity.OnStart" />
+            <altmember cref="M:Android.App.Activity.OnSaveInstanceState(Android.OS.Bundle)" />
+            <altmember cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" />
+            <altmember cref="M:Android.App.Activity.OnPostCreate(Android.OS.Bundle)" />
+            <remarks><para tool="javadoc-to-mdoc">Called when the activity is starting.  This is where most initialization
+            should go: calling <c><see cref="M:Android.App.Activity.SetContentView(System.Int32)" /></c> to inflate the
+            activity's UI, using <c><see cref="M:Android.App.Activity.FindViewById(System.Int32)" /></c> to programmatically interact
+            with widgets in the UI, calling
+            <c><see cref="M:Android.App.Activity.ManagedQuery(Android.Net.Uri, System.String[], System.String[], System.String[], System.String[])" /></c> to retrieve
+            cursors for data being displayed, etc.
+            </para>
+            <para tool="javadoc-to-mdoc">You can call <c><see cref="M:Android.App.Activity.Finish" /></c> from within this function, in
+            which case onDestroy() will be immediately called without any of the rest
+            of the activity lifecycle (<c><see cref="M:Android.App.Activity.OnStart" /></c>, <c><see cref="M:Android.App.Activity.OnResume" /></c>,
+            <c><see cref="M:Android.App.Activity.OnPause" /></c>, etc) executing.
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <i>Derived classes must call through to the super class's
+            implementation of this method.  If they do not, an exception will be
+            thrown.</i>
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickerActivity.OnActivityResult(System.Int32,Android.App.Result,Android.Content.Intent)">
+            <summary>
+            Called when an activity you launched exits, giving you the requestCode
+            you started it with, the resultCode it returned, and any additional
+            data from it.
+            </summary>
+            <param name="requestCode">The integer request code originally supplied to
+            startActivityForResult(), allowing you to identify who this
+            result came from.</param>
+            <param name="resultCode">The integer result code returned by the child activity
+            through its setResult().</param>
+            <param name="data">An Intent, which can return result data to the caller
+            (various data can be attached to Intent "extras").</param>
+            <since version="Added in API level 1" />
+            <altmember cref="M:Android.App.Activity.StartActivityForResult(Android.Content.Intent, System.Int32)" />
+            <altmember cref="M:Android.App.Activity.CreatePendingResult(System.Int32, Android.Content.Intent, Android.Content.Intent)" />
+            <altmember cref="M:Android.App.Activity.SetResult(Android.App.Result)" />
+            <remarks><para tool="javadoc-to-mdoc">Called when an activity you launched exits, giving you the requestCode
+            you started it with, the resultCode it returned, and any additional
+            data from it.  The <format type="text/html"><var>resultCode</var></format> will be
+            <c><see cref="F:Android.App.Result.Canceled" /></c> if the activity explicitly returned that,
+            didn't return any result, or crashed during its operation.
+            </para>
+            <para tool="javadoc-to-mdoc">You will receive this call immediately before onResume() when your
+            activity is re-starting.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/app/Activity.html#onActivityResult(int, int, android.content.Intent)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickerActivity.GetMediaFileAsync(Android.Content.Context,System.Int32,System.String,System.Boolean,Android.Net.Uri@,Android.Net.Uri)">
+            <summary>
+            Gets the media file asynchronous.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="requestCode">The request code.</param>
+            <param name="action">The action.</param>
+            <param name="isPhoto">if set to <c>true</c> [is photo].</param>
+            <param name="path">The path.</param>
+            <param name="data">The data.</param>
+            <returns>Task&lt;MediaPickedEventArgs&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickerActivity.TryMoveFileAsync(Android.Content.Context,Android.Net.Uri,Android.Net.Uri,System.Boolean)">
+            <summary>
+            Tries the move file asynchronous.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="url">The URL.</param>
+            <param name="path">The path.</param>
+            <param name="isPhoto">if set to <c>true</c> [is photo].</param>
+            <returns>Task&lt;System.Boolean&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickerActivity.GetVideoQuality(XLabs.Platform.Services.Media.VideoQuality)">
+            <summary>
+            Gets the video quality.
+            </summary>
+            <param name="videoQuality">The video quality.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickerActivity.GetOutputMediaFile(Android.Content.Context,System.String,System.String,System.Boolean)">
+            <summary>
+            Gets the output media file.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="subdir">The subdir.</param>
+            <param name="name">The name.</param>
+            <param name="isPhoto">if set to <c>true</c> [is photo].</param>
+            <returns>Uri.</returns>
+            <exception cref="T:System.IO.IOException">Couldn't create directory, have you added the WRITE_EXTERNAL_STORAGE permission?</exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickerActivity.FixUri(System.String)">
+            <summary>
+            FIx uripath for 5.0.2 new Gallery Picker Error 
+            see https://forums.xamarin.com/discussion/43908/issue-with-xlabs-mediapicker-selectpicture-and-selectvideo
+            </summary>
+            <param name="uriPath"></param>
+            <returns>if result != null uri is fixed</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickerActivity.GetFileForUriAsync(Android.Content.Context,Android.Net.Uri,System.Boolean)">
+            <summary>
+            Gets the file for URI asynchronous.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="uri">The URI.</param>
+            <param name="isPhoto">if set to <c>true</c> [is photo].</param>
+            <returns>Task&lt;Tuple&lt;System.String, System.Boolean&gt;&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickerActivity.GetLocalPath(Android.Net.Uri)">
+            <summary>
+            Gets the local path.
+            </summary>
+            <param name="uri">The URI.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickerActivity.Touch">
+            <summary>
+            Touches this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickerActivity.RaiseOnMediaPicked(XLabs.Platform.Services.Media.MediaPickedEventArgs)">
+            <summary>
+            Handles the <see cref="E:MediaPicked"/> event.
+            </summary>
+            <param name="e">The <see cref="T:XLabs.Platform.Services.Media.MediaPickedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="E:XLabs.Platform.Services.Media.MediaPickerActivity.MediaPicked">
+            <summary>
+            Occurs when [media picked].
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Services.Media.MediaPickedEventArgs">
+            <summary>
+            Class MediaPickedEventArgs.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickedEventArgs.#ctor(System.Int32,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Services.Media.MediaPickedEventArgs"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="error">The error.</param>
+            <exception cref="T:System.ArgumentNullException">error</exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickedEventArgs.#ctor(System.Int32,System.Boolean,XLabs.Platform.Services.Media.MediaFile)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Services.Media.MediaPickedEventArgs"/> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="isCanceled">if set to <c>true</c> [is canceled].</param>
+            <param name="media">The media.</param>
+            <exception cref="T:System.ArgumentNullException">media</exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPickedEventArgs.ToTask">
+            <summary>
+            To the task.
+            </summary>
+            <returns>Task&lt;MediaFile&gt;.</returns>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.MediaPickedEventArgs.RequestId">
+            <summary>
+            Gets the request identifier.
+            </summary>
+            <value>The request identifier.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.MediaPickedEventArgs.IsCanceled">
+            <summary>
+            Gets a value indicating whether this instance is canceled.
+            </summary>
+            <value><c>true</c> if this instance is canceled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.MediaPickedEventArgs.Error">
+            <summary>
+            Gets the error.
+            </summary>
+            <value>The error.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.MediaPickedEventArgs.Media">
+            <summary>
+            Gets the media.
+            </summary>
+            <value>The media.</value>
+        </member>
+        <member name="T:XLabs.Platform.Services.Media.Microphone">
+            <summary>
+                Class Microphone.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.Microphone._audioSource">
+            <summary>
+                The audio source.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.Microphone._bufferSize">
+            <summary>
+                The _buffer size
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.Microphone.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:XLabs.Platform.Services.Media.Microphone"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.Microphone.Start(System.Int32)">
+            <summary>
+                Starts the specified sample rate.
+            </summary>
+            <param name="sampleRate">The sample rate.</param>
+            <returns>Task&lt;System.Boolean&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.Microphone.Stop">
+            <summary>
+                Stops this instance.
+            </summary>
+            <returns>Task.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.Microphone.StartRecording">
+            <summary>
+                Start recording from the hardware audio source.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.Microphone.Record">
+            <summary>
+                Record from the microphone and broadcast the buffer.
+            </summary>
+            <returns>Task.</returns>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.Microphone.IsEnabled">
+            <summary>
+                Gets a value indicating whether this instance is enabled.
+            </summary>
+            <value><c>true</c> if this instance is enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.Microphone.SampleRate">
+            <summary>
+                Gets the sample rate.
+            </summary>
+            <value>The sample rate.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.Microphone.BitsPerSample">
+            <summary>
+                Gets bits per sample.
+            </summary>
+            <value>The bits per sample.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.Microphone.ChannelCount">
+            <summary>
+                Gets the channel count.
+            </summary>
+            <value>The channel count.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.Microphone.AverageBytesPerSecond">
+            <summary>
+                Gets the average data transfer rate
+            </summary>
+            <value>The average data transfer rate in bytes per second.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.Microphone.Active">
+            <summary>
+                Gets a value indicating whether this <see cref="T:XLabs.Platform.Services.Media.Microphone"/> is active.
+            </summary>
+            <value><c>true</c> if active; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.Microphone.SupportedSampleRates">
+            <summary>
+                Gets the average data transfer rate
+            </summary>
+            <value>The average data transfer rate in bytes per second.</value>
+        </member>
+        <member name="E:XLabs.Platform.Services.Media.Microphone.OnBroadcast">
+            <summary>
+                Occurs when new audio has been streamed.
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Services.Media.SoundService">
+            <summary>
+            Class SoundService.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.SoundService.isPlayerPrepared">
+            <summary>
+            The _is player prepared
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.SoundService.isScrubbing">
+            <summary>
+            The _is scrubbing
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.SoundService.player">
+            <summary>
+            The _player
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.StartPlayerAsyncFromAssetsFolder(Android.Content.Res.AssetFileDescriptor)">
+            <summary>
+            Starts the player asynchronous from assets folder.
+            </summary>
+            <param name="fp">The fp.</param>
+            <returns>Task.</returns>
+            <exception cref="T:System.IO.FileNotFoundException">Make sure you set your file in the Assets folder</exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.PlayAsync(System.String,System.String)">
+            <summary>
+            Plays the asynchronous.
+            </summary>
+            <param name="filename">The filename.</param>
+            <param name="extension">The extension.</param>
+            <returns>Task&lt;SoundFile&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.SetMediaAsync(System.String)">
+            <summary>
+            set media as an asynchronous operation.
+            </summary>
+            <param name="filename">The filename.</param>
+            <returns>Task&lt;SoundFile&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.GoToAsync(System.Double)">
+            <summary>
+            Goes to asynchronous.
+            </summary>
+            <param name="position">The position.</param>
+            <returns>Task.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.Play">
+            <summary>
+            Plays this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.Stop">
+            <summary>
+            Stops this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.Pause">
+            <summary>
+            Pauses this instance.
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Services.Media.SoundService.SoundFileFinished">
+            <summary>
+            Occurs when [sound file finished].
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.SoundService.Volume">
+            <summary>
+            Gets or sets the volume.
+            </summary>
+            <value>The volume.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.SoundService.CurrentTime">
+            <summary>
+            Gets the current time.
+            </summary>
+            <value>The current time.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.SoundService.IsPlaying">
+            <summary>
+            Gets a value indicating whether this instance is playing.
+            </summary>
+            <value><c>true</c> if this instance is playing; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.SoundService.CurrentFile">
+            <summary>
+            Gets the current file.
+            </summary>
+            <value>The current file.</value>
+        </member>
+        <member name="T:XLabs.Platform.Services.Network">
+            <summary>
+            Android <see cref="T:XLabs.Platform.Services.INetwork"/> implementation.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Network.InternetConnectionStatus">
+            <summary>
+            Internets the connection status.
+            </summary>
+            <returns>NetworkStatus.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Network.IsReachable(System.String,System.TimeSpan)">
+            <summary>
+            Determines whether the specified host is reachable.
+            </summary>
+            <param name="host">The host.</param>
+            <param name="timeout">The timeout.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Network.IsReachableByWifi(System.String,System.TimeSpan)">
+            <summary>
+            Determines whether [is reachable by wifi] [the specified host].
+            </summary>
+            <param name="host">The host.</param>
+            <param name="timeout">The timeout.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Network.OnReceive(Android.Content.Context,Android.Content.Intent)">
+            <summary>
+            This gets called by OS when the <see cref="F:Android.Net.ConnectivityManager.ConnectivityAction"/> <see cref="T:Android.Content.Intent"/> fires.
+            </summary>
+            <param name="context">Context for the intent.</param>
+            <param name="intent">Intent information.</param>
+        </member>
+        <member name="E:XLabs.Platform.Services.Network.ReachabilityChanged">
+            <summary>
+            Occurs when [reachability changed].
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Services.Network.Filter">
+            <summary>
+            <see cref="F:Android.Net.ConnectivityManager.ConnectivityAction"/> <see cref="T:Android.Content.Intent"/>
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Services.NfcDevice">
+            <summary>
+                Class NfcDevice.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.NfcDevice._monitor">
+            <summary>
+                The _monitor
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.NfcDevice._device">
+            <summary>
+                The _device
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.NfcDevice._published">
+            <summary>
+                The _published
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:XLabs.Platform.Services.NfcDevice"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.#ctor(Android.Nfc.NfcAdapter)">
+            <summary>
+                Initializes a new instance of the <see cref="T:XLabs.Platform.Services.NfcDevice"/> class.
+            </summary>
+            <param name="adapter">The adapter.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.CreateNdefMessage(Android.Nfc.NfcEvent)">
+            <summary>
+                Creates the ndef message.
+            </summary>
+            <param name="e">The e.</param>
+            <returns>NdefMessage.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.RegisterNfcCallback">
+            <summary>
+                Registers the NFC callback.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.UnregisterNfcCallback">
+            <summary>
+                Unregisters the NFC callback.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.PublishUri(System.Uri)">
+            <summary>
+                Publishes the URI.
+            </summary>
+            <param name="uri">The URI.</param>
+            <returns>Guid.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.Unpublish(System.Guid)">
+            <summary>
+                Unpublishes the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="P:XLabs.Platform.Services.NfcDevice.Context">
+            <summary>
+            Gets the context.
+            </summary>
+            <value>The context.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.NfcDevice.Manager">
+            <summary>
+                Gets the manager.
+            </summary>
+            <value>The manager.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.NfcDevice.SupportsNfc">
+            <summary>
+                Gets a value indicating whether [supports NFC].
+            </summary>
+            <value><c>true</c> if [supports NFC]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:XLabs.Platform.Services.NfcDevice.InRange">
+            <summary>
+                Occurs when [in range].
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Services.NfcDevice.OutOfRange">
+            <summary>
+                Occurs when [out of range].
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Services.NfcDevice.DeviceId">
+            <summary>
+                Gets the device identifier.
+            </summary>
+            <value>The device identifier.</value>
+            TODO: figure out if the NFC device has an ID or name.
+            The below method will not identify external NFC devices.
+        </member>
+        <member name="P:XLabs.Platform.Services.NfcDevice.IsEnabled">
+            <summary>
+                Gets a value indicating whether this instance is enabled.
+            </summary>
+            <value><c>true</c> if this instance is enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:XLabs.Platform.Services.NfcDevice.DeviceInRange">
+            <summary>
+                Occurs when [device in range].
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Services.NfcDevice.DeviceOutOfRange">
+            <summary>
+                Occurs when [device out of range].
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Services.NfcDevice.NfcMonitor">
+            <summary>
+                Class NfcMonitor.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.NfcDevice.NfcMonitor._deviceReference">
+            <summary>
+                The _device reference
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.NfcMonitor.#ctor(XLabs.Platform.Services.NfcDevice)">
+            <summary>
+                Initializes a new instance of the <see cref="T:XLabs.Platform.Services.NfcDevice.NfcMonitor"/> class.
+            </summary>
+            <param name="device">The device.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.NfcMonitor.OnReceive(Android.Content.Context,Android.Content.Intent)">
+            <summary>
+                This method is called when the BroadcastReceiver is receiving an Intent
+                broadcast.
+            </summary>
+            <param name="context">The Context in which the receiver is running.</param>
+            <param name="intent">The Intent being received.</param>
+            <since version="Added in API level 1" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">
+                    This method is called when the BroadcastReceiver is receiving an Intent
+                    broadcast.  During this time you can use the other methods on
+                    BroadcastReceiver to view/modify the current result values.  This method
+                    is always called within the main thread of its process, unless you
+                    explicitly asked for it to be scheduled on a different thread using
+                    <c>
+                        <see
+                            cref="M:Android.Content.Context.RegisterReceiver(Android.Content.BroadcastReceiver, Android.Content.IntentFilter, Android.Content.IntentFilter, Android.Content.IntentFilter)" />
+                    </c>
+                    . When it runs on the main
+                    thread you should
+                    never perform long-running operations in it (there is a timeout of
+                    10 seconds that the system allows before considering the receiver to
+                    be blocked and a candidate to be killed). You cannot launch a popup dialog
+                    in your implementation of onReceive().
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <b>
+                            If this BroadcastReceiver was launched through a &lt;receiver&gt; tag,
+                            then the object is no longer alive after returning from this
+                            function.
+                        </b>
+                    </format>
+                    This means you should not perform any operations that
+                    return a result to you asynchronously -- in particular, for interacting
+                    with services, you should use
+                    <c>
+                        <see cref="M:Android.Content.Context.StartService(Android.Content.Intent)" />
+                    </c>
+                    instead of
+                    <c>
+                        <see
+                            cref="M:Android.Content.Context.BindService(Android.Content.Intent, Android.Content.IServiceConnection, Android.Content.IServiceConnection)" />
+                    </c>
+                    .  If you wish
+                    to interact with a service that is already running, you can use
+                    <c>
+                        <see
+                            cref="M:Android.Content.BroadcastReceiver.PeekService(Android.Content.Context, Android.Content.Intent)" />
+                    </c>
+                    .
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    The Intent filters used in
+                    <c>
+                        <see
+                            cref="M:Android.Content.Context.RegisterReceiver(Android.Content.BroadcastReceiver, Android.Content.IntentFilter)" />
+                    </c>
+                    and in application manifests are <i>not</i> guaranteed to be exclusive. They
+                    are hints to the operating system about how to find suitable recipients. It is
+                    possible for senders to force delivery to specific recipients, bypassing filter
+                    resolution.  For this reason,
+                    <c>
+                        <see cref="M:Android.Content.BroadcastReceiver.OnReceive(Android.Content.Context, Android.Content.Intent)" />
+                    </c>
+                    implementations should respond only to known actions, ignoring any unexpected
+                    Intents that they may receive.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a
+                            href="http://developer.android.com/reference/android/content/BroadcastReceiver.html#onReceive(android.content.Context, android.content.Intent)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="P:XLabs.Platform.Services.NfcDevice.NfcMonitor.Filter">
+            <summary>
+                Gets the intent filter to use for monitoring.
+            </summary>
+            <value>The filter.</value>
+        </member>
+        <member name="T:XLabs.Platform.Services.PhoneService">
+            <summary>
+            Android Phone service implements <see cref="T:XLabs.Platform.Services.IPhoneService"/>.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.PhoneService.DialNumber(System.String)">
+            <summary>
+            Opens native dialog to dial the specified number.
+            </summary>
+            <param name="number">Number to dial.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.PhoneService.SendSMS(System.String,System.String)">
+            <summary>
+            Sends the SMS.
+            </summary>
+            <param name="to">To.</param>
+            <param name="body">The body.</param>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.Manager">
+            <summary>
+            Gets the telephony manager for Android.
+            </summary>
+            <value>The manager.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.ConnectivityManager">
+            <summary>
+            Gets the connectivity manager.
+            </summary>
+            <value>The connectivity manager.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.CellularProvider">
+            <summary>
+            Gets the cellular provider.
+            </summary>
+            <value>The cellular provider.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.ICC">
+            <summary>
+            Gets the ISO Country Code.
+            </summary>
+            <value>The ISO Country Code.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.MCC">
+            <summary>
+            Gets the Mobile Country Code.
+            </summary>
+            <value>The Mobile Country Code.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.MNC">
+            <summary>
+            Gets the Mobile Network Code.
+            </summary>
+            <value>The Mobile Network Code.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.IsCellularDataEnabled">
+            <summary>
+            Gets a value indicating whether this instance has cellular data enabled.
+            </summary>
+            <value>Null if value cannot be determined, otherwise the status of cellular data.</value>
+            <remarks>This feature will require the following Android permissions:
+            - android.permission.INTERNET
+            - android.permission.ACCESS_NETWORK_STATE
+            Please set them in the AndroidManifest.xml file.</remarks>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.IsCellularDataRoamingEnabled">
+            <summary>
+            Gets a value indicating whether this instance has cellular data roaming enabled.
+            </summary>
+            <value>Null if value cannot be determined, otherwise the status of cellular data roaming.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.IsNetworkAvailable">
+            <summary>
+            Gets a value indicating whether network is available.
+            </summary>
+            <value>The network availability.</value>
+            <remarks>This feature will require the following Android permissions:
+            - android.permission.INTERNET
+            - android.permission.ACCESS_NETWORK_STATE
+            Please set them in the AndroidManifest.xml file.</remarks>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.CanSendSMS">
+            <summary>
+            Gets whether the service can send SMS
+            </summary>
+            <value><c>true</c> if this instance can send SMS; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:XLabs.Platform.Services.Reachability">
+            <summary>
+            Class Reachability.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Reachability.IsNetworkAvailable">
+            <summary>
+            Determines whether [is network available].
+            </summary>
+            <returns><c>true</c> if [is network available]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Reachability.InternetConnectionStatus">
+            <summary>
+            Internets the connection status.
+            </summary>
+            <returns>NetworkStatus.</returns>
+        </member>
+        <member name="P:XLabs.Platform.Services.Reachability.ConnectivityManager">
+            <summary>
+            Gets the connectivity manager.
+            </summary>
+            <value>The connectivity manager.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Reachability.IsActiveNetworkWifi">
+            <summary>
+            Gets a value indicating whether this instance is active network wifi.
+            </summary>
+            <value><c>true</c> if this instance is active network wifi; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:XLabs.Platform.Services.SharedPreferencesStorage">
+            <summary>
+            Implements <see cref="T:XLabs.Platform.Services.ISecureStorage"/> for Android using <see cref="T:Android.Content.ISharedPreferences"/>.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.SharedPreferencesStorage.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Services.SharedPreferencesStorage"/> class.
+            </summary>
+            <param name="preferenceKey">Preferences key to use.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.SharedPreferencesStorage.Store(System.String,System.Byte[])">
+            <summary>
+            Stores data.
+            </summary>
+            <param name="key">Key for the data.</param>
+            <param name="dataBytes">Data bytes to store.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.SharedPreferencesStorage.Retrieve(System.String)">
+            <summary>
+            Retrieves stored data.
+            </summary>
+            <param name="key">Key for the data.</param>
+            <returns>Byte array of stored data.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.SharedPreferencesStorage.Delete(System.String)">
+            <summary>
+            Deletes data.
+            </summary>
+            <param name="key">Key for the data to be deleted.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.SharedPreferencesStorage.Contains(System.String)">
+            <summary>
+            Checks if the storage contains a key.
+            </summary>
+            <param name="key">The key to search.</param>
+            <returns>True if the storage has the key, otherwise false.</returns>
+        </member>
+        <member name="T:XLabs.Platform.Services.TextToSpeechService">
+            <summary>
+                The text to speech service implements <see cref="T:XLabs.Platform.Services.ITextToSpeechService"/> for Android.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.TextToSpeechService.OnInit(Android.Speech.Tts.OperationResult)">
+            <summary>
+                Implementation for <see cref="M:Android.Speech.Tts.TextToSpeech.IOnInitListener.OnInit(Android.Speech.Tts.OperationResult)"/>.
+            </summary>
+            <param name="status">
+                The status.
+            </param>
+        </member>
+        <member name="M:XLabs.Platform.Services.TextToSpeechService.Speak(System.String,System.String)">
+            <summary>
+            The speak.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="language">The language.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.TextToSpeechService.GetInstalledLanguages">
+            <summary>
+                Get installed languages.
+            </summary>
+            <returns>
+                The installed language names.
+            </returns>
+        </member>
+        <member name="T:XLabs.Platform.Services.IO.FileManager">
+            <summary>
+            Class FileManager.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.IO.FileManager.isolatedStorageFile">
+            <summary>
+            The isolated storage file
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.#ctor">
+            <summary>
+            Initialized new instance of <see cref="T:XLabs.Platform.Services.IO.FileManager"/> using user store for application.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.#ctor(System.IO.IsolatedStorage.IsolatedStorageFile)">
+            <summary>
+            Initialized new instance of <see cref="T:XLabs.Platform.Services.IO.FileManager"/>.
+            </summary>
+            <param name="isolatedStorageFile">Isolated storage file to use.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.DirectoryExists(System.String)">
+            <summary>
+            Directories the exists.
+            </summary>
+            <param name="path">The path.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.CreateDirectory(System.String)">
+            <summary>
+            Creates the directory.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.OpenFile(System.String,XLabs.Platform.Services.IO.FileMode,XLabs.Platform.Services.IO.FileAccess)">
+            <summary>
+            Opens the file.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="mode">The mode.</param>
+            <param name="access">The access.</param>
+            <returns>Stream.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.OpenFile(System.String,XLabs.Platform.Services.IO.FileMode,XLabs.Platform.Services.IO.FileAccess,XLabs.Platform.Services.IO.FileShare)">
+            <summary>
+            Opens the file.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="mode">The mode.</param>
+            <param name="access">The access.</param>
+            <param name="share">The share.</param>
+            <returns>Stream.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.FileExists(System.String)">
+            <summary>
+            Files the exists.
+            </summary>
+            <param name="path">The path.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.GetLastWriteTime(System.String)">
+            <summary>
+            Gets the last write time.
+            </summary>
+            <param name="path">The path.</param>
+            <returns>DateTimeOffset.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.DeleteFile(System.String)">
+            <summary>
+            Deletes the file.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.DeleteDirectory(System.String)">
+            <summary>
+            Deletes the directory.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.CopyDirectory(System.IO.DirectoryInfo,System.IO.DirectoryInfo)">
+            <summary>
+            Copies a directory to another.
+            </summary>
+            <param name="source">Source directory.</param>
+            <param name="destination">Destination directory. Created when necessary.</param>
+            <exception cref="T:System.ArgumentException">Source directory does not exist</exception>
+            <exception cref="T:System.ArgumentException">Exception is thrown if source directory doesn't exist.</exception>
+        </member>
+    </members>
+</doc>

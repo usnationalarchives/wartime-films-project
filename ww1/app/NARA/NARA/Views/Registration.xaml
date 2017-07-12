@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             xmlns:custom="clr-namespace:NARA;assembly=NARA"
+             x:Class="NARA.Registration">
+
+    <ScrollView x:Name="scrollView_Main" Orientation="Vertical" BackgroundColor="#1d1d1d">
+        <StackLayout VerticalOptions="FillAndExpand" x:Name="stack_ForAndroid" Orientation="Vertical">
+            <RelativeLayout x:Name="main">
+                <StackLayout x:Name="grid_All" Orientation="Vertical">
+                    <ContentView Padding="0,0,0,0">
+                        <StackLayout  Orientation="Horizontal" x:Name="icons">
+                            <Image x:Name="img_Previous" Source="previous.png" WidthRequest="60" Aspect="AspectFit" Opacity="0.6"></Image>
+
+                            <ContentView Padding="0,0,55,0" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                                <Label x:Name="lbl_TermsPopup" Text="Privacy and Use Policies" IsVisible="false" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" TextColor="#559FE3"></Label>
+                            </ContentView>
+
+                            <Grid x:Name="grid_Cancel" VerticalOptions="CenterAndExpand" Padding ="0,0,55,0" RowSpacing="3" ColumnSpacing="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"></RowDefinition>
+                                    <!--<RowDefinition Height="3"></RowDefinition>-->
+                                </Grid.RowDefinitions>
+
+                                <custom:LabelCustom LetterSpacing="1" IsVisible="false" BorderWidth="3" WidthRequest="75" HeightRequest = "25" BorderRadius="8" BorderColor="#E0665E" VerticalOptions="CenterAndExpand" Grid.Row="0" TextColor="White" x:Name="btn_Cancel" Text="CANCEL"></custom:LabelCustom>
+                                <!--<BoxView BackgroundColor="Transparent" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></BoxView>-->
+                                <!--<Button VerticalOptions="CenterAndExpand" WidthRequest="75" HeightRequest="25" Grid.Row="0" FontSize="17" BackgroundColor="#E0665E" BorderRadius="8" TextColor="White" x:Name="btn_Cancel" Text="CANCEL"></Button>-->
+                            </Grid>
+
+                        </StackLayout>
+                    </ContentView>
+
+                    <Grid x:Name="cv_Title" Padding="0,0,0,20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"></RowDefinition>
+                            <RowDefinition Height="70"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Label x:Name="lbl_Header" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" FontSize="36" FontFamily = "Orpheus Pro" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center" Text="Create your profile" ></Label>
+                    </Grid>
+
+                    <!--<Grid VerticalOptions="FillAndExpand" x:Name="grid_StackHolder" HorizontalOptions="FillAndExpand">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+          </Grid.ColumnDefinitions>-->
+
+                    <!--<StackLayout Orientation="Vertical"  x:Name="stack_loading" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    -->
+                    <!--<ActivityIndicator x:Name="loading_Indicator" VerticalOptions="EndAndExpand" Color="White" IsRunning="False"></ActivityIndicator>-->
+                    <!--
+                    <Label x:Name="lbl_Result" FontSize="25" FontFamily="TrebuchetMS" TextColor="White" HorizontalTextAlignment="Center" VerticalOptions="StartAndExpand" HorizontalOptions="Center"></Label>
+                </StackLayout>-->
+
+
+                    <StackLayout x:Name="stack_Overlay" Spacing="0" Padding="0,0,0,0" Orientation="Vertical">
+
+
+
+                        <StackLayout x:Name="stack_SocialHolder" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Padding="0,0,0,60">
+                            <RelativeLayout>
+                                <Button x:Name="btn_Facebook" Text="SIGN UP WITH FACEBOOK" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent, 
+                                                                                    Property=Width,
+                                                                                    Factor=0.05}" TextColor="White" BorderRadius="20" BackgroundColor="#3B5998"></Button>
+
+                                <Image Source="facebook2.png" HeightRequest="35" WidthRequest="35" RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent, 
+                                                                                    Property=Width,
+                                                                                    Factor=0.07}"
+                                            RelativeLayout.YConstraint= "{ConstraintExpression Type=RelativeToParent, 
+                                                  Property=Height,
+                                                  Factor=0.08}">
+                                </Image>
+                            </RelativeLayout>
+                            <!--<Button x:Name="btn_Google" Text="SIGN UP WITH GOOGLE+" VerticalOptions="StartAndExpand" BackgroundColor="Red" TextColor="White" BorderRadius="20"></Button>-->
+
+                        </StackLayout>
+
+
+                        <StackLayout x:Name="stack_Forms" BackgroundColor="#343434" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand"></StackLayout>
+
+
+                        <!--<Grid VerticalOptions="FillAndExpand" x:Name="grid_CenterHolder" HorizontalOptions="CenterAndExpand">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="30"></RowDefinition>
+                            <RowDefinition Height="1*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <BoxView VerticalOptions="FillAndExpand" Grid.Row="0" HorizontalOptions="CenterAndExpand" WidthRequest="1" BackgroundColor="#717171"></BoxView>
+                        <Label Grid.Row="1" TextColor="#717171" Text="or" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"></Label>
+                        <BoxView VerticalOptions="FillAndExpand" Grid.Row="2" HorizontalOptions="CenterAndExpand" WidthRequest="1" BackgroundColor="#717171"></BoxView>
+                    </Grid>-->
+
+
+
+                        <!--</Grid>-->
+
+                    </StackLayout>
+                </StackLayout>
+            </RelativeLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

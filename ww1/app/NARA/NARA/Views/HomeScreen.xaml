@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NARA.HomeScreen">
+
+
+
+  <RelativeLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#1d1d1d" x:Name="rl_Main">
+    
+  </RelativeLayout>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!--<Grid BackgroundColor="#1d1d1d" IsVisible="False" RowSpacing="0" Padding="20,20,20,20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="0.5*"></ColumnDefinition>
+      <ColumnDefinition Width="0.5*"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+
+
+    <ContentView Padding="0,20,0,30" Grid.Row="0" Grid.ColumnSpan="2">
+      <Label Text="NARA" x:Name="lbl_Header" FontSize="40" TextColor="White" HorizontalTextAlignment="Center">
+      </Label>
+    </ContentView>
+
+    <ContentView x:Name="cv_Link1" Grid.Row="1" Grid.ColumnSpan="2">
+      <Button x:Name="btn_Link1" TextColor="White"  BackgroundColor="#1d1d1d" Text="Collections view"></Button>
+    </ContentView>
+    
+    <BoxView Grid.Row="2" HeightRequest="3" Grid.ColumnSpan="2" BackgroundColor="#E0665E"></BoxView>
+
+    <ContentView x:Name="cv_Link2" Grid.Row="3" Grid.ColumnSpan="2">
+      <Button x:Name="btn_Link2" Grid.Row="3" TextColor="White"  BackgroundColor="#1d1d1d" Grid.ColumnSpan="2" Text="Editor"></Button>
+    </ContentView>
+    
+    <BoxView Grid.Row="4" HeightRequest="3" Grid.ColumnSpan="2" BackgroundColor="#E0665E"></BoxView>
+
+  </Grid>-->
+
+
+
+</ContentPage>

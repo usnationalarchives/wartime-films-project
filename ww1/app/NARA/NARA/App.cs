@@ -1,7 +1,10 @@
 ﻿using NARA.Common_p.Model;
+using NARA.Util;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Text;
 
 using Xamarin.Forms;
@@ -12,14 +15,14 @@ namespace NARA
     {
         public static NavigationPage mainPage = new NavigationPage();
         public static byte[] LoaderImageInByteArray { get; set; }
+        public static Stopwatch sw = new Stopwatch();
         public App()
         {
+            LoaderImageInByteArray = Convert.FromBase64String(Base64Loader);
             mainPage = new NavigationPage(new HomeScreen()) { BarBackgroundColor = Color.FromHex("#1d1d1d"), BarTextColor = Color.White, BackgroundColor = Color.FromHex("#1d1d1d") };
             NavigationPage.SetHasNavigationBar(mainPage, false);
             MainPage = mainPage;
-            DependencyService.Get<IPlatformSpecific>().SaveText("", false);
-
-            LoaderImageInByteArray = Convert.FromBase64String(Base64Loader);
+            //DependencyService.Get<IPlatformSpecific>().SaveText("", false);
         }
 
         static string _Token;

@@ -19,7 +19,7 @@ namespace NARA.Util
     }
     public static class NaraTools
     {
-        public static Environments Environment { get { return Environments.Production; } }
+        public static Environments Environment { get { return Environments.Testing; } }
         public static byte[] LoaderInByteArray { get; set; }
         public static string SelectedFont
         {
@@ -179,11 +179,13 @@ namespace NARA.Util
 
             }
         }
+
         /// <summary>
         /// //Reads stream and return a byte array of the selected image
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
+
         public static byte[] ReadFully(Stream input)
         {
             using (MemoryStream ms = new MemoryStream())
@@ -193,7 +195,7 @@ namespace NARA.Util
             }
         }
         public static string Token { get; set; }
-        public static int ContentIntervalCheck { get { return 120; } }
+        public static int ContentIntervalCheck { get { return 480; } }
         public static bool LogingEnabled { get { return false; } }
     }
 }

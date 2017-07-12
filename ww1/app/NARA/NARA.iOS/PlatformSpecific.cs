@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using NARA.iOS.Util;
 using NARA.Util;
+using UIKit;
+using WebKit;
+using AssetsLibrary;
 
 [assembly: Dependency(typeof(PlatformSpecific))]
 namespace NARA.iOS
@@ -151,5 +154,90 @@ namespace NARA.iOS
             }
             catch { return ""; }
         }
+
+        public void SavePictureToDisk(string filename, byte[] imageData, WebViewCustom webView, bool isImage = true, string url = "")
+        {
+            try
+            {
+                if (isImage)
+                {
+                    var chartImage = new UIImage(NSData.FromArray(imageData));
+                    chartImage.SaveToPhotosAlbum((image, error) =>
+                    {
+                        //you can retrieve the saved UI Image as well if needed using
+                        //var i = image as UIImage;
+                        if (error != null)
+                        {
+                            Console.WriteLine(error.ToString());
+                            webView.InvokeShowMessage(false);
+                        }
+                        else
+                        {
+                            webView.InvokeShowMessage(true);
+                        }
+                    });
+                }
+                else
+                {
+                    var lib = new ALAssetsLibrary();
+                    NSError err = null;
+                    NSData data = new NSData(Convert.ToBase64String(imageData), NSDataBase64DecodingOptions.None);
+                    if (data.Save(filename, false, out err))
+                    {
+                        webView.InvokeShowMessage(true);
+                    }
+                    else
+                    {
+                        webView.InvokeShowMessage(false);
+                    }
+                    //lib.WriteVideoToSavedPhotosAlbum(new NSUrl(url), (t, u) =>
+                    //{
+
+                    //    if (u != null)
+                    //    {
+                    //        Console.WriteLine(u.ToString());
+                    //        webView.InvokeShowMessage(false);
+                    //    }
+                    //    else
+                    //    {
+                    //        webView.InvokeShowMessage(true);
+                    //    }
+
+                    //});
+                }
+            }
+            catch (Exception e)
+            {
+                webView.InvokeShowMessage(false);
+            }
+        }
+
+        public void SaveImage(string p_Filename, string p_Url, WebViewCustom webView)
+        {
+            try
+            {
+                var webClient = new WebClient();
+                
+                webClient.DownloadDataAsync(new System.Uri(p_Url));
+                webClient.DownloadDataCompleted += (s, e) =>
+                {
+                    var bytes = e.Result; // get the downloaded data
+                    //if (p_Url.Contains("vimeo"))
+                    //{
+                    //    SavePictureToDisk(p_Filename, bytes, webView, false, p_Url);
+                    //}
+                    //else
+                    //{
+                        SavePictureToDisk(p_Filename, bytes, webView);
+                    //}
+                };
+
+            }
+            catch (Exception e)
+            {
+                webView.InvokeShowMessage(false);
+            }
+        }
+
     }
 }

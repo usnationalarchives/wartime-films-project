@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:nara="clr-namespace:NARA;assembly=NARA"
+             x:Class="NARA.TeachersPage" BackgroundColor="#1d1d1d">
+
+    <RelativeLayout x:Name="rl_Main">
+
+        <ContentView Padding="0,0,0,0">
+            <StackLayout  Orientation="Horizontal" x:Name="icons">
+                <Image x:Name="img_Previous" Source="previous.png" WidthRequest="60" Aspect="AspectFit" Opacity="0.6"></Image>
+            </StackLayout>
+        </ContentView>
+
+
+        <StackLayout Grid.Column="0" RelativeLayout.WidthConstraint = "{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.25}" 
+                     RelativeLayout.YConstraint= "{ConstraintExpression Type=Constant,Constant=60}">
+            <!--<ContentView  Padding="30,20,0,20">
+                <Label Text="About" FontFamily="Orpheus Pro" TextColor="White" FontSize="60"></Label>
+            </ContentView>-->
+            <ScrollView x:Name="scrollView_Navigation" VerticalOptions="Start" IsClippedToBounds="True">
+                <StackLayout Spacing="0" Padding="0,0,25,0" VerticalOptions="Start">
+
+                    <!--<BoxView x:Name="bv_OverView" Grid.Column="0" Grid.Row="0" VerticalOptions="Fill" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <BoxView Grid.Column="0" Grid.Row="0" VerticalOptions="Fill" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <BoxView Grid.Column="0" Grid.Row="1" VerticalOptions="Fill" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <BoxView Grid.Column="0" Grid.Row="2" VerticalOptions="Fill" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <BoxView Grid.Column="0" Grid.Row="3" VerticalOptions="Fill" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <BoxView Grid.Column="0" Grid.Row="4" VerticalOptions="Fill" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <BoxView Grid.Column="0" Grid.Row="5" VerticalOptions="Fill" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <BoxView Grid.Column="0" Grid.Row="6" VerticalOptions="Fill" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <BoxView Grid.Column="0" Grid.Row="7" VerticalOptions="Fill" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <BoxView Grid.Column="0" Grid.Row="8" VerticalOptions="Fill" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <BoxView Grid.Column="0" Grid.Row="9" VerticalOptions="Fill" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <BoxView Grid.Column="0" Grid.Row="9" VerticalOptions="Fill" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>-->
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="0,0,0,10">
+                        <BoxView x:Name="bv_OverView" VerticalOptions="FillAndExpand" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_Overview" Text="Overview" FontSize="16" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="0,0,0,10">
+                        <BoxView VerticalOptions="FillAndExpand" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_ForTeachersStudents" Text="Is this app primarily for teachers or for students?" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="0,0,0,10">
+                        <BoxView VerticalOptions="FillAndExpand" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_WhatType" Text="What type of primary sources can I browse and use in my collections?" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="0,0,0,10">
+                        <BoxView     VerticalOptions="FillAndExpand" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_WhatKind" Text="What kind of collections are in the app?" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="0,0,0,10">
+                        <BoxView     VerticalOptions="FillAndExpand" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_Register" Text="Do I have to register to use the app?" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="0,0,0,10">
+                        <BoxView     VerticalOptions="FillAndExpand" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_Explore" Text="How can I explore the app?" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="0,0,0,10">
+                        <BoxView     VerticalOptions="FillAndExpand" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_Favoriting" Text="Favoriting" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="0,0,0,10">
+                        <BoxView     VerticalOptions="FillAndExpand" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_CreateAndAdd" Text="How do I create and add to a collection?" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="0,0,0,10">
+                        <BoxView     VerticalOptions="FillAndExpand" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_EditCollection" Text="How do I edit my collection?" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="0,0,0,10">
+                        <BoxView     VerticalOptions="FillAndExpand" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_Downloading" Text="Downloading" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="0,0,0,10">
+                        <BoxView     VerticalOptions="FillAndExpand" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_AddingToNotes" Text="Adding items to your notes" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0">
+                        </Label>
+
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="0,0,0,10">
+                        <BoxView     VerticalOptions="FillAndExpand" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_Downloads" Text="Downloads and additional activities on DocsTeach" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0">
+                        </Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="0,0,0,10">
+                        <BoxView     VerticalOptions="FillAndExpand" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_Discuss" Text="Discuss the app with other educators" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0">
+                        </Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" IsVisible="False">
+                        <BoxView x:Name="bv_ContactUs" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_ContactUs" Text="Contact us" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+
+        <ScrollView x:Name="scrollView_Main" Orientation="Vertical"  VerticalOptions="FillAndExpand" HeightRequest="60" RelativeLayout.WidthConstraint = "{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.58}" RelativeLayout.HeightConstraint = 
+                        "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.2}">
+
+            <StackLayout x:Name="stack_Outer" VerticalOptions="FillAndExpand">
+
+                <StackLayout Grid.Row="1" Grid.Column="0" x:Name="stack_Text" VerticalOptions="FillAndExpand">
+                    <ContentView  Padding="40,20,10,20">
+                        <Label x:Name="lbl_ForTeachers" Text="For Teachers" FontFamily="Orpheus Pro" TextColor="White" FontSize="60"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label x:Name="lbl_Text2" Text="Intended in part for classroom instruction, this app provides teachers with the digital sources and narrative-building tools that will help foster an understanding of the multifaceted topic of World War I. With this app you will be able to create collections in a way that complements your existing resources. And you're free to reuse  all available partner content." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand" x:Name="cv_WhatFor">
+                        <Label Text="What can I use the app for?" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="The core of what we want the app to do is gather collections together in a way that people can tell stories. Using this app, teachers will be able to create collections using featured WWI films and images, interweaving personalized text to tell the stories of a local training camp or to trace the movements of a regiment. " FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="There are no pre-made activities or lessons within this app—see our DocsTeach resource at the bottom of this page—but we've provided the basic tools for creating collections in a way that highlights the rarely seen WWI content being digitized by the National Archives, and allows you as teachers to formulate relevant historical questions. This focus on the reuse and enrichment of primary sources allows for flexibility in creating new historical narratives." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <!--<ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="A spotlight on geography" FontAttributes="Italic" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="All content added to this app must have a location attributed to it, whether that is a state, region, or even country. By adding a geo-spatial element to this primary source content, you can help students view the war through a geographical lens, exploring the global reaches of the war and its different arenas. In addition, this gives teachers the option of exploring or adding more localized content, and spotlighting on community WWI stories." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>-->
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand" x:Name="TeachersStudents">
+                        <Label Text="Is this app primarily for teachers or for students?" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label FontFamily="TrebuchetMS" TextColor="White" FontSize="20" Text="When asking teachers how they would use this app in the classroom, they recommended that the teachers themselves use the app to curate collections and have students explore what they've created. Considering the time restraints in teaching WWI, this option allows teachers to first and foremost focus on content. Another option for teachers who would like to see their students more involved with collection creation is to create collections with vetted primary sources that students can then use to create their own collections.">
+                            <!--<Label.FormattedText>
+                <FormatedString>
+                  <Span Text="When asking teachers how they would use this app in the classroom, the easiest route suggested was "></Span>
+                  <Span Text="for teachers themselves to use the app to curate collections and have students explore what they’ve created." FontAttributes="Bold"></Span>
+                  <Span Text="Considering the time restraints in teaching WWI, this option allows teachers to first and foremost focus on content. Another option for teachers who would like to see their students more involved with collection-creation is to create collections with vetted primary sources that students can then use to create their own collections."></Span>
+                </FormatedString>
+              </Label.FormattedText>-->
+                        </Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand" x:Name="cv_WhatTypeOfPrimary">
+                        <Label Text="What type of primary sources can I browse and use in my collections?" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="A majority of the primary source content within the app is from two of the National Archives' major WWI repositories: Historical Films, ca. 1914–ca. 1936 and the American Unofficial Collection of World War I Photographs, 1917–1918.  We have also segmented the films into short clips to take advantage of varying subject matter and geographical locations. All sources can be enlarged to more closely examine details, and you may reuse any of this content in your own collections and share it with your students." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <!--<ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="We have grouped a number of these sources into searchable thematic collections for inspiration, informed by WWI themes that our teacher focus groups would like to see surfaced in the app. These speak to diversity in people and places, with subjects including:" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>-->
+
+                    <!--<ContentView Padding="40,0,10,20" VerticalOptions="FillAndExpand">
+            <StackLayout>
+              <Label Text="- Nationalism	" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+              <Label Text="- Women’s roles	" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+              <Label Text="- Imperialism	" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+              <Label Text="- Minority roles  	" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+              <Label Text="- Colonialism 	" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+              <Label Text="- Revolution (technological, political, social)	" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+              <Label Text="- Wartime propaganda 	" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+            </StackLayout>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="In addition to film and photographic sources, you may also add images of objects, letters, etc. to further enrich the story being told." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>-->
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand" x:Name="cv_WhatKindOfColl">
+                        <Label Text="What kind of collections are in the app?" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView x:Name="cv1" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img1" BorderColor="White" BorderWidth="2" Source="archiveview.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="A snapshot of the Collections within the app." FontAttributes="Italic" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="National Archives and partner resources have been grouped into thematic collections, featured in the 'Collections' section of app for inspiration and organized by popularity. These materials have brief descriptions and are organized by some WWI themes that our teacher focus groups would like to see in the app, including: " FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,5" VerticalOptions="StartAndExpand">
+                        <Label Text="● Nationalism" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,5" VerticalOptions="StartAndExpand">
+                        <Label Text="● Women's roles" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,5" VerticalOptions="StartAndExpand">
+                        <Label Text="● Volunteerism on the homefront" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,5" VerticalOptions="StartAndExpand">
+                        <Label Text="● Minority roles" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,5" VerticalOptions="StartAndExpand">
+                        <Label Text="● Colonialism" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,5" VerticalOptions="StartAndExpand">
+                        <Label Text="● New technologies" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,5" VerticalOptions="StartAndExpand">
+                        <Label Text="● Revolution (technological, political, social)" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="● Wartime propaganda" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand" x:Name="cv_DoIHaveToRegister">
+                        <Label Text="Do I have to register to use the app?" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="In order to start creating collections, you must first register an account by choosing 'Sign-Up' from the Welcome screen. You may use an email, or an existing Facebook login. To make it easier to indicate that you are participating as part of a class, we recommend signing-up with an email address in order to personalize the name of your account (e.g. 'John Doe's History Class')." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Upon sign-up, you will also be able to indicate that you are a teacher by checking the box next to I'm a teacher. This will allow users to filter by user type within the 'Curators' section of the app, so you can separate out collections created by fellow teachers." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="You are also free to explore the app and use the share link on each item without registering." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand" x:Name="cv_HowToExplore">
+                        <Label Text="How can I explore the app?" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Collections: Themed collections of items, created by the National Archives. Also includes a few collections from our institutional partners. Click 'View Slideshow' to view enlarged versions of images, or double-tap on images in the collection list to enlarge them. " FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Topics: Existing content is grouped according to major themes in WWI." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Curators: All app users. To view collections created by other teachers, use the filter found on the left-hand sidebar." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Tags: All Archives and partner content uploaded into the app is tagged as much as possible to  allow you to make connections to major WWI themes or geographic areas. Tags are arranged in this section alphabetically. You can also find these tags under each item in the app and use them as an additional way of navigating to similar content." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Search bar: Use the search bar at the top of the Archive page to search each of the these four sections as well as individual items. " FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+
+                    <ContentView x:Name="cv2" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img2" BorderColor="White" BorderWidth="2" Source="search2.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="Using the search bar at the top of the Archive page" FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand" x:Name="cv_Favoriting">
+                        <Label Text="Favoriting" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Sign in to favorite collections that you want to return to later by clicking the star symbol on a collection page. You can find your list of favorites on the My Collections page." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+
+
+                    <ContentView x:Name="cvFavoriting" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img22" BorderColor="White" BorderWidth="2" Source="favoriting.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="Favoriting a collection by clicking the star on any collection landing screen" FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand" x:Name="cv_HowToCreate">
+                        <Label Text="How do I create and add to a collection?" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Create a collection by visiting the 'My Collections' page when logged in (via your profile icon) and clicking 'Add Collection.'" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView x:Name="cv3" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img3" BorderColor="White" BorderWidth="2" Source="mycollections.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="Getting to the My Collections page by clicking your profile icon." FontAttributes="Italic" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+
+
+                    <ContentView x:Name="cv4" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img4" BorderColor="White" BorderWidth="2" Source="profile.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="The Add Collection button on the My Collections Page." FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Use the available tools on the edit page to add chapters, new captions to existing app content, and other narrative text." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+
+                    <ContentView x:Name="cv5" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img5" BorderColor="White" BorderWidth="2" Source="editor.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="The collection edit page. Get started by adding a Collection title and chapter, then add app items or additional chapters using the button at the bottom of the page. You can delete items or chapters at any time once these are added. " FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="You can also create a new collection or add any item within the app to one of your existing collections by clicking the plus sign on any item." TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+
+                    <ContentView x:Name="cv6" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img6" BorderColor="White" BorderWidth="2" Source="plussign.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="Click the plus sign on any item in the app to add it to your collection, or create a new collection with that item." FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+
+
+                    <ContentView x:Name="cv7" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img7" BorderColor="White" BorderWidth="2" Source="addcollection111.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="Pop-up menu to save an item to a collection." FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand" x:Name="cv_HowDoIEdit">
+                        <Label Text="How do I edit my collection?" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="From the 'My Collections' page, click on the collection you want to edit, and click 'Edit' in the top right-hand corner." TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Make your collection 'Private' at any time while you work on it, and make it 'Public' when you're ready to share it." TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+
+
+                    <ContentView x:Name="cv8" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img8" BorderColor="White" BorderWidth="2" Source="coverpage.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="From within your collections, the buttons to make your collection 'Private' or 'Public' and to 'Edit.'" FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand" x:Name="cv_Downloading">
+                        <Label Text="Downloading" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Tap on the download icon on any item in slideshow mode to download it to your tablet." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView x:Name="cv55" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img1123" BorderColor="White" BorderWidth="2" Source="downloading.png" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="The download icon" FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+
+
+
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand" x:Name="cv_Adding">
+                        <Label Text="Adding items to your notes" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Tap on the 'Share icon' use the iOS or Android controls to select 'Add to Notes' or 'Memo' feature to start a list of items you might add to a collection." TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView x:Name="cv9" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img9" BorderColor="White" BorderWidth="2" Source="notes1.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="The 'Share' button (right) and the 'Add to Notes' feature in the share pop-out. If you have the Twitter and Facebook apps installed on your tablet, these will appear as share options as well." FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand" x:Name="cv_Downloads">
+                        <Label Text="Downloads and additional activities on DocsTeach: " TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="A large selection of the National Archives content that we're adding to the app will also be added to DocsTeach, our online resource that helps all learners to discover and use the vast amount of primary sources preserved by the Archives. On DocTeach's WWI resource page, you have the option of choosing additional classroom activities that focus on developing historical thinking skills. If time permits, we recommend supplementing your collection creation and narrative building within the app with one or more of DocsTeach's useful primary source–focused activities." TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="DocsTeach also gives you the ability to directly download these selected primary sources." TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+
+                    <ContentView x:Name="cv10" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img10" BorderColor="White" BorderWidth="2" Source="forum.png" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="WWI Portal on docsteach.org" FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand" x:Name="cv_Discuss">
+                        <Label Text="Discuss the app with other educators" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="We have provided a space on NARA's History Hub where you can connect with other educators using the app, and discuss methods for best using the app within the classroom. Also, this is a space to ask general questions, report bugs, and more." TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+
+                    <!--<ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Tap on the “Share icon” use the iOS or Android controls to select “Add to Notes” or “Memo” feature to start a list of items you might add to a collection." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Sharing and adding items to your notes" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Each item has a Share button, where you will have access to a suite of iOS sharing tools. One option that you have here is to add an item to the Notes section of your iPad, where you might start to create sample collections and jot down useful information relevant to classroom instruction." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Presenting" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="All content within the app is available in slideshow mode, which is a useful method of presenting the collections you create to your students." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Discuss the app with other educators" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="We have provided a space on NARA’s History Hub where you can connect with other educators using the app, and discuss methods for best utilizing the app within the classroom. Also, this is a space to ask general questions, report bugs, and more." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Additional resources:" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Much of the NARA content that we’re adding to the app will also be added to NARA’s DocsTeach, so that you have the option of utilizing additional classroom activities focusing on developing historical thinking skills." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>-->
+
+                    <!--<ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label x:Name="lbl_Link2" Text="https://www.docsteach.org/topics/wwi" FontFamily="TrebuchetMS" TextColor="#559FE3" FontSize="20"></Label>
+          </ContentView>-->
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label x:Name="lbl_Link1" Text="https://historyhub.archives.gov/groups/remembering-ww1" FontFamily="TrebuchetMS" TextColor="#559FE3" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label x:Name="lbl_Link2" Text="" FontFamily="TrebuchetMS" TextColor="#559FE3" FontSize="20"></Label>
+                    </ContentView>
+
+
+                    <nara:LabelCustom HorizontalOptions="Center" WidthRequest="220" Margin="0,50,0,40"  Grid.Column="0" FontSize="15" x:Name="lbl_SignInOnBottom" Text="SIGN UP FOR FREE" LetterSpacing="1" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="46" BorderWidth="2" BorderRadius="23" BorderColor="#E0665E" BackgroundColor="Transparent"></nara:LabelCustom>
+                    
+                </StackLayout>
+
+
+                <!--<Grid Grid.Column="1" Padding="0,50,0,0" x:Name="grid_Logos" Grid.Row="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="120"></RowDefinition>
+            <RowDefinition Height="250"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="170"></RowDefinition>
+          </Grid.RowDefinitions>
+
+          <ContentView Padding="40,70,10,0" Grid.Row="0">
+            <Label Text="COORDINATED BY"  VerticalOptions="Center" HorizontalOptions="Center" FontFamily="TrebuchetMS" TextColor="#e0665e" FontSize="20"></Label>
+          </ContentView>
+
+
+          <ContentView Padding="40,10,10,20" Grid.Row="1">
+            <Image VerticalOptions="CenterAndExpand" Source="bs1.png" Aspect="AspectFit" ></Image>
+          </ContentView>
+
+
+          <ContentView Padding="40,20,10,20" Grid.Row="2">
+            <Label Text="IN PARTNERSHIP WITH" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="TrebuchetMS" TextColor="#e0665e" FontSize="20"></Label>
+          </ContentView>
+
+
+          <ContentView Grid.Row="3">
+
+            <ContentView Padding="40,20,10,20" Grid.Row="1">
+              <Image Source="bs2.png" Aspect="AspectFit"></Image>
+            </ContentView>
+
+          </ContentView>
+          
+          <ContentView Padding="0,20,0,20" Grid.Row="4">
+            <StackLayout HorizontalOptions="CenterAndExpand" Spacing="50">
+              <Image Source="national.png" HorizontalOptions="CenterAndExpand" WidthRequest="200" Opacity="0.8" Aspect="AspectFit"></Image>
+              <Image Source="centennialLogo.png" HorizontalOptions="CenterAndExpand" WidthRequest="200" Opacity="0.8" Aspect="AspectFit"></Image>
+              <Image Source="AASLHLogo.png" HorizontalOptions="CenterAndExpand" WidthRequest="200" Opacity="0.8" Aspect="AspectFit"></Image>
+            </StackLayout>
+          </ContentView>
+
+        </Grid>-->
+            </StackLayout>
+
+        </ScrollView>
+
+
+        <StackLayout x:Name="upperToolbar" HorizontalOptions="End" Padding="0,10,10,0" RelativeLayout.WidthConstraint = "{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.22}" RelativeLayout.HeightConstraint = 
+                        "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.78}">
+
+            <Grid HorizontalOptions="End">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <nara:LabelCustom HorizontalOptions="End" Grid.Column="0" FontSize="15" x:Name="lbl_SignIn" Text="SIGN IN" LetterSpacing="1" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="90" HeightRequest="36" BorderWidth="2" BorderRadius="19" BorderColor="#E0665E" BackgroundColor="Transparent"></nara:LabelCustom>
+                <Label Grid.Column="1" Text="or" TextColor="White" FontSize="15" FontAttributes="Italic" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand"></Label>
+                <nara:LabelCustom HorizontalOptions="Start" FontSize="15" Grid.Column="2" x:Name="lbl_SignUp" RequestedHeight="1" Text="SIGN UP" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="90" HeightRequest="36" BorderWidth="2" BorderRadius="19" BorderColor="#E0665E"></nara:LabelCustom>
+
+            </Grid>
+
+        </StackLayout>
+
+
+    </RelativeLayout>
+
+</ContentPage>

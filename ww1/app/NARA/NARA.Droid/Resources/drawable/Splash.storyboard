@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes/>
+    <resources>
+        <image name="bokeh.png" width="512" height="512"/>
+        <image name="Content/Images/anim.gif" width="320" height="180"/>
+        <image name="Content/Images/background.png" width="1920" height="1200"/>
+        <image name="Content/loading-overlay.png" width="248" height="248"/>
+        <image name="AASLHLogo.png" width="804" height="279"/>
+        <image name="addcollection1.jpg" width="2048" height="1536"/>
+        <image name="addcollection11.jpg" width="2048" height="1536"/>
+        <image name="addcollection111.jpg" width="1024" height="768"/>
+        <image name="anim.gif" width="320" height="180"/>
+        <image name="anima.gif" width="400" height="400"/>
+        <image name="animation.gif" width="162" height="122"/>
+        <image name="anzacs.jpg" width="575" height="371"/>
+        <image name="archiveview.jpg" width="1024" height="768"/>
+        <image name="arrow_down.png" width="12" height="6"/>
+        <image name="arrow_up.png" width="12" height="6"/>
+        <image name="BorderImage.png" width="71" height="71"/>
+        <image name="bs1.png" width="275" height="270"/>
+        <image name="bs1_hp.png" width="275" height="176"/>
+        <image name="bs2.png" width="260" height="140"/>
+        <image name="centenniallogo.png" width="622" height="166"/>
+        <image name="coverpage.jpg" width="2048" height="1536"/>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default-Portrait.png" width="768" height="1004"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="editor.jpg" width="1536" height="1497"/>
+        <image name="empty_cb.png" width="24" height="24"/>
+        <image name="facebook.png" width="167" height="167"/>
+        <image name="facebook2.png" width="77" height="69"/>
+        <image name="fill_cb.png" width="24" height="24"/>
+        <image name="forum.png" width="1440" height="784"/>
+        <image name="homebackground.png" width="1078" height="845"/>
+        <image name="Icon-1024.png" width="1024" height="1024"/>
+        <image name="Icon-120.png" width="120" height="120"/>
+        <image name="Icon-152.png" width="152" height="152"/>
+        <image name="Icon-167.png" width="167" height="167"/>
+        <image name="Icon-512.png" width="512" height="512"/>
+        <image name="Icon-57.png" width="57" height="57"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-72.png" width="72" height="72"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="itemview.jpg" width="1024" height="768"/>
+        <image name="itemviewmore.jpg" width="1024" height="768"/>
+        <image name="loader.gif" width="240" height="240"/>
+        <image name="loading-overlay.png" width="248" height="248"/>
+        <image name="makepublic1.jpg" width="2048" height="1536"/>
+        <image name="menu.png" width="144" height="144"/>
+        <image name="mycollections.jpg" width="2048" height="1536"/>
+        <image name="mycollections1.jpg" width="2048" height="1536"/>
+        <image name="national.png" width="218" height="80"/>
+        <image name="next.png" width="144" height="144"/>
+        <image name="no_image.jpg" width="270" height="270"/>
+        <image name="notes.jpg" width="2048" height="1536"/>
+        <image name="notes1.jpg" width="2048" height="1536"/>
+        <image name="plane.jpg" width="398" height="261"/>
+        <image name="portrait.jpg" width="208" height="312"/>
+        <image name="previous.png" width="144" height="144"/>
+        <image name="profile.jpg" width="2048" height="1536"/>
+        <image name="rememberingww1link.png" width="1127" height="499"/>
+        <image name="remove.png" width="18" height="17"/>
+        <image name="s_bg.jpg" width="431" height="315"/>
+        <image name="s_bg.png" width="431" height="315"/>
+        <image name="search.png" width="144" height="144"/>
+        <image name="search2.jpg" width="2048" height="1536"/>
+        <image name="splash_image.png" width="2000" height="1594"/>
+        <image name="tags.jpg" width="1024" height="768"/>
+        <image name="thumb_about.png" width="324" height="248"/>
+        <image name="thumb_curators.png" width="322" height="248"/>
+        <image name="thumb_teachers.png" width="322" height="248"/>
+        <image name="views1.jpg" width="2048" height="1536"/>
+        <image name="x.png" width="17" height="17"/>
+    </resources>
+</document>

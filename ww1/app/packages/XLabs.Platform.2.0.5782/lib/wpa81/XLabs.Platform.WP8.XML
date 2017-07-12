@@ -1,0 +1,1645 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XLabs.Platform.WP8</name>
+    </assembly>
+    <members>
+        <member name="T:XLabs.Platform.Device.Accelerometer">
+            <summary>
+            Class Accelerometer.
+            </summary>
+            <summary>
+            Class Accelerometer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Accelerometer.Gravitation">
+            <summary>
+            Gravitational force is 9.81 m/s^2
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Accelerometer.accelerometer">
+            <summary>
+            The accelerometer
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Accelerometer.Start">
+            <summary>
+            Starts this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Accelerometer.Stop">
+            <summary>
+            Stops this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Accelerometer.AccelerometerOnCurrentValueChanged(System.Object,Microsoft.Devices.Sensors.SensorReadingEventArgs{Microsoft.Devices.Sensors.AccelerometerReading})">
+            <summary>
+            Accelerometers the on current value changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="sensorReadingEventArgs">The sensor reading event arguments.</param>
+        </member>
+        <member name="M:XLabs.Platform.Device.Accelerometer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Device.Accelerometer"/> class.
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.Accelerometer.Interval">
+            <summary>
+            Gets or sets the interval.
+            </summary>
+            <value>The interval.</value>
+        </member>
+        <member name="E:XLabs.Platform.Device.Accelerometer.ReadingAvailable">
+            <summary>
+            The reading available event handler.
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Device.Accelerometer.readingAvailable">
+            <summary>
+            Occurs when [reading available].
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.Accelerometer.LatestReading">
+            <summary>
+            Gets the latest reading.
+            </summary>
+            <value>The latest reading.</value>
+        </member>
+        <member name="T:XLabs.Platform.Device.Battery">
+            <summary>
+            Windows Phone Battery class.
+            </summary>
+            <summary>
+            Class Battery.
+            </summary>
+            <summary>
+            Windows Phone Battery class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.StartChargerMonitoring">
+            <summary>
+            Starts the charger monitoring.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.StopChargerMonitoring">
+            <summary>
+            Stops the charger monitoring.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.OnRemainingChargePercentChanged(System.Object,System.Object)">
+            <summary>
+            Called when [remaining charge percent changed].
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="o">The o.</param>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.OnPowerSourceChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the <see cref="E:PowerSourceChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="eventArgs">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.StartLevelMonitoring">
+            <summary>
+            Starts the level monitoring.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Battery.StopLevelMonitoring">
+            <summary>
+            Stops the level monitoring.
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.Battery.Charging">
+            <summary>
+            Gets a value indicating whether battery is charging
+            </summary>
+            <value><c>true</c> if charging; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:XLabs.Platform.Device.Battery.OnLevelChange">
+            <summary>
+            Event handler for battery level changes.
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Device.Battery.OnChargerStatusChanged">
+            <summary>
+            Event handler for charger connection changes.
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Device.Battery.onLevelChange">
+            <summary>
+            Private event handler for battery level changes.
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Device.Battery.onChargerStatusChanged">
+            <summary>
+            Private event handler for charger connection changes.
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.Battery.Level">
+            <summary>
+            Gets the level.
+            </summary>
+            <value>The level in percentage 0-100.</value>
+        </member>
+        <member name="T:XLabs.Platform.Device.BluetoothDevice">
+            <summary>
+            Class BluetoothDevice.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.BluetoothDevice._socket">
+            <summary>
+            The _socket
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.BluetoothDevice._device">
+            <summary>
+            The _device
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.BluetoothDevice.#ctor(Windows.Networking.Proximity.PeerInformation)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Device.BluetoothDevice"/> class.
+            </summary>
+            <param name="peerInfo">The peer information.</param>
+        </member>
+        <member name="M:XLabs.Platform.Device.BluetoothDevice.Connect">
+            <summary>
+            Connects this instance.
+            </summary>
+            <returns>Task.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Device.BluetoothDevice.Disconnect">
+            <summary>
+            Disconnects this instance.
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.BluetoothDevice.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.BluetoothDevice.Address">
+            <summary>
+            Gets the address.
+            </summary>
+            <value>The address.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.BluetoothDevice.InputStream">
+            <summary>
+            Gets the input stream.
+            </summary>
+            <value>The input stream.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.BluetoothDevice.OutputStream">
+            <summary>
+            Gets the output stream.
+            </summary>
+            <value>The output stream.</value>
+        </member>
+        <member name="T:XLabs.Platform.Device.BluetoothHub">
+            <summary>
+            Class BluetoothHub.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.BluetoothHub.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Device.BluetoothHub"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.BluetoothHub.OpenSettings">
+            <summary>
+            Gets the open settings.
+            </summary>
+            <value>The open settings.</value>
+        </member>
+        <member name="M:XLabs.Platform.Device.BluetoothHub.GetPairedDevices">
+            <summary>
+            Gets the paired devices.
+            </summary>
+            <returns>Task&lt;IReadOnlyList&lt;IBluetoothDevice&gt;&gt;.</returns>
+        </member>
+        <member name="P:XLabs.Platform.Device.BluetoothHub.Enabled">
+            <summary>
+            Gets a value indicating whether this <see cref="T:XLabs.Platform.Device.IBluetoothHub"/> is enabled.
+            </summary>
+            <value><c>true</c> if enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:XLabs.Platform.Device.DeviceCapabilities">
+            <summary>
+            Class DeviceCapabilities.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.WM_APP_MANIFEST">
+            <summary>
+            The w m_ ap p_ manifest
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.CAPABILITIES">
+            <summary>
+            The capabilities
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.NAME">
+            <summary>
+            The name
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.capabilities">
+            <summary>
+            The capabilities
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.DeviceCapabilities.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:XLabs.Platform.Device.DeviceCapabilities"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.DeviceCapabilities.IsEnabled(XLabs.Platform.Device.DeviceCapabilities.Capability)">
+            <summary>
+            Determines whether the specified capability is enabled.
+            </summary>
+            <param name="capability">The capability.</param>
+            <returns><c>true</c> if the specified capability is enabled; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Device.DeviceCapabilities.CheckCapability(System.Collections.Generic.IEnumerable{System.Xml.Linq.XElement},XLabs.Platform.Device.DeviceCapabilities.Capability)">
+            <summary>
+            Checks the capability.
+            </summary>
+            <param name="capabilities">The capabilities.</param>
+            <param name="capability">The capability.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="T:XLabs.Platform.Device.DeviceCapabilities.Capability">
+            <summary>
+            Enum Capability
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapNetworking">
+            <summary>
+            The identifier cap networking
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapMedialibAudio">
+            <summary>
+            The identifier cap medialib audio
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapMedialibPlayback">
+            <summary>
+            The identifier cap medialib playback
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapWebbrowsercomponent">
+            <summary>
+            The identifier cap webbrowsercomponent
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapAppointments">
+            <summary>
+            The identifier cap appointments
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapContacts">
+            <summary>
+            The identifier cap contacts
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapGamerservices">
+            <summary>
+            The identifier cap gamerservices
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapIdentityDevice">
+            <summary>
+            The identifier cap identity device
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapIdentityUser">
+            <summary>
+            The identifier cap identity user
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapIsvCamera">
+            <summary>
+            The identifier cap isv camera
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapLocation">
+            <summary>
+            The identifier cap location
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapMap">
+            <summary>
+            The identifier cap map
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapMedialibPhoto">
+            <summary>
+            The identifier cap medialib photo
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapMicrophone">
+            <summary>
+            The identifier cap microphone
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapPhonedialer">
+            <summary>
+            The identifier cap phonedialer
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapProximity">
+            <summary>
+            The identifier cap proximity
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapPushNotification">
+            <summary>
+            The identifier cap push notification
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapRemovableStorage">
+            <summary>
+            The identifier cap removable storage
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapSensors">
+            <summary>
+            The identifier cap sensors
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapSpeechRecognition">
+            <summary>
+            The identifier cap speech recognition
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapVoip">
+            <summary>
+            The identifier cap voip
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapWallet">
+            <summary>
+            The identifier cap wallet
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapWalletPaymentinstruments">
+            <summary>
+            The identifier cap wallet paymentinstruments
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.DeviceCapabilities.Capability.IdCapWalletSecureelement">
+            <summary>
+            The identifier cap wallet secureelement
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Device.Display">
+            <summary>
+            Windows Phone 8 Display.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Display.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Device.Display"/> class.
+            </summary>
+            <remarks>To get accurate display reading application should enable ID_CAP_IDENTITY_DEVICE on app manifest.</remarks>
+        </member>
+        <member name="M:XLabs.Platform.Device.Display.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:XLabs.Platform.Device.Display"/>.
+            </summary>
+            <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:XLabs.Platform.Device.Display"/>.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Device.Display.WidthRequestInInches(System.Double)">
+            <summary>
+            Convert width in inches to runtime pixels
+            </summary>
+            <param name="inches">The inches.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Device.Display.HeightRequestInInches(System.Double)">
+            <summary>
+            Convert height in inches to runtime pixels
+            </summary>
+            <param name="inches">The inches.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="P:XLabs.Platform.Device.Display.Height">
+            <summary>
+            Gets the screen height in pixels
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.Display.Width">
+            <summary>
+            Gets the screen width in pixels
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.Display.Xdpi">
+            <summary>
+            Gets the screens X pixel density per inch
+            </summary>
+            <value>The xdpi.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.Display.Ydpi">
+            <summary>
+            Gets the screens Y pixel density per inch
+            </summary>
+            <value>The ydpi.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.Display.Scale">
+            <summary>
+            Gets the scale value of the display.
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Device.Gyroscope">
+            <summary>
+            Class Gyroscope.
+            </summary>
+            <summary>
+            Class Gyroscope.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.Gyroscope._gyroscope">
+            <summary>
+            The _gyroscope
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Gyroscope.Start">
+            <summary>
+            Starts this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Gyroscope.Stop">
+            <summary>
+            Stops this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.Gyroscope.GyroscopeCurrentValueChanged(System.Object,Microsoft.Devices.Sensors.SensorReadingEventArgs{Microsoft.Devices.Sensors.GyroscopeReading})">
+            <summary>
+            Gyroscopes the current value changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Platform.Device.Gyroscope.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Device.Gyroscope"/> class.
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.Gyroscope.Interval">
+            <summary>
+            Gets or sets the interval.
+            </summary>
+            <value>The interval.</value>
+        </member>
+        <member name="E:XLabs.Platform.Device.Gyroscope.readingAvailable">
+            <summary>
+            Occurs when [reading available].
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Device.Gyroscope.ReadingAvailable">
+            <summary>
+            Occurs when [reading available].
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Device.Gyroscope.LatestReading">
+            <summary>
+            Gets the latest reading vector
+            </summary>
+            <value>Rotation values in radians per second</value>
+        </member>
+        <member name="T:XLabs.Platform.Device.WindowsPhoneDevice">
+            <summary>
+            Windows phone device.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.WindowsPhoneDevice.currentDevice">
+            <summary>
+            The current device.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.WindowsPhoneDevice.fileManager">
+            <summary>
+            The file manager.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.WindowsPhoneDevice.id">
+            <summary>
+            The Id for the device.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.WindowsPhoneDevice.mediaPicker">
+            <summary>
+            The media picker.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Device.WindowsPhoneDevice.network">
+            <summary>
+            The network.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.WindowsPhoneDevice.#ctor">
+            <summary>
+            Creates an instance of <see cref="T:XLabs.Platform.Device.WindowsPhoneDevice"/>.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Device.WindowsPhoneDevice.LaunchUriAsync(System.Uri)">
+            <summary>
+            Starts the default app associated with the URI for the specified URI.
+            </summary>
+            <param name="uri">The URI.</param>
+            <returns>The launch operation.</returns>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.CurrentDevice">
+            <summary>
+            Gets the current device.
+            </summary>
+            <value>The current device.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.Id">
+            <summary>
+            Gets Unique Id for the device.
+            </summary>
+            <value>The id for the device.</value>
+            <exception cref="T:System.UnauthorizedAccessException">Application has no access to device identity. To enable access consider enabling ID_CAP_IDENTITY_DEVICE on app manifest.</exception>
+            <remarks>Requires the application to check ID_CAP_IDENTITY_DEVICE on application permissions.</remarks>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.Display">
+            <summary>
+            Gets the display.
+            </summary>
+            <value>The display.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.PhoneService">
+            <summary>
+            Gets the phone service.
+            </summary>
+            <value>Phone service instance if available, otherwise null.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.Battery">
+            <summary>
+            Gets the battery.
+            </summary>
+            <value>The battery.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.Accelerometer">
+            <summary>
+            Gets the accelerometer for the device if available.
+            </summary>
+            <value>Instance of IAccelerometer if available, otherwise null.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.Gyroscope">
+            <summary>
+            Gets the gyroscope.
+            </summary>
+            <value>The gyroscope instance if available, otherwise null.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.MediaPicker">
+            <summary>
+            Gets the picture chooser.
+            </summary>
+            <value>The picture chooser.</value>
+            <exception cref="T:System.UnauthorizedAccessException">Exception is thrown if application manifest does not enable ID_CAP_ISV_CAMERA capability.</exception>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.Network">
+            <summary>
+            Gets the network service.
+            </summary>
+            <value>The network service.</value>
+            <exception cref="T:System.UnauthorizedAccessException">Exception is thrown if application manifest does not enable ID_CAP_NETWORKING capability.</exception>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.BluetoothHub">
+            <summary>
+            Gets the bluetooth hub service.
+            </summary>
+            <value>The bluetooth hub service if available, otherwise null.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.Microphone">
+            <summary>
+            Gets the default microphone for the device
+            </summary>
+            <value>The default microphone if available, otherwise null.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.FileManager">
+            <summary>
+            Gets the file manager for the device.
+            </summary>
+            <value>Device file manager.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name of the device.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.FirmwareVersion">
+            <summary>
+            Gets the firmware version.
+            </summary>
+            <value>The firmware version.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.HardwareVersion">
+            <summary>
+            Gets the hardware version.
+            </summary>
+            <value>The hardware version.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.Manufacturer">
+            <summary>
+            Gets the manufacturer.
+            </summary>
+            <value>The manufacturer.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.TotalMemory">
+            <summary>
+            Gets the total memory in bytes.
+            </summary>
+            <value>The total memory in bytes.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.TimeZoneOffset">
+            <summary>
+            Gets the time zone offset.
+            </summary>
+            <value>The time zone offset.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.TimeZone">
+            <summary>
+            Gets the time zone.
+            </summary>
+            <value>The time zone.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.LanguageCode">
+            <summary>
+            Gets the language code.
+            </summary>
+            <value>The language code.</value>
+        </member>
+        <member name="P:XLabs.Platform.Device.WindowsPhoneDevice.Orientation">
+            <summary>
+            Gets the orientation.
+            </summary>
+            <value>The orientation.</value>
+        </member>
+        <member name="T:XLabs.Platform.ColorExtensions">
+            <summary>
+            Class ColorExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.ColorExtensions.ToBrush(System.Windows.Media.Color)">
+            <summary>
+            To the brush.
+            </summary>
+            <param name="color">The color.</param>
+            <returns>Brush.</returns>
+        </member>
+        <member name="M:XLabs.Platform.ColorExtensions.ToMediaColor(System.Windows.Media.Color)">
+            <summary>
+            To the color of the media.
+            </summary>
+            <param name="color">The color.</param>
+            <returns>Color.</returns>
+        </member>
+        <member name="T:XLabs.Platform.DeviceExtensions">
+            <summary>
+                Class DeviceExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.DeviceExtensions.DriveTo(XLabs.Platform.Device.IDevice,XLabs.Platform.Services.Geolocation.Position)">
+            <summary>
+                Drives to.
+            </summary>
+            <param name="device">The device.</param>
+            <param name="position">The position.</param>
+            <returns>Task&lt;System.Boolean&gt;.</returns>
+        </member>
+        <member name="T:XLabs.Platform.OrientationExtensions">
+            <summary>
+            Class OrientationExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.OrientationExtensions.ToOrientation(Microsoft.Phone.Controls.PageOrientation)">
+            <summary>
+            To the orientation.
+            </summary>
+            <param name="orientation">The orientation.</param>
+            <returns>Orientation.</returns>
+        </member>
+        <member name="M:XLabs.Platform.OrientationExtensions.ToPageOrientation(XLabs.Enums.Orientation)">
+            <summary>
+            To the page orientation.
+            </summary>
+            <param name="orientation">The orientation.</param>
+            <returns>PageOrientation.</returns>
+        </member>
+        <member name="T:XLabs.Platform.UiElementExtensions">
+            <summary>
+            Class UiElementExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.UiElementExtensions.StreamToJpeg(System.Windows.UIElement,System.IO.Stream)">
+            <summary>
+            Streams to JPEG.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="stream">The stream.</param>
+            <returns>Task.</returns>
+        </member>
+        <member name="M:XLabs.Platform.UiElementExtensions.ToBitmap(System.Windows.UIElement)">
+            <summary>
+            To the bitmap.
+            </summary>
+            <param name="view">The view.</param>
+            <returns>WriteableBitmap.</returns>
+        </member>
+        <member name="T:XLabs.Platform.VectorExtensions">
+            <summary>
+            Class VectorExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.VectorExtensions.AsVector3(Microsoft.Xna.Framework.Vector3)">
+            <summary>
+            Ases the vector3.
+            </summary>
+            <param name="reading">The reading.</param>
+            <returns>Vector3.</returns>
+        </member>
+        <member name="T:XLabs.Platform.Services.Email.EmailService">
+            <summary>
+            Class EmailService.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Email.EmailService.ShowDraft(System.String,System.String,System.Boolean,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Shows the draft.
+            </summary>
+            <param name="subject">The subject.</param>
+            <param name="body">The body.</param>
+            <param name="html">if set to <c>true</c> [HTML].</param>
+            <param name="to">To.</param>
+            <param name="attachments">The attachments.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Email.EmailService.ShowDraft(System.String,System.String,System.Boolean,System.String[],System.String[],System.String[],System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Shows the draft.
+            </summary>
+            <param name="subject">The subject.</param>
+            <param name="body">The body.</param>
+            <param name="html">if set to <c>true</c> [HTML].</param>
+            <param name="to">To.</param>
+            <param name="cc">The cc.</param>
+            <param name="bcc">The BCC.</param>
+            <param name="attachments">The attachments.</param>
+        </member>
+        <member name="P:XLabs.Platform.Services.Email.EmailService.CanSend">
+            <summary>
+            Gets a value indicating whether this instance can send.
+            </summary>
+            <value><c>true</c> if this instance can send; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:XLabs.Platform.Services.Geolocation.CoordinateExtensions">
+            <summary>
+            The coordinate extensions for Windows Phone.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.CoordinateExtensions.GetPosition(Windows.Devices.Geolocation.Geocoordinate)">
+            <summary>
+            Converts <see cref="T:Windows.Devices.Geolocation.Geocoordinate"/> class into <see cref="T:XLabs.Platform.Services.Geolocation.Position"/>.
+            </summary>
+            <param name="geocoordinate">The Geocoordinate.</param>
+            <returns>The <see cref="T:XLabs.Platform.Services.Geolocation.Position"/>.</returns>
+        </member>
+        <member name="T:XLabs.Platform.Services.Geolocation.Geolocator">
+            <summary>
+            The geolocator implements <see cref="T:Windows.Devices.Geolocation.IGeolocator"/> interface for Windows Phone 8.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Geolocation.Geolocator._locator">
+            <summary>
+            The _locator
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Services.Geolocation.Geolocator"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.LocatorPositionChanged(Windows.Devices.Geolocation.Geolocator,Windows.Devices.Geolocation.PositionChangedEventArgs)">
+            <summary>
+            Locators the position changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="args">The <see cref="T:Windows.Devices.Geolocation.PositionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.LocatorStatusChanged(Windows.Devices.Geolocation.Geolocator,Windows.Devices.Geolocation.StatusChangedEventArgs)">
+            <summary>
+            Locators the status changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="args">The <see cref="T:Windows.Devices.Geolocation.StatusChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.GetPositionAsync(System.Int32)">
+            <summary>
+            get position as an asynchronous operation.
+            </summary>
+            <param name="timeout">The timeout.</param>
+            <returns>Task&lt;Position&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.GetPositionAsync(System.Int32,System.Boolean)">
+            <summary>
+            get position as an asynchronous operation.
+            </summary>
+            <param name="timeout">The timeout.</param>
+            <param name="includeHeading">if set to <c>true</c> [include heading].</param>
+            <returns>Task&lt;Position&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.GetPositionAsync(System.Threading.CancellationToken)">
+            <summary>
+            get position as an asynchronous operation.
+            </summary>
+            <param name="cancelToken">The cancel token.</param>
+            <returns>Task&lt;Position&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.GetPositionAsync(System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Gets the position asynchronous.
+            </summary>
+            <param name="cancelToken">The cancel token.</param>
+            <param name="includeHeading">if set to <c>true</c> [include heading].</param>
+            <returns>Task&lt;Position&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.GetPositionAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Gets the position asynchronous.
+            </summary>
+            <param name="timeout">The timeout.</param>
+            <param name="cancelToken">The cancel token.</param>
+            <returns>Task&lt;Position&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.GetPositionAsync(System.Int32,System.Threading.CancellationToken,System.Boolean)">
+            <summary>
+            Gets the position asynchronous.
+            </summary>
+            <param name="timeout">The timeout.</param>
+            <param name="cancelToken">The cancel token.</param>
+            <param name="includeHeading">if set to <c>true</c> [include heading].</param>
+            <returns>Task&lt;Position&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.StartListening(System.UInt32,System.Double)">
+            <summary>
+            Start listening to location changes
+            </summary>
+            <param name="minTime">Minimum interval in milliseconds</param>
+            <param name="minDistance">Minimum distance in meters</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.StartListening(System.UInt32,System.Double,System.Boolean)">
+            <summary>
+            Start listening to location changes
+            </summary>
+            <param name="minTime">Minimum interval in milliseconds</param>
+            <param name="minDistance">Minimum distance in meters</param>
+            <param name="includeHeading">Include heading information</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Geolocation.Geolocator.StopListening">
+            <summary>
+            Stop listening to location changes
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Services.Geolocation.Geolocator.PositionError">
+            <summary>
+            Occurs when [position error].
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Services.Geolocation.Geolocator.PositionChanged">
+            <summary>
+            Occurs when [position changed].
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Services.Geolocation.Geolocator.DesiredAccuracy">
+            <summary>
+            Gets or sets the desired accuracy.
+            </summary>
+            <value>The desired accuracy.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Geolocation.Geolocator.IsListening">
+            <summary>
+            Gets a value indicating whether this instance is listening.
+            </summary>
+            <value><c>true</c> if this instance is listening; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Geolocation.Geolocator.SupportsHeading">
+            <summary>
+            Gets a value indicating whether [supports heading].
+            </summary>
+            <value><c>true</c> if [supports heading]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Geolocation.Geolocator.IsGeolocationAvailable">
+            <summary>
+            Gets a value indicating whether this instance is geolocation available.
+            </summary>
+            <value><c>true</c> if this instance is geolocation available; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Geolocation.Geolocator.IsGeolocationEnabled">
+            <summary>
+            Gets a value indicating whether this instance is geolocation enabled.
+            </summary>
+            <value><c>true</c> if this instance is geolocation enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:XLabs.Platform.Services.Media.MediaPicker">
+            <summary>
+            Class MediaPicker.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Services.Media.MediaPicker"/> class.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPicker._cameraCapture">
+            <summary>
+            The _camera capture
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPicker._photoChooser">
+            <summary>
+            The _photo chooser
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.MediaPicker._completionSource">
+            <summary>
+            The _completion source
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.SelectPhotoAsync(XLabs.Platform.Services.Media.CameraMediaStorageOptions)">
+            <summary>
+            Select a picture from library.
+            </summary>
+            <param name="options">The storage options.</param>
+            <returns>Task&lt;IMediaFile&gt;.</returns>
+            <exception cref="T:System.InvalidOperationException">Only one operation can be active at at time</exception>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.TakePhotoAsync(XLabs.Platform.Services.Media.CameraMediaStorageOptions)">
+            <summary>
+            Takes the picture.
+            </summary>
+            <param name="options">The storage options.</param>
+            <returns>Task&lt;IMediaFile&gt;.</returns>
+            <exception cref="T:System.InvalidOperationException">Only one operation can be active at a time</exception>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.SelectVideoAsync(XLabs.Platform.Services.Media.VideoMediaStorageOptions)">
+            <summary>
+            Selects the video asynchronous.
+            </summary>
+            <param name="options">The options.</param>
+            <returns>Task&lt;IMediaFile&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.TakeVideoAsync(XLabs.Platform.Services.Media.VideoMediaStorageOptions)">
+            <summary>
+            Takes the video asynchronous.
+            </summary>
+            <param name="options">The options.</param>
+            <returns>Task&lt;IMediaFile&gt;.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.InternalOnPhotoChosen(System.Object,Microsoft.Phone.Tasks.PhotoResult)">
+            <summary>
+            Internals the on photo chosen.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="photoResult">The photo result.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.ResizeImageStream(System.Nullable{System.Int32},System.Nullable{System.Int32},System.IO.Stream,System.Action{System.IO.Stream})">
+            <summary>
+            Resizes the JPEG stream.
+            </summary>
+            <param name="maxPixelDimension">The maximum pixel dimension ratio (used to resize the image).</param>
+            <param name="percentQuality">The percent quality.</param>
+            <param name="input">The stream that contains the image.</param>
+            <param name="success">The action to execute on actionSuccess of resizing the image.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.SafeAsyncCall(System.IO.Stream,System.Action{System.IO.Stream})">
+            <summary>
+            Calls the asynchronous.
+            </summary>
+            <param name="input">The stream that contains the image.</param>
+            <param name="success">The action to execute on actionSuccess of resizing the image.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.SafeAsyncCall(System.Action)">
+            <summary>
+            Does the with invalid operation protection.
+            </summary>
+            <param name="action">The action.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.MediaPicker.ResizeBasedOnPixelDimension(System.Nullable{System.Int32},System.Int32,System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            Calcualtes the target height and width of the image based on the max pixel dimension.
+            </summary>
+            <param name="maxPixelDimension">The maximum pixel dimension ratio (used to resize the image).</param>
+            <param name="currentWidth">Current Width of the image.</param>
+            <param name="currentHeight">Current Height of the image.</param>
+            <param name="targetWidth">Target Width of the image.</param>
+            <param name="targetHeight">Target Height of the image.</param>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.MediaPicker.IsCameraAvailable">
+            <summary>
+            Gets a value indicating whether this instance is camera available.
+            </summary>
+            <value><c>true</c> if this instance is camera available; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.MediaPicker.IsPhotosSupported">
+            <summary>
+            Gets a value indicating whether this instance is photos supported.
+            </summary>
+            <value><c>true</c> if this instance is photos supported; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.MediaPicker.IsVideosSupported">
+            <summary>
+            Gets a value indicating whether this instance is videos supported.
+            </summary>
+            <value><c>true</c> if this instance is videos supported; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.MediaPicker.OnMediaSelected">
+            <summary>
+            Event the fires when media has been selected
+            </summary>
+            <value>The on photo selected.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.MediaPicker.OnError">
+            <summary>
+            Gets or sets the on error.
+            </summary>
+            <value>The on error.</value>
+        </member>
+        <member name="T:XLabs.Platform.Services.Media.SoundService">
+            <summary>
+            SoundService implementation on the Windows Phone platform
+            Nees a GlobalMEdiaElement instance on the App resources dictionary
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.SoundService.isScrubbing">
+            <summary>
+            The _is scrubbing
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.SoundService.tcsSetMedia">
+            <summary>
+            The _TCS set media
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Services.Media.SoundService"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.Play">
+            <summary>
+            Plays this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.Stop">
+            <summary>
+            Stops this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.Pause">
+            <summary>
+            Pauses this instance.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.OnFileFinished(XLabs.Platform.Services.Media.SoundFinishedEventArgs)">
+            <summary>
+            Raises the <see cref="E:FileFinished"/> event.
+            </summary>
+            <param name="e">The <see cref="T:XLabs.Platform.Services.Media.SoundFinishedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.PlayAsync(System.String,System.String)">
+            <summary>
+            Plays the asynchronous.
+            </summary>
+            <param name="filename">The filename.</param>
+            <param name="extension">The extension.</param>
+            <returns>Task&lt;SoundFile&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.SetMediaAsync(System.String)">
+            <summary>
+            Sets the media asynchronous.
+            </summary>
+            <param name="filename">The filename.</param>
+            <returns>Task&lt;SoundFile&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.GlobalMediaElementMediaOpened(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Globals the media element media opened.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.GlobalMediaElementMediaEnded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the MediaEnded event of the player control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.SoundService.GoToAsync(System.Double)">
+            <summary>
+            Goes to asynchronous.
+            </summary>
+            <param name="position">The position.</param>
+            <returns>Task.</returns>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.SoundService.GlobalMediaElement">
+            <summary>
+            Gets the global media element.
+            </summary>
+            <value>The global media element.</value>
+            <exception cref="T:System.ArgumentNullException">GlobalMedia is missing</exception>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.SoundService.IsPlaying">
+            <summary>
+            Gets a value indicating whether this instance is playing.
+            </summary>
+            <value><c>true</c> if this instance is playing; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.SoundService.CurrentTime">
+            <summary>
+            Gets the current time.
+            </summary>
+            <value>The current time.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.SoundService.Volume">
+            <summary>
+            Gets or sets the volume.
+            </summary>
+            <value>The volume.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.SoundService.CurrentFile">
+            <summary>
+            Gets the current file.
+            </summary>
+            <value>The current file.</value>
+        </member>
+        <member name="E:XLabs.Platform.Services.Media.SoundService.SoundFileFinished">
+            <summary>
+            Occurs when [sound file finished].
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Services.Media.XnaMicrophone">
+            <summary>
+            Class XnaMicrophone.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.XnaMicrophone._microphone">
+            <summary>
+            The _microphone
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Media.XnaMicrophone._timer">
+            <summary>
+            The _timer
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.XnaMicrophone.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Services.Media.XnaMicrophone"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.XnaMicrophone.MicrophoneBufferReady(System.Object,System.EventArgs)">
+            <summary>
+            Microphones the buffer ready.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.XnaMicrophone.Start(System.Int32)">
+            <summary>
+            Starts the specified sample rate.
+            </summary>
+            <param name="sampleRate">The sample rate.</param>
+            <returns>Task&lt;System.Boolean&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Media.XnaMicrophone.Stop">
+            <summary>
+            Stops this instance.
+            </summary>
+            <returns>Task.</returns>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.XnaMicrophone.IsAvailable">
+            <summary>
+            Gets a value indicating whether this instance is available.
+            </summary>
+            <value><c>true</c> if this instance is available; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.XnaMicrophone.SampleRate">
+            <summary>
+            Gets the sample rate.
+            </summary>
+            <value>The sample rate in hertz.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.XnaMicrophone.ChannelCount">
+            <summary>
+            Gets the channel count.
+            </summary>
+            <value>The channel count.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.XnaMicrophone.BitsPerSample">
+            <summary>
+            Gets bits per sample.
+            </summary>
+            <value>The bits per sample.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.XnaMicrophone.Active">
+            <summary>
+            Gets a value indicating whether this <see cref="T:XLabs.Platform.Services.Media.XnaMicrophone"/> is active.
+            </summary>
+            <value><c>true</c> if active; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.Media.XnaMicrophone.SupportedSampleRates">
+            <summary>
+            Gets the average data transfer rate
+            </summary>
+            <value>The average data transfer rate in bytes per second.</value>
+        </member>
+        <member name="E:XLabs.Platform.Services.Media.XnaMicrophone.OnBroadcast">
+            <summary>
+            Occurs when new audio has been streamed.
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Services.Network">
+            <summary>
+            Class Network.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.Network._networkStatus">
+            <summary>
+            The _network status
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Network.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Services.Network"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.Network.InternetConnectionStatus">
+            <summary>
+            Internets the connection status.
+            </summary>
+            <returns>NetworkStatus.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.Network.IsReachable(System.String,System.TimeSpan)">
+            <summary>
+            Determines whether the specified host is reachable.
+            </summary>
+            <param name="host">The host.</param>
+            <param name="timeout">The timeout.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Network.IsReachableByWifi(System.String,System.TimeSpan)">
+            <summary>
+            Determines whether [is reachable by wifi] [the specified host].
+            </summary>
+            <param name="host">The host.</param>
+            <param name="timeout">The timeout.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.Network.DeviceNetworkInformationNetworkAvailabilityChanged(System.Object,Microsoft.Phone.Net.NetworkInformation.NetworkNotificationEventArgs)">
+            <summary>
+            Devices the network information network availability changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Microsoft.Phone.Net.NetworkInformation.NetworkNotificationEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="E:XLabs.Platform.Services.Network.reachabilityChanged">
+            <summary>
+            Occurs when [reachability changed].
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Services.Network.ReachabilityChanged">
+            <summary>
+            Occurs when [reachability changed].
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Services.NfcDevice">
+            <summary>
+            Class NfcDevice.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.NfcDevice._publishId">
+            <summary>
+            The _publish identifier
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.NfcDevice._device">
+            <summary>
+            The _device
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.NfcDevice._published">
+            <summary>
+            The _published
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Services.NfcDevice"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.#ctor(Windows.Networking.Proximity.ProximityDevice)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Services.NfcDevice"/> class.
+            </summary>
+            <param name="proximityDevice">The proximity device.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.DeviceArrived(Windows.Networking.Proximity.ProximityDevice)">
+            <summary>
+            Devices the arrived.
+            </summary>
+            <param name="sender">The sender.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.DeviceDeparted(Windows.Networking.Proximity.ProximityDevice)">
+            <summary>
+            Devices the departed.
+            </summary>
+            <param name="sender">The sender.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.PublishUri(System.Uri)">
+            <summary>
+            Publishes the URI.
+            </summary>
+            <param name="uri">The URI.</param>
+            <returns>Guid.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.NfcDevice.Unpublish(System.Guid)">
+            <summary>
+            Unpublishes the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+        </member>
+        <member name="E:XLabs.Platform.Services.NfcDevice.InRange">
+            <summary>
+            Occurs when [in range].
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Services.NfcDevice.OutOfRange">
+            <summary>
+            Occurs when [out of range].
+            </summary>
+        </member>
+        <member name="P:XLabs.Platform.Services.NfcDevice.DeviceId">
+            <summary>
+            Gets the device identifier.
+            </summary>
+            <value>The device identifier.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.NfcDevice.IsEnabled">
+            <summary>
+            Gets a value indicating whether this instance is enabled.
+            </summary>
+            <value><c>true</c> if this instance is enabled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:XLabs.Platform.Services.NfcDevice.DeviceInRange">
+            <summary>
+            Occurs when [device in range].
+            </summary>
+        </member>
+        <member name="E:XLabs.Platform.Services.NfcDevice.DeviceOutOfRange">
+            <summary>
+            Occurs when [device out of range].
+            </summary>
+        </member>
+        <member name="T:XLabs.Platform.Services.PhoneService">
+            <summary>
+                Phone service for Windows Phone devices.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.PhoneService.DialNumber(System.String)">
+            <summary>
+                Opens native dialog to dial the specified number
+            </summary>
+            <param name="number">Number to dial.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.PhoneService.SendSMS(System.String,System.String)">
+            <summary>
+                Sends the SMS.
+            </summary>
+            <param name="to">To.</param>
+            <param name="body">The body.</param>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.CellularProvider">
+            <summary>
+                Gets the cellular provider.
+            </summary>
+            <value>The cellular provider.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.IsCellularDataEnabled">
+            <summary>
+                Gets a value indicating whether this instance has cellular data enabled.
+            </summary>
+            <value>
+                <c>null</c> if [is cellular data enabled] contains no value, <c>true</c> if [is cellular data enabled];
+                otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.IsCellularDataRoamingEnabled">
+            <summary>
+                Gets a value indicating whether this instance has cellular data roaming enabled.
+            </summary>
+            <value>
+                <c>null</c> if [is cellular data roaming enabled] contains no value, <c>true</c> if [is cellular data roaming
+                enabled]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.IsNetworkAvailable">
+            <summary>
+                Gets a value indicating whether this instance is network available.
+            </summary>
+            <value>
+                <c>null</c> if [is network available] contains no value, <c>true</c> if [is network available]; otherwise,
+                <c>false</c>.
+            </value>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.ICC">
+            <summary>
+                Gets the ISO Country Code
+            </summary>
+            <value>The icc.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.MCC">
+            <summary>
+                Gets the Mobile Country Code
+            </summary>
+            <value>The MCC.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.MNC">
+            <summary>
+                Gets the Mobile Network Code
+            </summary>
+            <value>The MNC.</value>
+        </member>
+        <member name="P:XLabs.Platform.Services.PhoneService.CanSendSMS">
+            <summary>
+                Gets a value indicating whether this instance can send SMS.
+            </summary>
+            <value><c>true</c> if this instance can send SMS; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:XLabs.Platform.Services.SecureStorage">
+            <summary>
+            Implements <see cref="T:XLabs.Platform.Services.ISecureStorage"/> for WP using <see cref="T:System.IO.IsolatedStorage.IsolatedStorageFile"/> and <see cref="T:System.Security.Cryptography.ProtectedData"/>.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.SecureStorage.#ctor(System.Byte[])">
+            <summary>
+            Initializes a new instance of <see cref="T:XLabs.Platform.Services.SecureStorage"/>.
+            </summary>
+            <param name="optionalEntropy">Optional password for additional entropy to make encyption more complex.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.SecureStorage.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:XLabs.Platform.Services.SecureStorage"/>.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.SecureStorage.Store(System.String,System.Byte[])">
+            <summary>
+            Stores the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="dataBytes">The data bytes.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.SecureStorage.Retrieve(System.String)">
+            <summary>
+            Retrieves the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>System.Byte[].</returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:XLabs.Platform.Services.SecureStorage.Delete(System.String)">
+            <summary>
+            Deletes the specified key.
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.SecureStorage.Contains(System.String)">
+            <summary>
+            Checks if the storage contains a key.
+            </summary>
+            <param name="key">The key to search.</param>
+            <returns>True if the storage has the key, otherwise false.</returns>
+        </member>
+        <member name="T:XLabs.Platform.Services.TextToSpeechService">
+            <summary>
+            The text to speech service implements <see cref="T:XLabs.Platform.Services.ITextToSpeechService"/> for Windows Phone.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.TextToSpeechService._synth">
+            <summary>
+            The _synth
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.TextToSpeechService.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Platform.Services.TextToSpeechService"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.TextToSpeechService.Speak(System.String,System.String)">
+            <summary>
+            The speak.
+            </summary>
+            <param name="text">The text.</param>
+            <param name="language">The language.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.TextToSpeechService.GetInstalledLanguages">
+            <summary>
+            Get installed languages.
+            </summary>
+            <returns>The installed language names.</returns>
+        </member>
+        <member name="T:XLabs.Platform.Services.IO.FileManager">
+            <summary>
+            Class FileManager.
+            </summary>
+        </member>
+        <member name="F:XLabs.Platform.Services.IO.FileManager.isolatedStorageFile">
+            <summary>
+            The isolated storage file
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.#ctor">
+            <summary>
+            Initialized new instance of <see cref="T:XLabs.Platform.Services.IO.FileManager"/> using user store for application.
+            </summary>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.#ctor(System.IO.IsolatedStorage.IsolatedStorageFile)">
+            <summary>
+            Initialized new instance of <see cref="T:XLabs.Platform.Services.IO.FileManager"/>.
+            </summary>
+            <param name="isolatedStorageFile">Isolated storage file to use.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.DirectoryExists(System.String)">
+            <summary>
+            Directories the exists.
+            </summary>
+            <param name="path">The path.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.CreateDirectory(System.String)">
+            <summary>
+            Creates the directory.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.OpenFile(System.String,XLabs.Platform.Services.IO.FileMode,XLabs.Platform.Services.IO.FileAccess)">
+            <summary>
+            Opens the file.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="mode">The mode.</param>
+            <param name="access">The access.</param>
+            <returns>Stream.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.OpenFile(System.String,XLabs.Platform.Services.IO.FileMode,XLabs.Platform.Services.IO.FileAccess,XLabs.Platform.Services.IO.FileShare)">
+            <summary>
+            Opens the file.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="mode">The mode.</param>
+            <param name="access">The access.</param>
+            <param name="share">The share.</param>
+            <returns>Stream.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.FileExists(System.String)">
+            <summary>
+            Files the exists.
+            </summary>
+            <param name="path">The path.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.GetLastWriteTime(System.String)">
+            <summary>
+            Gets the last write time.
+            </summary>
+            <param name="path">The path.</param>
+            <returns>DateTimeOffset.</returns>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.DeleteFile(System.String)">
+            <summary>
+            Deletes the file.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:XLabs.Platform.Services.IO.FileManager.DeleteDirectory(System.String)">
+            <summary>
+            Deletes the directory.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+    </members>
+</doc>

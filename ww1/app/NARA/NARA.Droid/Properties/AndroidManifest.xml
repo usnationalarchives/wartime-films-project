@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="NARA.NARA" android:installLocation="auto" android:versionCode="1" android:versionName="1.0">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.gov_archives.rememberingwwi" android:installLocation="auto" android:versionCode="23" android:versionName="1.1.23">
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="21" />
-	<application android:label="Remembering" android:icon="@drawable/icon" android:largeHeap="true" android:hardwareAccelerated="true"></application>
+	<application android:label="Remembering" android:icon="@drawable/icon" android:largeHeap="true" android:vmSafeMode="true" android:windowSoftInputMode="adjustResize"></application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.READ_OWNER_DATA" />
+	<supports-screens android:smallScreens="false" android:normalScreens="false" android:largeScreens="true" android:xlargeScreens="true" android:requiresSmallestWidthDp="700" />
 </manifest>

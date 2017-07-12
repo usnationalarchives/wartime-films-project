@@ -30,8 +30,9 @@ namespace NARA.Droid.Renderers
                 if (e.NewElement != null)
                 {
                     formsEntry = e.NewElement as EntryCustom;
-                    Control.Background = Resources.GetDrawable(Resource.Drawable.entry_Borders);
-                    Control.Gravity = GravityFlags.CenterVertical;
+                    Control.Background = Resources.GetDrawable(Resource.Drawable.no_borders);
+                    Control.SetPadding(0, 0, 0, 0);
+                    Control.Gravity = GravityFlags.Bottom;
                 }
             }
         }

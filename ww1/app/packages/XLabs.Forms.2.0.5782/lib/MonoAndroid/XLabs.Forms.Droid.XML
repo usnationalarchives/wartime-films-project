@@ -1,0 +1,3910 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XLabs.Forms.Droid</name>
+    </assembly>
+    <members>
+        <member name="T:XLabs.Forms.Services.FontManager">
+            <summary>
+            Class FontManager.
+            </summary>
+            <summary>
+            Class FontManager.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Services.FontManager.FindClosest(System.String,System.Double)">
+            <summary>
+            Finds the closest.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="desiredHeight">Height of the desired.</param>
+            <returns>Font.</returns>
+        </member>
+        <member name="F:XLabs.Forms.Services.FontManager.display">
+            <summary>
+            The _display
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Services.FontManager.#ctor(XLabs.Platform.Device.IDisplay)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Services.FontManager"/> class.
+            </summary>
+            <param name="display">The display.</param>
+        </member>
+        <member name="M:XLabs.Forms.Services.FontManager.GetHeight(Xamarin.Forms.Font)">
+            <summary>
+            Gets height for the font.
+            </summary>
+            <param name="font">Font whose height is calculated.</param>
+            <returns>Height of the font in inches.</returns>
+        </member>
+        <member name="P:XLabs.Forms.Services.FontManager.FontDirectories">
+            <summary>
+            Directories that are searched for font files.
+            </summary>
+            <remarks>Add or remove directories before accessing method <see cref="P:XLabs.Forms.Services.IFontManager.AvailableFonts"/>.</remarks>
+        </member>
+        <member name="P:XLabs.Forms.Services.FontManager.AvailableFonts">
+            <summary>
+            Gets all available system fonts.
+            </summary>
+            <value>The available fonts.</value>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CalendarViewRenderer">
+            <summary>
+                Class CalendarViewRenderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarViewRenderer.TAG">
+            <summary>
+                The tag
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarViewRenderer._containerView">
+            <summary>
+                The _container view
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarViewRenderer._isElementChanging">
+            <summary>
+                The _is element changing
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarViewRenderer._leftArrow">
+            <summary>
+                The _left arrow
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarViewRenderer._picker">
+            <summary>
+                The _picker
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarViewRenderer._rightArrow">
+            <summary>
+                The _right arrow
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.CalendarViewRenderer._view">
+            <summary>
+                The _view
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{XLabs.Forms.Controls.CalendarView})">
+            <summary>
+                Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+                Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.ProtectFromEventCycle(System.Action)">
+            <summary>
+                Protects from event cycle.
+            </summary>
+            <param name="action">The action.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.SetDisplayedMonth(System.DateTime)">
+            <summary>
+                Sets the displayed month.
+            </summary>
+            <param name="newMonth">The new month.</param>
+            <exception cref="T:System.Exception">Month must be between MinDate and MaxDate</exception>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.SetNavigationArrows">
+            <summary>
+                Sets the navigation arrows.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.SelectMonth(System.Int32,System.Boolean)">
+            <summary>
+                Selects the month.
+            </summary>
+            <param name="monthIndex">Index of the month.</param>
+            <param name="animated">if set to <c>true</c> [animated].</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.SetFonts">
+            <summary>
+                Sets the fonts.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CalendarViewRenderer.SetColors">
+            <summary>
+                Sets the colors.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView">
+            <summary>
+            Class CalendarArrowView.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView._arrowDirection">
+            <summary>
+            The _arrow direction
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView._trianglePath">
+            <summary>
+            The _triangle path
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView._trianglePaint">
+            <summary>
+            The _triangle paint
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="attrSet">The attribute set.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView"/> class.
+            </summary>
+            <param name="javaReference">The java reference.</param>
+            <param name="handleown">The handleown.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView.SharedConstructor">
+            <summary>
+            Shareds the constructor.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView.OnSizeChanged(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            This is called during layout when the size of this view has changed.
+            </summary>
+            <param name="w">Current width of this view.</param>
+            <param name="h">Current height of this view.</param>
+            <param name="oldw">Old width of this view.</param>
+            <param name="oldh">Old height of this view.</param>
+            <since version="Added in API level 1" />
+            <remarks><para tool="javadoc-to-mdoc">This is called during layout when the size of this view has changed. If
+            you were just added to the view hierarchy, you're called with the old
+            values of 0.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/View.html#onSizeChanged(int, int, int, int)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView.OnDraw(Android.Graphics.Canvas)">
+            <summary>
+            Implement this to do your drawing.
+            </summary>
+            <param name="canvas">the canvas on which the background will be drawn</param>
+            <since version="Added in API level 1" />
+            <remarks><para tool="javadoc-to-mdoc">Implement this to do your drawing.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/View.html#onDraw(android.graphics.Canvas)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView.GetEquilateralTriangle(System.Int32,System.Int32)">
+            <summary>
+            Gets the equilateral triangle.
+            </summary>
+            <param name="width">The width.</param>
+            <param name="height">The height.</param>
+            <returns>Path.</returns>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView.Direction">
+            <summary>
+            Gets or sets the direction.
+            </summary>
+            <value>The direction.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView.Color">
+            <summary>
+            Sets the color.
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView.ArrowDirection">
+            <summary>
+            Enum ArrowDirection
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView.ArrowDirection.RIGHT">
+            <summary>
+            The right
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView.ArrowDirection.LEFT">
+            <summary>
+            The left
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView">
+            <summary>
+            Class CalendarCellView.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView._isSelectable">
+            <summary>
+            The _is selectable
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView._isCurrentMonth">
+            <summary>
+            The _is current month
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView._isToday">
+            <summary>
+            The _is today
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView._isHighlighted">
+            <summary>
+            The _is highlighted
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView._rangeState">
+            <summary>
+            The _range state
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView"/> class.
+            </summary>
+            <param name="handle">The handle.</param>
+            <param name="transfer">The transfer.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="attrs">The attrs.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="attrs">The attrs.</param>
+            <param name="defStyle">The definition style.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView.SetStyle(XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor)">
+            <summary>
+            Sets the style.
+            </summary>
+            <param name="style">The style.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView.Selectable">
+            <summary>
+            Sets a value indicating whether this <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView"/> is selectable.
+            </summary>
+            <value><c>true</c> if selectable; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView.IsCurrentMonth">
+            <summary>
+            Sets a value indicating whether this instance is current month.
+            </summary>
+            <value><c>true</c> if this instance is current month; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView.IsToday">
+            <summary>
+            Sets a value indicating whether this instance is today.
+            </summary>
+            <value><c>true</c> if this instance is today; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView.IsHighlighted">
+            <summary>
+            Sets a value indicating whether this instance is highlighted.
+            </summary>
+            <value><c>true</c> if this instance is highlighted; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView.RangeState">
+            <summary>
+            Sets the state of the range.
+            </summary>
+            <value>The state of the range.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView">
+            <summary>
+            Class CalendarGridView.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView._dividerPaint">
+            <summary>
+            The _divider paint
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView._oldWidthMeasureSize">
+            <summary>
+            The _old width measure size
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView._oldNumRows">
+            <summary>
+            The _old number rows
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView.FloatFudge">
+            <summary>
+            The float fudge
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView.sidePadding">
+            <summary>
+            The side padding
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="attrs">The attrs.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView.AddView(Android.Views.View,System.Int32,Android.Views.ViewGroup.LayoutParams)">
+            <summary>
+            Adds the view.
+            </summary>
+            <param name="child">The child.</param>
+            <param name="index">The index.</param>
+            <param name="params">The parameters.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView.DispatchDraw(Android.Graphics.Canvas)">
+            <summary>
+            Called by draw to draw the child views.
+            </summary>
+            <param name="canvas">the canvas on which to draw the view</param>
+            <since version="Added in API level 1" />
+            <remarks><para tool="javadoc-to-mdoc">Called by draw to draw the child views. This may be overridden
+            by derived classes to gain control just before its children are drawn
+            (but after its own view has been drawn).</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/View.html#dispatchDraw(android.graphics.Canvas)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView.DrawChild(Android.Graphics.Canvas,Android.Views.View,System.Int64)">
+            <summary>
+            Draw one child of this View Group.
+            </summary>
+            <param name="canvas">The canvas on which to draw the child</param>
+            <param name="child">Who to draw</param>
+            <param name="drawingTime">The time at which draw is occurring</param>
+            <returns>To be added.</returns>
+            <since version="Added in API level 1" />
+            <remarks><para tool="javadoc-to-mdoc">Draw one child of this View Group. This method is responsible for getting
+            the canvas in the right state. This includes clipping, translating so
+            that the child's scrolled origin is at 0, 0, and applying any animation
+            transformations.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/ViewGroup.html#drawChild(android.graphics.Canvas, android.view.View, long)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView._oldHeightMeasureSize">
+            <summary>
+            The _old height measure size
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView.OnMeasure(System.Int32,System.Int32)">
+            <summary>
+            Called when [measure].
+            </summary>
+            <param name="widthMeasureSpec">horizontal space requirements as imposed by the parent.
+            The requirements are encoded with
+            <c><see cref="T:Android.Views.View+MeasureSpec" /></c>.</param>
+            <param name="heightMeasureSpec">vertical space requirements as imposed by the parent.
+            The requirements are encoded with
+            <c><see cref="T:Android.Views.View+MeasureSpec" /></c>.</param>
+            <since version="Added in API level 1" />
+            <altmember cref="P:Android.Views.View.MeasuredWidth" />
+            <altmember cref="P:Android.Views.View.MeasuredHeight" />
+            <altmember cref="M:Android.Views.View.SetMeasuredDimension(System.Int32, System.Int32)" />
+            <altmember cref="M:Android.Views.View.get_SuggestedMinimumHeight" />
+            <altmember cref="M:Android.Views.View.get_SuggestedMinimumWidth" />
+            <altmember cref="M:Android.Views.View.MeasureSpec.GetMode(System.Int32)" />
+            <altmember cref="M:Android.Views.View.MeasureSpec.GetSize(System.Int32)" />
+            <remarks><para tool="javadoc-to-mdoc" />
+            <para tool="javadoc-to-mdoc">
+            Measure the view and its content to determine the measured width and the
+            measured height. This method is invoked by <c><see cref="M:Android.Views.View.Measure(System.Int32, System.Int32)" /></c> and
+            should be overriden by subclasses to provide accurate and efficient
+            measurement of their contents.
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <i>CONTRACT:</i> When overriding this method, you
+            <i>must</i> call <c><see cref="M:Android.Views.View.SetMeasuredDimension(System.Int32, System.Int32)" /></c> to store the
+            measured width and height of this view. Failure to do so will trigger an
+            <c>IllegalStateException</c>, thrown by
+            <c><see cref="M:Android.Views.View.Measure(System.Int32, System.Int32)" /></c>. Calling the superclass'
+            <c><see cref="M:Android.Views.View.OnMeasure(System.Int32, System.Int32)" /></c> is a valid use.
+            </para>
+            <para tool="javadoc-to-mdoc">
+            The base class implementation of measure defaults to the background size,
+            unless a larger size is allowed by the MeasureSpec. Subclasses should
+            override <c><see cref="M:Android.Views.View.OnMeasure(System.Int32, System.Int32)" /></c> to provide better measurements of
+            their content.
+            </para>
+            <para tool="javadoc-to-mdoc">
+            If this method is overridden, it is the subclass's responsibility to make
+            sure the measured height and width are at least the view's minimum height
+            and width (<c><see cref="M:Android.Views.View.get_SuggestedMinimumHeight" /></c> and
+            <c><see cref="M:Android.Views.View.get_SuggestedMinimumWidth" /></c>).
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/View.html#onMeasure(int, int)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView.OnLayout(System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Called from layout when this view should
+            assign a size and position to each of its children.
+            </summary>
+            <param name="changed">This is a new size or position for this view</param>
+            <param name="l">Left position, relative to parent</param>
+            <param name="t">Top position, relative to parent</param>
+            <param name="r">Right position, relative to parent</param>
+            <param name="b">Bottom position, relative to parent</param>
+            <since version="Added in API level 1" />
+            <remarks><para tool="javadoc-to-mdoc">Called from layout when this view should
+            assign a size and position to each of its children.
+            Derived classes with children should override
+            this method and call layout on each of
+            their children.
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/ViewGroup.html#onLayout(boolean, int, int, int, int)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView.DividerColor">
+            <summary>
+            Sets the color of the divider.
+            </summary>
+            <value>The color of the divider.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView.NumRows">
+            <summary>
+            Sets the number rows.
+            </summary>
+            <value>The number rows.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarMonthPageTransformer">
+            <summary>
+            Class CalendarMonthPageTransformer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarMonthPageTransformer.MIN_SCALE">
+            <summary>
+            The mi n_ scale
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarMonthPageTransformer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarMonthPageTransformer"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarMonthPageTransformer.TransformPage(Android.Views.View,System.Single)">
+            <summary>
+            Transforms the page.
+            </summary>
+            <param name="page">The page.</param>
+            <param name="position">The position.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView">
+            <summary>
+            Class CalendarPickerView.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView._context">
+            <summary>
+            The _context
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.MyAdapter">
+            <summary>
+            My adapter
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.Months">
+            <summary>
+            The months
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.Cells">
+            <summary>
+            The cells
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.SelectedCells">
+            <summary>
+            The selected cells
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView._highlightedCells">
+            <summary>
+            The _highlighted cells
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.SelectedCals">
+            <summary>
+            The selected cals
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView._highlightedCals">
+            <summary>
+            The _highlighted cals
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.Today">
+            <summary>
+            The today
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.MinDate">
+            <summary>
+            The minimum date
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.MaxDate">
+            <summary>
+            The maximum date
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView._monthCounter">
+            <summary>
+            The _month counter
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView._styleDescriptor">
+            <summary>
+            The _style descriptor
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.MonthNameFormat">
+            <summary>
+            The month name format
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.WeekdayNameFormat">
+            <summary>
+            The weekday name format
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.FullDateFormat">
+            <summary>
+            The full date format
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.ClickHandler">
+            <summary>
+            The click handler
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.InvokeOnMonthChanged(System.Int32)">
+            <summary>
+            Invokes the on month changed.
+            </summary>
+            <param name="position">The position.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.UpdateStyles">
+            Forces a redraw of the calendar and thus applying of the styles
+            <summary>
+            Updates the styles.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView._hlighlightedDaysOfWeek">
+            <summary>
+            The _hlighlighted days of week
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="attrs">The attrs.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.OnCellClicked(XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor)">
+            <summary>
+            Called when [cell clicked].
+            </summary>
+            <param name="cell">The cell.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.OnInvalidateDateClicked(System.Object,XLabs.Forms.Controls.MonoDroid.TimesSquare.DateSelectedEventArgs)">
+            <summary>
+            Handles the <see cref="E:InvalidateDateClicked"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.DateSelectedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.Init(System.DateTime,System.DateTime,System.DayOfWeek[])">
+            <summary>
+            Initializes the specified minimum date.
+            </summary>
+            <param name="minDate">The minimum date.</param>
+            <param name="maxDate">The maximum date.</param>
+            <param name="highlightedDaysOfWeek">The highlighted days of week.</param>
+            <returns>FluentInitializer.</returns>
+            <exception cref="T:Java.Lang.IllegalArgumentException">
+            minDate and maxDate must be non-zero.  +
+            				Debug(minDate, maxDate)
+            or
+            minDate must be before maxDate.  +
+            				Debug(minDate, maxDate)
+            </exception>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.HighlighDaysOfWeeks(System.DayOfWeek[])">
+            <summary>
+            Highlighes the days of weeks.
+            </summary>
+            <param name="daysOfWeeks">The days of weeks.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.GetMonthCells(XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthDescriptor,System.DateTime)">
+            <summary>
+            Gets the month cells.
+            </summary>
+            <param name="month">The month.</param>
+            <param name="startCal">The start cal.</param>
+            <returns>List&lt;List&lt;MonthCellDescriptor&gt;&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.ScrollToSelectedMonth(System.Int32)">
+            <summary>
+            Scrolls to selected month.
+            </summary>
+            <param name="selectedIndex">Index of the selected.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.ScrollToSelectedMonth(System.Int32,System.Boolean)">
+            <summary>
+            Scrolls to selected month.
+            </summary>
+            <param name="selectedIndex">Index of the selected.</param>
+            <param name="smoothScroll">if set to <c>true</c> [smooth scroll].</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.GetMonthCellWithIndexByDate(System.DateTime)">
+            <summary>
+            Gets the month cell with index by date.
+            </summary>
+            <param name="date">The date.</param>
+            <returns>MonthCellWithMonthIndex.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.OnMeasure(System.Int32,System.Int32)">
+            <summary>
+            Called when [measure].
+            </summary>
+            <param name="widthMeasureSpec">horizontal space requirements as imposed by the parent.
+            The requirements are encoded with
+            <c><see cref="T:Android.Views.View+MeasureSpec"/></c>.</param>
+            <param name="heightMeasureSpec">vertical space requirements as imposed by the parent.
+            The requirements are encoded with
+            <c><see cref="T:Android.Views.View+MeasureSpec"/></c>.</param>
+            <exception cref="T:System.InvalidOperationException">Must have at least one month to display. Did you forget to call Init()?</exception>
+            <since version="Added in API level 1"/>
+            <altmember cref="P:Android.Views.View.MeasuredWidth"/>
+            <altmember cref="P:Android.Views.View.MeasuredHeight"/>
+            <altmember cref="M:Android.Views.View.SetMeasuredDimension(System.Int32, System.Int32)"/>
+            <altmember cref="M:Android.Views.View.get_SuggestedMinimumHeight"/>
+            <altmember cref="M:Android.Views.View.get_SuggestedMinimumWidth"/>
+            <altmember cref="M:Android.Views.View.MeasureSpec.GetMode(System.Int32)"/>
+            <altmember cref="M:Android.Views.View.MeasureSpec.GetSize(System.Int32)"/>
+            <remarks><para tool="javadoc-to-mdoc"/>
+            <para tool="javadoc-to-mdoc">
+            Measure the view and its content to determine the measured width and the
+            measured height. This method is invoked by <c><see cref="M:Android.Views.View.Measure(System.Int32, System.Int32)"/></c> and
+            should be overriden by subclasses to provide accurate and efficient
+            measurement of their contents.
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <i>CONTRACT:</i> When overriding this method, you
+            <i>must</i> call <c><see cref="M:Android.Views.View.SetMeasuredDimension(System.Int32, System.Int32)"/></c> to store the
+            measured width and height of this view. Failure to do so will trigger an
+            <c>IllegalStateException</c>, thrown by
+            <c><see cref="M:Android.Views.View.Measure(System.Int32, System.Int32)"/></c>. Calling the superclass'
+            <c><see cref="M:Android.Views.View.OnMeasure(System.Int32, System.Int32)"/></c> is a valid use.
+            </para>
+            <para tool="javadoc-to-mdoc">
+            The base class implementation of measure defaults to the background size,
+            unless a larger size is allowed by the MeasureSpec. Subclasses should
+            override <c><see cref="M:Android.Views.View.OnMeasure(System.Int32, System.Int32)"/></c> to provide better measurements of
+            their content.
+            </para>
+            <para tool="javadoc-to-mdoc">
+            If this method is overridden, it is the subclass's responsibility to make
+            sure the measured height and width are at least the view's minimum height
+            and width (<c><see cref="M:Android.Views.View.get_SuggestedMinimumHeight"/></c> and
+            <c><see cref="M:Android.Views.View.get_SuggestedMinimumWidth"/></c>).
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/View.html#onMeasure(int, int)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.SetMidnight(System.DateTime)">
+            <summary>
+            Sets the midnight.
+            </summary>
+            <param name="date">The date.</param>
+            <returns>DateTime.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.IsSelectable(System.DateTime)">
+            <summary>
+            Determines whether the specified date is selectable.
+            </summary>
+            <param name="date">The date.</param>
+            <returns><c>true</c> if the specified date is selectable; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.ApplyMultiSelect(System.DateTime,System.DateTime)">
+            <summary>
+            Applies the multi select.
+            </summary>
+            <param name="date">The date.</param>
+            <param name="selectedCal">The selected cal.</param>
+            <returns>DateTime.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.ClearOldSelection">
+            <summary>
+            Clears the old selection.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.DeselectDate">
+            <summary>
+            Deselects the date.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.DoSelectDate(System.DateTime,XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor)">
+            <summary>
+            Does the select date.
+            </summary>
+            <param name="date">The date.</param>
+            <param name="cell">The cell.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+            <exception cref="T:Java.Lang.IllegalStateException">Unknown SelectionMode  + Mode</exception>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.ValidateAndUpdate">
+            <summary>
+            Validates the and update.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.SelectDate(System.DateTime)">
+            <summary>
+            Selects the date.
+            </summary>
+            <param name="date">The date.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.SelectDate(System.DateTime,System.Boolean)">
+            <summary>
+            Selects the date.
+            </summary>
+            <param name="date">The date.</param>
+            <param name="smoothScroll">if set to <c>true</c> [smooth scroll].</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.ValidateDate(System.DateTime)">
+            <summary>
+            Validates the date.
+            </summary>
+            <param name="date">The date.</param>
+            <exception cref="T:Java.Lang.IllegalArgumentException">
+            Selected date must be non-zero.
+            or
+            </exception>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.GetMinDate(System.Collections.Generic.List{System.DateTime})">
+            <summary>
+            Gets the minimum date.
+            </summary>
+            <param name="selectedCals">The selected cals.</param>
+            <returns>DateTime.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.GetMaxDate(System.Collections.Generic.List{System.DateTime})">
+            <summary>
+            Gets the maximum date.
+            </summary>
+            <param name="selectedCals">The selected cals.</param>
+            <returns>DateTime.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.IsBetweenDates(System.DateTime,System.DateTime,System.DateTime)">
+            <summary>
+            Determines whether [is between dates] [the specified date].
+            </summary>
+            <param name="date">The date.</param>
+            <param name="minCal">The minimum cal.</param>
+            <param name="maxCal">The maximum cal.</param>
+            <returns><c>true</c> if [is between dates] [the specified date]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.IsSameDate(System.DateTime,System.DateTime)">
+            <summary>
+            Determines whether [is same date] [the specified cal].
+            </summary>
+            <param name="cal">The cal.</param>
+            <param name="selectedDate">The selected date.</param>
+            <returns><c>true</c> if [is same date] [the specified cal]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.IsSameMonth(System.DateTime,XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthDescriptor)">
+            <summary>
+            Determines whether [is same month] [the specified cal].
+            </summary>
+            <param name="cal">The cal.</param>
+            <param name="month">The month.</param>
+            <returns><c>true</c> if [is same month] [the specified cal]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.ContatinsDate(System.Collections.Generic.IEnumerable{System.DateTime},System.DateTime)">
+            <summary>
+            Contatinses the date.
+            </summary>
+            <param name="selectedCals">The selected cals.</param>
+            <param name="cal">The cal.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.HighlightDates(System.Collections.Generic.ICollection{System.DateTime})">
+            <summary>
+            Highlights the dates.
+            </summary>
+            <param name="dates">The dates.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.Debug(System.DateTime,System.DateTime)">
+            <summary>
+            Debugs the specified minimum date.
+            </summary>
+            <param name="minDate">The minimum date.</param>
+            <param name="maxDate">The maximum date.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.StyleDescriptor">
+            <summary>
+            Gets the style descriptor.
+            </summary>
+            <value>The style descriptor.</value>
+        </member>
+        <member name="E:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.OnInvalidDateSelected">
+            <summary>
+            Occurs when [on invalid date selected].
+            </summary>
+        </member>
+        <member name="E:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.OnDateSelected">
+            <summary>
+            Occurs when [on date selected].
+            </summary>
+        </member>
+        <member name="E:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.OnDateUnselected">
+            <summary>
+            Occurs when [on date unselected].
+            </summary>
+        </member>
+        <member name="E:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.OnMonthChanged">
+            <summary>
+            Occurs when [on month changed].
+            </summary>
+        </member>
+        <member name="E:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.OnDateSelectable">
+            <summary>
+            Occurs when [on date selectable].
+            </summary>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.Mode">
+            <summary>
+            Gets or sets the mode.
+            </summary>
+            <value>The mode.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.CurrentMonth">
+            <summary>
+            Gets the current month.
+            </summary>
+            <value>The current month.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.MonthCount">
+            <summary>
+            Gets the month count.
+            </summary>
+            <value>The month count.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.SelectedDate">
+            <summary>
+            Gets the selected date.
+            </summary>
+            <value>The selected date.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.SelectedDates">
+            <summary>
+            Gets the selected dates.
+            </summary>
+            <value>The selected dates.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.SelectionMode">
+            <summary>
+            Enum SelectionMode
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.SelectionMode.Single">
+            <summary>
+            The single
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.SelectionMode.Multi">
+            <summary>
+            The multi
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.SelectionMode.Range">
+            <summary>
+            The range
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.OnPageChangeListener">
+            <summary>
+            Class OnPageChangeListener.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.OnPageChangeListener._picker">
+            <summary>
+            The _picker
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.OnPageChangeListener.#ctor(XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.OnPageChangeListener"/> class.
+            </summary>
+            <param name="picker">The picker.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.OnPageChangeListener.OnPageSelected(System.Int32)">
+            <summary>
+            Called when [page selected].
+            </summary>
+            <param name="position">The position.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.MonthCellWithMonthIndex">
+            <summary>
+            Class MonthCellWithMonthIndex.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.MonthCellWithMonthIndex.Cell">
+            <summary>
+            The cell
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.MonthCellWithMonthIndex.MonthIndex">
+            <summary>
+            The month index
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.MonthCellWithMonthIndex.#ctor(XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.MonthCellWithMonthIndex"/> class.
+            </summary>
+            <param name="cell">The cell.</param>
+            <param name="monthIndex">Index of the month.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.FluentInitializer">
+            <summary>
+            Class FluentInitializer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.FluentInitializer._calendar">
+            <summary>
+            The _calendar
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.FluentInitializer.#ctor(XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.FluentInitializer"/> class.
+            </summary>
+            <param name="calendar">The calendar.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.FluentInitializer.InMode(XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView.SelectionMode)">
+            <summary>
+            Ins the mode.
+            </summary>
+            <param name="mode">The mode.</param>
+            <returns>FluentInitializer.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.FluentInitializer.WithSelectedDate(System.DateTime)">
+            <summary>
+            Withes the selected date.
+            </summary>
+            <param name="selectedDate">The selected date.</param>
+            <returns>FluentInitializer.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.FluentInitializer.WithSelectedDates(System.Collections.Generic.ICollection{System.DateTime})">
+            <summary>
+            Withes the selected dates.
+            </summary>
+            <param name="selectedDates">The selected dates.</param>
+            <returns>FluentInitializer.</returns>
+            <exception cref="T:Java.Lang.IllegalArgumentException">SINGLE mode can't be used with multiple selectedDates</exception>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.FluentInitializer.WithLocale(Java.Util.Locale)">
+            <summary>
+            Withes the locale.
+            </summary>
+            <param name="locale">The locale.</param>
+            <returns>FluentInitializer.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.FluentInitializer.WithHighlightedDates(System.Collections.Generic.ICollection{System.DateTime})">
+            <summary>
+            Withes the highlighted dates.
+            </summary>
+            <param name="dates">The dates.</param>
+            <returns>FluentInitializer.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.FluentInitializer.WithHighlightedDate(System.DateTime)">
+            <summary>
+            Withes the highlighted date.
+            </summary>
+            <param name="date">The date.</param>
+            <returns>FluentInitializer.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.ClickHandler">
+            <summary>
+            Delegate ClickHandler
+            </summary>
+            <param name="cell">The cell.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.DateSelectableHandler">
+            <summary>
+            Delegate DateSelectableHandler
+            </summary>
+            <param name="date">The date.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.DateSelectedEventArgs">
+            <summary>
+            Class DateSelectedEventArgs.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.DateSelectedEventArgs.#ctor(System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.DateSelectedEventArgs"/> class.
+            </summary>
+            <param name="date">The date.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.DateSelectedEventArgs.SelectedDate">
+            <summary>
+            Gets the selected date.
+            </summary>
+            <value>The selected date.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthChangedEventArgs">
+            <summary>
+            Class MonthChangedEventArgs.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthChangedEventArgs.#ctor(System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthChangedEventArgs"/> class.
+            </summary>
+            <param name="date">The date.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthChangedEventArgs.DisplayedMonth">
+            <summary>
+            Gets the displayed month.
+            </summary>
+            <value>The displayed month.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView">
+            <summary>
+            Class CalendarRowView.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView.ClickHandler">
+            <summary>
+            The click handler
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView._cellSize">
+            <summary>
+            The _cell size
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="attrs">The attrs.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView.AddView(Android.Views.View,System.Int32,Android.Views.ViewGroup.LayoutParams)">
+            <summary>
+            Adds the view.
+            </summary>
+            <param name="child">The child.</param>
+            <param name="index">The index.</param>
+            <param name="params">The parameters.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView.OnMeasure(System.Int32,System.Int32)">
+            <summary>
+            Called when [measure].
+            </summary>
+            <param name="widthMeasureSpec">horizontal space requirements as imposed by the parent.
+            The requirements are encoded with
+            <c><see cref="T:Android.Views.View+MeasureSpec" /></c>.</param>
+            <param name="heightMeasureSpec">vertical space requirements as imposed by the parent.
+            The requirements are encoded with
+            <c><see cref="T:Android.Views.View+MeasureSpec" /></c>.</param>
+            <since version="Added in API level 1" />
+            <altmember cref="P:Android.Views.View.MeasuredWidth" />
+            <altmember cref="P:Android.Views.View.MeasuredHeight" />
+            <altmember cref="M:Android.Views.View.SetMeasuredDimension(System.Int32, System.Int32)" />
+            <altmember cref="M:Android.Views.View.get_SuggestedMinimumHeight" />
+            <altmember cref="M:Android.Views.View.get_SuggestedMinimumWidth" />
+            <altmember cref="M:Android.Views.View.MeasureSpec.GetMode(System.Int32)" />
+            <altmember cref="M:Android.Views.View.MeasureSpec.GetSize(System.Int32)" />
+            <remarks><para tool="javadoc-to-mdoc" />
+            <para tool="javadoc-to-mdoc">
+            Measure the view and its content to determine the measured width and the
+            measured height. This method is invoked by <c><see cref="M:Android.Views.View.Measure(System.Int32, System.Int32)" /></c> and
+            should be overriden by subclasses to provide accurate and efficient
+            measurement of their contents.
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <i>CONTRACT:</i> When overriding this method, you
+            <i>must</i> call <c><see cref="M:Android.Views.View.SetMeasuredDimension(System.Int32, System.Int32)" /></c> to store the
+            measured width and height of this view. Failure to do so will trigger an
+            <c>IllegalStateException</c>, thrown by
+            <c><see cref="M:Android.Views.View.Measure(System.Int32, System.Int32)" /></c>. Calling the superclass'
+            <c><see cref="M:Android.Views.View.OnMeasure(System.Int32, System.Int32)" /></c> is a valid use.
+            </para>
+            <para tool="javadoc-to-mdoc">
+            The base class implementation of measure defaults to the background size,
+            unless a larger size is allowed by the MeasureSpec. Subclasses should
+            override <c><see cref="M:Android.Views.View.OnMeasure(System.Int32, System.Int32)" /></c> to provide better measurements of
+            their content.
+            </para>
+            <para tool="javadoc-to-mdoc">
+            If this method is overridden, it is the subclass's responsibility to make
+            sure the measured height and width are at least the view's minimum height
+            and width (<c><see cref="M:Android.Views.View.get_SuggestedMinimumHeight" /></c> and
+            <c><see cref="M:Android.Views.View.get_SuggestedMinimumWidth" /></c>).
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/View.html#onMeasure(int, int)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView.OnLayout(System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Called from layout when this view should
+            assign a size and position to each of its children.
+            </summary>
+            <param name="changed">This is a new size or position for this view</param>
+            <param name="l">Left position, relative to parent</param>
+            <param name="t">Top position, relative to parent</param>
+            <param name="r">Right position, relative to parent</param>
+            <param name="b">Bottom position, relative to parent</param>
+            <since version="Added in API level 1" />
+            <remarks><para tool="javadoc-to-mdoc">Called from layout when this view should
+            assign a size and position to each of its children.
+            Derived classes with children should override
+            this method and call layout on each of
+            their children.
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/ViewGroup.html#onLayout(boolean, int, int, int, int)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView.OnClick(Android.Views.View)">
+            <summary>
+            Called when [click].
+            </summary>
+            <param name="v">The v.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView.IsHeaderRow">
+            <summary>
+            Gets or sets a value indicating whether this instance is header row.
+            </summary>
+            <value><c>true</c> if this instance is header row; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.Logr">
+            <summary>
+            Class Logr.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.Logr.D(System.String)">
+            <summary>
+            ds the specified message.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.Logr.D(System.String,System.Object[])">
+            <summary>
+            ds the specified message.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthAdapter">
+            <summary>
+            Class MonthAdapter.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthAdapter._inflater">
+            <summary>
+            The _inflater
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthAdapter._calendar">
+            <summary>
+            The _calendar
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthAdapter._reusableMonthView">
+            <summary>
+            The _reusable month view
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthAdapter._activeMonthViews">
+            <summary>
+            The _active month views
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthAdapter.#ctor(Android.Content.Context,XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthAdapter"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="calendar">The calendar.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthAdapter.IsViewFromObject(Android.Views.View,Java.Lang.Object)">
+            <summary>
+            Determines whether [is view from object] [the specified view].
+            </summary>
+            <param name="view">The view.</param>
+            <param name="object">The object.</param>
+            <returns><c>true</c> if [is view from object] [the specified view]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthAdapter.GetPageWidth(System.Int32)">
+            <summary>
+            Gets the width of the page.
+            </summary>
+            <param name="position">The position.</param>
+            <returns>System.Single.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthAdapter.InstantiateItem(Android.Views.View,System.Int32)">
+            <summary>
+            Instantiates the item.
+            </summary>
+            <param name="container">The container.</param>
+            <param name="position">The position.</param>
+            <returns>Java.Lang.Object.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthAdapter.NotifyDataSetChanged">
+            <summary>
+            Notifies the data set changed.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthAdapter.DestroyItem(Android.Views.View,System.Int32,Java.Lang.Object)">
+            <summary>
+            Destroys the item.
+            </summary>
+            <param name="container">The container.</param>
+            <param name="position">The position.</param>
+            <param name="object">The object.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthAdapter.Count">
+            <summary>
+            Gets the count.
+            </summary>
+            <value>The count.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.RangeState">
+            <summary>
+            Enum RangeState
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.RangeState.None">
+            <summary>
+            The none
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.RangeState.First">
+            <summary>
+            The first
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.RangeState.Middle">
+            <summary>
+            The middle
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.RangeState.Last">
+            <summary>
+            The last
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor">
+            <summary>
+            Class MonthCellDescriptor.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor.#ctor(System.DateTime,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,XLabs.Forms.Controls.MonoDroid.TimesSquare.RangeState,XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor"/> class.
+            </summary>
+            <param name="date">The date.</param>
+            <param name="isCurrentMonth">if set to <c>true</c> [is current month].</param>
+            <param name="isSelectable">if set to <c>true</c> [is selectable].</param>
+            <param name="isSelected">if set to <c>true</c> [is selected].</param>
+            <param name="isToday">if set to <c>true</c> [is today].</param>
+            <param name="isHighlighted">if set to <c>true</c> [is highlighted].</param>
+            <param name="value">The value.</param>
+            <param name="rangeState">State of the range.</param>
+            <param name="style">The style.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String"/> that represents this instance.</returns>
+            <since version="Added in API level 1"/>
+            <remarks><para tool="javadoc-to-mdoc">Returns a string containing a concise, human-readable description of this
+            object. Subclasses are encouraged to override this method and provide an
+            implementation that takes into account the object's type and data. The
+            default implementation is equivalent to the following expression:
+            <example><code lang="java">
+            getClass().getName() + '@' + Integer.toHexString(hashCode())</code></example></para>
+            <para tool="javadoc-to-mdoc">See <see cref="!:Java.Lang.Object.writing_toString"/>
+            if you intend implementing your own <c>toString</c> method.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/java/lang/Object.html#toString()" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor.DateTime">
+            <summary>
+            Gets or sets the date time.
+            </summary>
+            <value>The date time.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor.IsCurrentMonth">
+            <summary>
+            Gets or sets a value indicating whether this instance is current month.
+            </summary>
+            <value><c>true</c> if this instance is current month; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor.IsSelected">
+            <summary>
+            Gets or sets a value indicating whether this instance is selected.
+            </summary>
+            <value><c>true</c> if this instance is selected; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor.IsToday">
+            <summary>
+            Gets or sets a value indicating whether this instance is today.
+            </summary>
+            <value><c>true</c> if this instance is today; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor.IsSelectable">
+            <summary>
+            Gets or sets a value indicating whether this instance is selectable.
+            </summary>
+            <value><c>true</c> if this instance is selectable; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor.IsHighlighted">
+            <summary>
+            Gets or sets a value indicating whether this instance is highlighted.
+            </summary>
+            <value><c>true</c> if this instance is highlighted; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor.RangeState">
+            <summary>
+            Gets or sets the state of the range.
+            </summary>
+            <value>The state of the range.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor.Style">
+            <summary>
+            Gets or sets the style.
+            </summary>
+            <value>The style.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthDescriptor">
+            <summary>
+            Class MonthDescriptor.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthDescriptor.#ctor(System.Int32,System.Int32,System.DateTime,System.String,XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthDescriptor"/> class.
+            </summary>
+            <param name="month">The month.</param>
+            <param name="year">The year.</param>
+            <param name="date">The date.</param>
+            <param name="label">The label.</param>
+            <param name="style">The style.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthDescriptor.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String"/> that represents this instance.</returns>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthDescriptor.Month">
+            <summary>
+            Gets the month.
+            </summary>
+            <value>The month.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthDescriptor.Year">
+            <summary>
+            Gets the year.
+            </summary>
+            <value>The year.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthDescriptor.Date">
+            <summary>
+            Gets the date.
+            </summary>
+            <value>The date.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthDescriptor.Label">
+            <summary>
+            Gets the label.
+            </summary>
+            <value>The label.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthDescriptor.Style">
+            <summary>
+            Gets the style.
+            </summary>
+            <value>The style.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView">
+            <summary>
+            Class MonthView.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView._title">
+            <summary>
+            The _title
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView._grid">
+            <summary>
+            The _grid
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView._clickHandler">
+            <summary>
+            The _click handler
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="attrs">The attrs.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView.Create(Android.Views.ViewGroup,Android.Views.LayoutInflater,System.String,System.DateTime,XLabs.Forms.Controls.MonoDroid.TimesSquare.ClickHandler)">
+            <summary>
+            Creates the specified parent.
+            </summary>
+            <param name="parent">The parent.</param>
+            <param name="inflater">The inflater.</param>
+            <param name="weekdayNameFormat">The weekday name format.</param>
+            <param name="today">The today.</param>
+            <param name="handler">The handler.</param>
+            <returns>MonthView.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView.OnMeasure(System.Int32,System.Int32)">
+            <summary>
+            Called when [measure].
+            </summary>
+            <param name="widthMeasureSpec">horizontal space requirements as imposed by the parent.
+            The requirements are encoded with
+            <c><see cref="T:Android.Views.View+MeasureSpec" /></c>.</param>
+            <param name="heightMeasureSpec">vertical space requirements as imposed by the parent.
+            The requirements are encoded with
+            <c><see cref="T:Android.Views.View+MeasureSpec" /></c>.</param>
+            <since version="Added in API level 1" />
+            <altmember cref="P:Android.Views.View.MeasuredWidth" />
+            <altmember cref="P:Android.Views.View.MeasuredHeight" />
+            <altmember cref="M:Android.Views.View.SetMeasuredDimension(System.Int32, System.Int32)" />
+            <altmember cref="M:Android.Views.View.get_SuggestedMinimumHeight" />
+            <altmember cref="M:Android.Views.View.get_SuggestedMinimumWidth" />
+            <altmember cref="M:Android.Views.View.MeasureSpec.GetMode(System.Int32)" />
+            <altmember cref="M:Android.Views.View.MeasureSpec.GetSize(System.Int32)" />
+            <remarks><para tool="javadoc-to-mdoc" />
+            <para tool="javadoc-to-mdoc">
+            Measure the view and its content to determine the measured width and the
+            measured height. This method is invoked by <c><see cref="M:Android.Views.View.Measure(System.Int32, System.Int32)" /></c> and
+            should be overriden by subclasses to provide accurate and efficient
+            measurement of their contents.
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <i>CONTRACT:</i> When overriding this method, you
+            <i>must</i> call <c><see cref="M:Android.Views.View.SetMeasuredDimension(System.Int32, System.Int32)" /></c> to store the
+            measured width and height of this view. Failure to do so will trigger an
+            <c>IllegalStateException</c>, thrown by
+            <c><see cref="M:Android.Views.View.Measure(System.Int32, System.Int32)" /></c>. Calling the superclass'
+            <c><see cref="M:Android.Views.View.OnMeasure(System.Int32, System.Int32)" /></c> is a valid use.
+            </para>
+            <para tool="javadoc-to-mdoc">
+            The base class implementation of measure defaults to the background size,
+            unless a larger size is allowed by the MeasureSpec. Subclasses should
+            override <c><see cref="M:Android.Views.View.OnMeasure(System.Int32, System.Int32)" /></c> to provide better measurements of
+            their content.
+            </para>
+            <para tool="javadoc-to-mdoc">
+            If this method is overridden, it is the subclass's responsibility to make
+            sure the measured height and width are at least the view's minimum height
+            and width (<c><see cref="M:Android.Views.View.get_SuggestedMinimumHeight" /></c> and
+            <c><see cref="M:Android.Views.View.get_SuggestedMinimumWidth" /></c>).
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/View.html#onMeasure(int, int)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView.Init(XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthDescriptor,System.Collections.Generic.List{System.Collections.Generic.List{XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthCellDescriptor}})">
+            <summary>
+            Initializes the specified month.
+            </summary>
+            <param name="month">The month.</param>
+            <param name="cells">The cells.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView.OnFinishInflate">
+            <summary>
+            Finalize inflating a view from XML.
+            </summary>
+            <since version="Added in API level 1" />
+            <remarks><para tool="javadoc-to-mdoc">Finalize inflating a view from XML.  This is called as the last phase
+            of inflation, after all child views have been added.
+            </para>
+            <para tool="javadoc-to-mdoc">Even if the subclass overrides onFinishInflate, they should always be
+            sure to call the super method, so that we get called.
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/View.html#onFinishInflate()" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="T:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor">
+            <summary>
+            Class StyleDescriptor.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.BackgroundColor">
+            <summary>
+            The background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.DateForegroundColor">
+            <summary>
+            The date foreground color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.DateBackgroundColor">
+            <summary>
+            The date background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.InactiveDateForegroundColor">
+            <summary>
+            The inactive date foreground color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.InactiveDateBackgroundColor">
+            <summary>
+            The inactive date background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.SelectedDateForegroundColor">
+            <summary>
+            The selected date foreground color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.SelectedDateBackgroundColor">
+            <summary>
+            The selected date background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.TitleForegroundColor">
+            <summary>
+            The title foreground color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.TitleBackgroundColor">
+            <summary>
+            The title background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.TodayForegroundColor">
+            <summary>
+            The today foreground color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.TodayBackgroundColor">
+            <summary>
+            The today background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.DayOfWeekLabelForegroundColor">
+            <summary>
+            The day of week label foreground color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.DayOfWeekLabelBackgroundColor">
+            <summary>
+            The day of week label background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.HighlightedDateForegroundColor">
+            <summary>
+            The highlighted date foreground color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.HighlightedDateBackgroundColor">
+            <summary>
+            The highlighted date background color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.DateSeparatorColor">
+            <summary>
+            The date separator color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.MonthTitleFont">
+            <summary>
+            The month title font
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.DateLabelFont">
+            <summary>
+            The date label font
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.MonoDroid.TimesSquare.StyleDescriptor.ShouldHighlightDaysOfWeekLabel">
+            <summary>
+            The should highlight days of week label
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CameraViewRenderer">
+            <summary>
+            Class CameraViewRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{XLabs.Forms.Controls.CameraView})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraViewRenderer.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CameraPreview">
+            <summary>
+            Class CameraPreview.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraPreview.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.CameraPreview"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraPreview.SwitchCamera(Android.Hardware.Camera)">
+            <summary>
+            Switches the camera.
+            </summary>
+            <param name="camera">The camera.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraPreview.OnMeasure(System.Int32,System.Int32)">
+            <summary>
+            Called when [measure].
+            </summary>
+            <param name="widthMeasureSpec">The width measure spec.</param>
+            <param name="heightMeasureSpec">The height measure spec.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraPreview.OnLayout(System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Called when [layout].
+            </summary>
+            <param name="changed">if set to <c>true</c> [changed].</param>
+            <param name="l">The l.</param>
+            <param name="t">The t.</param>
+            <param name="r">The r.</param>
+            <param name="b">The b.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraPreview.SurfaceCreated(Android.Views.ISurfaceHolder)">
+            <summary>
+            Surfaces the created.
+            </summary>
+            <param name="holder">The holder.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraPreview.SurfaceDestroyed(Android.Views.ISurfaceHolder)">
+            <summary>
+            Surfaces the destroyed.
+            </summary>
+            <param name="holder">The holder.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraPreview.GetOptimalPreviewSize(System.Collections.Generic.IList{Android.Hardware.Camera.Size},System.Int32,System.Int32)">
+            <summary>
+            Gets the size of the optimal preview.
+            </summary>
+            <param name="sizes">The sizes.</param>
+            <param name="w">The w.</param>
+            <param name="h">The h.</param>
+            <returns>Camera.Size.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CameraPreview.SurfaceChanged(Android.Views.ISurfaceHolder,Android.Graphics.Format,System.Int32,System.Int32)">
+            <summary>
+            Surfaces the changed.
+            </summary>
+            <param name="holder">The holder.</param>
+            <param name="format">The format.</param>
+            <param name="w">The w.</param>
+            <param name="h">The h.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.CameraPreview.PreviewCamera">
+            <summary>
+            Gets or sets the preview camera.
+            </summary>
+            <value>The preview camera.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CheckBoxRenderer">
+            <summary>
+            Class CheckBoxRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{XLabs.Forms.Controls.CheckBox})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxRenderer.CheckBoxCheckedChange(System.Object,Android.Widget.CompoundButton.CheckedChangeEventArgs)">
+            <summary>
+            CheckBoxes the checked change.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Android.Widget.CompoundButton.CheckedChangeEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxRenderer.TrySetFont(System.String)">
+            <summary>
+            Tries the set font.
+            </summary>
+            <param name="fontName">Name of the font.</param>
+            <returns>Typeface.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CheckBoxRenderer.UpdateTextColor">
+            <summary>
+            Updates the color of the text
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CircleImageRenderer">
+            <summary>
+            Class CircleImageRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CircleImageRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{Xamarin.Forms.Image})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CircleImageRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CircleImageRenderer.DrawChild(Android.Graphics.Canvas,Android.Views.View,System.Int64)">
+            <summary>
+            Draw one child of this View Group.
+            </summary>
+            <param name="canvas">The canvas on which to draw the child</param>
+            <param name="child">Who to draw</param>
+            <param name="drawingTime">The time at which draw is occurring</param>
+            <returns>To be added.</returns>
+            <since version="Added in API level 1" />
+            <remarks><para tool="javadoc-to-mdoc">Draw one child of this View Group. This method is responsible for getting
+            the canvas in the right state. This includes clipping, translating so
+            that the child's scrolled origin is at 0, 0, and applying any animation
+            transformations.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/ViewGroup.html#drawChild(android.graphics.Canvas, android.view.View, long)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CircleImageRenderer.ReshapeImage(Android.Graphics.Bitmap)">
+            <summary>
+            Reshapes the image.
+            </summary>
+            <param name="sourceBitmap">The source bitmap.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CircleImageRenderer.GetScaledRect(System.Int32,System.Int32)">
+            <summary>
+            Gets the scaled rect.
+            </summary>
+            <param name="sourceHeight">Height of the source.</param>
+            <param name="sourceWidth">Width of the source.</param>
+            <returns>Rect.</returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CircleImageRenderer.MakeSquare(System.Int32,System.Int32@)">
+            <summary>
+            Makes the square.
+            </summary>
+            <param name="height">The height.</param>
+            <param name="width">The width.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.CircleImageRenderer.GetTargetRect(System.Int32,System.Int32)">
+            <summary>
+            Gets the target rect.
+            </summary>
+            <param name="sourceHeight">Height of the source.</param>
+            <param name="sourceWidth">Width of the source.</param>
+            <returns>Rect.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.DragContentViewRenderer">
+            <summary>
+            Class DragContentViewRenderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DragContentViewRenderer.touchedElement">
+            <summary>
+            The touched element
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DragContentViewRenderer.touchedView">
+            <summary>
+            The touched view
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DragContentViewRenderer.homePosition">
+            <summary>
+            The home position
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DragContentViewRenderer.offsetLocation">
+            <summary>
+            The offset location
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DragContentViewRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.DragContentViewRenderer"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DragContentViewRenderer.HandleTouch(System.Object,Android.Views.View.TouchEventArgs)">
+            <summary>
+            Handles the touch.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Android.Views.View.TouchEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DragContentViewRenderer.GetPointF(Android.Views.MotionEvent)">
+            <summary>
+            Gets the point f.
+            </summary>
+            <param name="e">The e.</param>
+            <returns>PointF.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.DynamicListViewRenderer`1">
+            <summary>
+            Class DynamicListViewRenderer.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DynamicListViewRenderer`1._tableView">
+            <summary>
+            The _table view
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DynamicListViewRenderer`1._source">
+            <summary>
+            The _source
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicListViewRenderer`1.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{XLabs.Forms.Controls.DynamicListView{`0}})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicListViewRenderer`1.GetView(`0,Android.Views.View,Android.Views.ViewGroup)">
+            <summary>
+            Gets the view.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="convertView">The convert view.</param>
+            <param name="parent">The parent.</param>
+            <returns>Android.Views.View.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicListViewRenderer`1.Unbind(XLabs.Forms.Controls.DynamicListView{`0})">
+            <summary>
+            Unbinds the specified old element.
+            </summary>
+            <param name="oldElement">The old element.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicListViewRenderer`1.Bind(XLabs.Forms.Controls.DynamicListView{`0})">
+            <summary>
+            Binds the specified new element.
+            </summary>
+            <param name="newElement">The new element.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicListViewRenderer`1.ElementPropertyChanging(System.Object,Xamarin.Forms.PropertyChangingEventArgs)">
+            <summary>
+            Elements the property changing.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Xamarin.Forms.PropertyChangingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicListViewRenderer`1.DataCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Datas the collection changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicListViewRenderer`1.ElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Elements the property changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.DynamicListViewRenderer`1.Source">
+            <summary>
+            Gets the source.
+            </summary>
+            <value>The source.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.DynamicListViewRenderer`1.DataSource">
+            <summary>
+            Class DataSource.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.DynamicListViewRenderer`1.DataSource._parent">
+            <summary>
+            The _parent
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicListViewRenderer`1.DataSource.#ctor(XLabs.Forms.Controls.DynamicListViewRenderer{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.DynamicListViewRenderer`1.DataSource"/> class.
+            </summary>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicListViewRenderer`1.DataSource.GetItem(System.Int32)">
+            <summary>
+            To be added.
+            </summary>
+            <param name="position">To be added.</param>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicListViewRenderer`1.DataSource.GetItemId(System.Int32)">
+            <summary>
+            To be added.
+            </summary>
+            <param name="position">To be added.</param>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.DynamicListViewRenderer`1.DataSource.GetView(System.Int32,Android.Views.View,Android.Views.ViewGroup)">
+            <summary>
+            To be added.
+            </summary>
+            <param name="position">To be added.</param>
+            <param name="convertView">To be added.</param>
+            <param name="parent">To be added.</param>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:XLabs.Forms.Controls.DynamicListViewRenderer`1.DataSource.Count">
+            <summary>
+            To be added.
+            </summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedButtonRenderer">
+            <summary>
+            Class ExtendedButtonRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedButtonRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{Xamarin.Forms.Button})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedButtonRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedButtonRenderer.UpdateFont">
+            <summary>
+            Updates the font
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedButtonRenderer.UpdateAlignment">
+            <summary>
+            Sets the alignment.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedEditorRenderer">
+            <summary>
+            Class ExtendedEditorRenderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedEditorRenderer.MIN_DISTANCE">
+            <summary>
+            The mi n_ distance
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedEditorRenderer._downX">
+            <summary>
+            The _down x
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedEditorRenderer._downY">
+            <summary>
+            The _down x
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedEditorRenderer._upX">
+            <summary>
+            The _down x
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedEditorRenderer._upY">
+            <summary>
+            The _down x
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEditorRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{Xamarin.Forms.Editor})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEditorRenderer.HandleTouch(System.Object,Android.Views.View.TouchEventArgs)">
+            <summary>
+            Handles the touch.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Android.Views.View.TouchEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedEntryCellRenderer">
+            <summary>
+            Class ExtendedEntryCellRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryCellRenderer.GetCellCore(Xamarin.Forms.Cell,Android.Views.View,Android.Views.ViewGroup,Android.Content.Context)">
+            <summary>
+            Gets the cell core.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="convertView">The convert view.</param>
+            <param name="parent">The parent.</param>
+            <param name="context">The context.</param>
+            <returns>Android.Views.View.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedEntryRenderer">
+            <summary>
+            Class ExtendedEntryRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{Xamarin.Forms.Entry})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.HandleTouch(System.Object,Android.Views.View.TouchEventArgs)">
+            <summary>
+            Handles the touch.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Android.Views.View.TouchEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.SetTextAlignment(XLabs.Forms.Controls.ExtendedEntry)">
+            <summary>
+            Sets the text alignment.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.SetFont(XLabs.Forms.Controls.ExtendedEntry)">
+            <summary>
+            Sets the font.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.SetPlaceholderTextColor(XLabs.Forms.Controls.ExtendedEntry)">
+            <summary>
+            Sets the color of the placeholder text.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedEntryRenderer.SetMaxLength(XLabs.Forms.Controls.ExtendedEntry)">
+            <summary>
+            Sets the MaxLength characteres.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedLabelRender">
+            <summary>
+            Class ExtendedLabelRender.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedLabelRender.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.ExtendedLabelRender"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedLabelRender.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{Xamarin.Forms.Label})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedLabelRender.UpdateUi(XLabs.Forms.Controls.ExtendedLabel,Android.Widget.TextView)">
+            <summary>
+            Updates the UI.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="control">The control.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedLabelRender.TrySetFont(System.String)">
+            <summary>
+            Tries the set font.
+            </summary>
+            <param name="fontName">Name of the font.</param>
+            <returns>Typeface.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedScrollViewRenderer">
+            <summary>
+            Class ExtendedScrollViewRenderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedScrollViewRenderer.Epsilon">
+            <summary>
+            The epsilon.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedScrollViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.VisualElementChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementChanged"/> event.
+            </summary>
+            <param name="e">The <see cref="T:Xamarin.Forms.Platform.Android.VisualElementChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedScrollViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedSwitchRenderer">
+            <summary>
+            Class ExtendedSwitchRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedSwitchRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{XLabs.Forms.Controls.ExtendedSwitch})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedSwitchRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedSwitchRenderer.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedSwitchRenderer.SetTintColor(Xamarin.Forms.Color)">
+            <summary>
+            Sets the color of the tint.
+            </summary>
+            <param name="color">The color.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedSwitchRenderer.ElementToggled(System.Object,Xamarin.Forms.ToggledEventArgs)">
+            <summary>
+            Handles the Toggled event of the Element control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Xamarin.Forms.ToggledEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedSwitchRenderer.ControlValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the ValueChanged event of the Control control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedTableViewRenderer">
+            <summary>
+            Class ExtendedTableViewRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTableViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{Xamarin.Forms.TableView})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ExtendedTextCellRenderer">
+            <summary>
+            Class ExtendedTextCellRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTextCellRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.ExtendedTextCellRenderer"/> class.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ExtendedTextCellRenderer._context">
+            <summary>
+            The _context
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTextCellRenderer.OnCellPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:CellPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="args">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTextCellRenderer.GetCellCore(Xamarin.Forms.Cell,Android.Views.View,Android.Views.ViewGroup,Android.Content.Context)">
+            <summary>
+            Gets the cell core.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="convertView">The convert view.</param>
+            <param name="parent">The parent.</param>
+            <param name="context">The context.</param>
+            <returns>Android.Views.View.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTextCellRenderer.UpdateTextViewFont(XLabs.Forms.Controls.ExtendedTextCell,Android.Widget.TextView)">
+            <summary>
+            Updates the Text View.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="control">The control.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ExtendedTextCellRenderer.TrySetFont(System.String)">
+            <summary>
+            Tries the set font.
+            </summary>
+            <param name="fontName">Name of the font.</param>
+            <returns>Typeface.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GesturesContentViewRenderer">
+            <summary>
+            Android renderer for the GestureContentView
+            This class detects gestures and sends them
+            to the GestureContentView for processing
+            It implments:
+            <see cref="T:Android.Views.GestureDetector.IOnGestureListener"/>
+            <see cref="T:Android.Views.GestureDetector.IOnDoubleTapListener"/>
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GesturesContentViewRenderer._detector">
+            <summary>
+            Standard Android detector
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.#ctor">
+            <summary>
+            Initialize the detector with a listener(this)
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{XLabs.Forms.Controls.GesturesContentView})">
+            <summary>
+            Follow the xamarin rules for element changing.
+            </summary>
+            <param name="e">Change event parameter</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.HandleTouch(System.Object,Android.Views.View.TouchEventArgs)">
+            <summary>
+            Forward touch events to the detector
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.HandleGenericMotion(System.Object,Android.Views.View.GenericMotionEventArgs)">
+            <summary>
+            Forward motion events to the detector
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.OnDown(Android.Views.MotionEvent)">
+            <summary>
+            Do noting
+            </summary>
+            <param name="e"></param>
+            <returns>Return false to indicate the the event has not been handled</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.OnFling(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single)">
+            <summary>
+            Pass the Fling(aka swipe) to the <see cref="T:XLabs.Forms.Controls.GesturesContentView"/> for processing
+            
+            </summary>
+            <param name="e1"></param>
+            <param name="e2"></param>
+            <param name="velocityX"></param>
+            <param name="velocityY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.OnLongPress(Android.Views.MotionEvent)">
+            <summary>
+            Pass the longpress to the <see cref="T:XLabs.Forms.Controls.GesturesContentView"/>
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.OnScroll(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single)">
+            <summary>
+            Ignored
+            </summary>
+            <param name="e1"></param>
+            <param name="e2"></param>
+            <param name="distanceX"></param>
+            <param name="distanceY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.OnShowPress(Android.Views.MotionEvent)">
+            <summary>
+            Ignored
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.OnSingleTapUp(Android.Views.MotionEvent)">
+            <summary>
+            Ignored
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.OnDoubleTap(Android.Views.MotionEvent)">
+            <summary>
+            Ignored
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.OnDoubleTapEvent(Android.Views.MotionEvent)">
+            <summary>
+            Send double tap to the <see cref="T:XLabs.Forms.Controls.GesturesContentView"/> for processing
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GesturesContentViewRenderer.OnSingleTapConfirmed(Android.Views.MotionEvent)">
+            <summary>
+            Send the Single tap to the <see cref="T:XLabs.Forms.Controls.GesturesContentView"/> for processing
+            </summary>
+            <param name="e"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GradientContentViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{XLabs.Forms.Controls.GradientContentView})">
+            <summary>
+            Setup the gradient layer
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:XLabs.Forms.Controls.GradientContentViewRenderer.GradientContentView">
+            <summary>
+            Gets the underlying element typed as an <see cref="P:XLabs.Forms.Controls.GradientContentViewRenderer.GradientContentView"/>.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridViewRenderer">
+            <summary>
+            Class GridViewRenderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridViewRenderer._orientation">
+            <summary>
+            The orientation
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.GridViewRenderer"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.OnConfigurationChanged(Android.Content.Res.Configuration)">
+            <summary>
+            Called when the current configuration of the resources being used
+            by the application have changed.
+            </summary>
+            <param name="newConfig">The new resource configuration.</param>
+            <since version="Added in API level 8" />
+            <remarks><para tool="javadoc-to-mdoc">Called when the current configuration of the resources being used
+            by the application have changed.  You can use this to decide when
+            to reload resources that can changed based on orientation and other
+            configuration characterstics.  You only need to use this if you are
+            not relying on the normal <c><see cref="T:Android.App.Activity" /></c> mechanism of
+            recreating the activity instance upon a configuration change.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/View.html#onConfigurationChanged(android.content.res.Configuration)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{XLabs.Forms.Controls.GridView})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.CollectionViewItemClick(System.Object,Android.Widget.AdapterView.ItemClickEventArgs)">
+            <summary>
+            Handles the ItemClick event of the collectionView control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:Android.Widget.AdapterView.ItemClickEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.Unbind(XLabs.Forms.Controls.GridView)">
+            <summary>
+            Unbinds the specified old element.
+            </summary>
+            <param name="oldElement">The old element.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.Bind(XLabs.Forms.Controls.GridView)">
+            <summary>
+            Binds the specified new element.
+            </summary>
+            <param name="newElement">The new element.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.ElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Elements the property changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.ElementPropertyChanging(System.Object,Xamarin.Forms.PropertyChangingEventArgs)">
+            <summary>
+            Elements the property changing.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Xamarin.Forms.PropertyChangingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.DataCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Datas the collection changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridViewRenderer._dataSource">
+            <summary>
+            The data source
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.RowsInSection">
+            <summary>
+            Rowses the in section.
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.GetCell(System.Int32,Android.Views.View,Android.Views.ViewGroup)">
+            <summary>
+            Gets the cell.
+            </summary>
+            <param name="position">The position.</param>
+            <param name="convertView">The convert view.</param>
+            <param name="parent">The parent.</param>
+            <returns>Android.Views.View.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewRenderer.GetImageBitmapFromUrl(System.String)">
+            <summary>
+            Gets the image bitmap from URL.
+            </summary>
+            <param name="url">The URL.</param>
+            <returns>Bitmap.</returns>
+        </member>
+        <member name="P:XLabs.Forms.Controls.GridViewRenderer.DataSource">
+            <summary>
+            Gets the data source.
+            </summary>
+            <value>The data source.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridDataSource">
+            <summary>
+            Class GridDataSource.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridDataSource._context">
+            <summary>
+            The _context
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridDataSource._onGetCell">
+            <summary>
+            The _on get cell
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridDataSource._onRowsInSection">
+            <summary>
+            The _on rows in section
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridDataSource.#ctor(XLabs.Forms.Controls.GridDataSource.OnGetCell,XLabs.Forms.Controls.GridDataSource.OnRowsInSection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.GridDataSource"/> class.
+            </summary>
+            <param name="onGetCell">The on get cell.</param>
+            <param name="onRowsInSection">The on rows in section.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridDataSource.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.GridDataSource"/> class.
+            </summary>
+            <param name="c">The c.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridDataSource.GetItem(System.Int32)">
+            <summary>
+            Gets the item.
+            </summary>
+            <param name="position">The position.</param>
+            <returns>Java.Lang.Object.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridDataSource.GetItemId(System.Int32)">
+            <summary>
+            Gets the item identifier.
+            </summary>
+            <param name="position">The position.</param>
+            <returns>System.Int64.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridDataSource.GetView(System.Int32,Android.Views.View,Android.Views.ViewGroup)">
+            <summary>
+            Gets the view.
+            </summary>
+            <param name="position">The position.</param>
+            <param name="convertView">The convert view.</param>
+            <param name="parent">The parent.</param>
+            <returns>Android.Views.View.</returns>
+        </member>
+        <member name="P:XLabs.Forms.Controls.GridDataSource.Count">
+            <summary>
+            Gets the count.
+            </summary>
+            <value>The count.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridDataSource.OnGetCell">
+            <summary>
+            Delegate OnGetCell
+            </summary>
+            <param name="position">The position.</param>
+            <param name="convertView">The convert view.</param>
+            <param name="parent">The parent.</param>
+            <returns>Android.Views.View.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridDataSource.OnRowsInSection">
+            <summary>
+            Delegate OnRowsInSection
+            </summary>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridViewCellRenderer">
+            <summary>
+            Class GridViewCellRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewCellRenderer.GetCellCore(Xamarin.Forms.Cell,Android.Views.View,Android.Views.ViewGroup,Android.Content.Context)">
+            <summary>
+            Gets the cell core.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="convertView">The convert view.</param>
+            <param name="parent">The parent.</param>
+            <param name="context">The context.</param>
+            <returns>Android.Views.View.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.GridViewCellRenderer.ViewCellContainer">
+            <summary>
+            Class ViewCellContainer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridViewCellRenderer.ViewCellContainer._view">
+            <summary>
+            The _view
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridViewCellRenderer.ViewCellContainer._parent">
+            <summary>
+            The _parent
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.GridViewCellRenderer.ViewCellContainer._viewCell">
+            <summary>
+            The _view cell
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewCellRenderer.ViewCellContainer.#ctor(Android.Content.Context,Xamarin.Forms.Platform.Android.IVisualElementRenderer,Xamarin.Forms.ViewCell,Android.Views.View)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.GridViewCellRenderer.ViewCellContainer"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="view">The view.</param>
+            <param name="viewCell">The view cell.</param>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewCellRenderer.ViewCellContainer.Update(Xamarin.Forms.ViewCell)">
+            <summary>
+            Updates the specified cell.
+            </summary>
+            <param name="cell">The cell.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.GridViewCellRenderer.ViewCellContainer.OnLayout(System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Called when [layout].
+            </summary>
+            <param name="changed">if set to <c>true</c> [changed].</param>
+            <param name="l">The l.</param>
+            <param name="t">The t.</param>
+            <param name="r">The r.</param>
+            <param name="b">The b.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.HybridWebViewRenderer">
+            <summary>
+            Class HybridWebViewRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:XLabs.Forms.Controls.HybridWebViewRenderer.GetWebViewClientDelegate">
+            <summary>
+            Allows one to override the Webview Client class without a custom renderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.HybridWebViewRenderer.GetWebChromeClientDelegate">
+            <summary>
+            Allows one to override the Chrome Client class without a custom renderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.GetDesiredSize(System.Int32,System.Int32)">
+            <summary>
+            Gets the desired size of the view.
+            </summary>
+            <param name="widthConstraint">Width constraint.</param>
+            <param name="heightConstraint">Height constraint.</param>
+            <returns>The desired size.</returns>
+            <remarks>We need to override this method and set the request height to 0. Otherwise on view refresh
+            we will get incorrect view height and might lose the ability to scroll the webview
+            completely.</remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{XLabs.Forms.Controls.HybridWebView})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.GetWebViewClient">
+            <summary>
+            Gets <see cref="T:XLabs.Forms.Controls.HybridWebViewRenderer.Client"/> for the web view.
+            </summary>
+            <returns><see cref="T:XLabs.Forms.Controls.HybridWebViewRenderer.Client"/></returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.GetWebChromeClient">
+            <summary>
+            Gets <see cref="T:XLabs.Forms.Controls.HybridWebViewRenderer.ChromeClient"/> for the web view.
+            </summary>
+            <returns><see cref="T:XLabs.Forms.Controls.HybridWebViewRenderer.ChromeClient"/></returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.Inject(System.String)">
+            <summary>
+            Injects the specified script.
+            </summary>
+            <param name="script">The script.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.Load(System.Uri)">
+            <summary>
+            Loads the specified URI.
+            </summary>
+            <param name="uri">The URI.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.LoadFromContent(System.Object,XLabs.Forms.Controls.HybridWebView.LoadContentEventArgs)">
+            <summary>
+            Loads from content.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="contentFullName">Full name of the content.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.LoadContent(System.Object,XLabs.Forms.Controls.HybridWebView.LoadContentEventArgs)">
+            <summary>
+            Loads the content.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="content">Full name of the content.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.LoadFromString(System.String)">
+            <summary>
+            Loads from string.
+            </summary>
+            <param name="html">The HTML.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.HybridWebViewRenderer.Client">
+            <summary>
+            Class Client.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.HybridWebViewRenderer.Client.WebHybrid">
+            <summary>
+            The web hybrid
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.Client.#ctor(XLabs.Forms.Controls.HybridWebViewRenderer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.HybridWebViewRenderer.Client"/> class.
+            </summary>
+            <param name="webHybrid">The web hybrid.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.Client.OnPageFinished(Android.Webkit.WebView,System.String)">
+            <summary>
+            Notify the host application that a page has finished loading.
+            </summary>
+            <param name="view">The WebView that is initiating the callback.</param>
+            <param name="url">The url of the page.</param>
+            <since version="Added in API level 1" />
+            <remarks><para tool="javadoc-to-mdoc">Notify the host application that a page has finished loading. This method
+            is called only for main frame. When onPageFinished() is called, the
+            rendering picture may not be updated yet. To get the notification for the
+            new Picture, use <c><see cref="M:Android.Webkit.WebView.IPictureListener.OnNewPicture(Android.Webkit.WebView, Android.Graphics.Picture)" /></c>.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/webkit/WebViewClient.html#onPageFinished(android.webkit.WebView, java.lang.String)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="T:XLabs.Forms.Controls.HybridWebViewRenderer.Xamarin">
+            <summary>
+            Java callback class for JavaScript.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.HybridWebViewRenderer.Xamarin.webHybrid">
+            <summary>
+            The web hybrid.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.Xamarin.#ctor(XLabs.Forms.Controls.HybridWebViewRenderer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.HybridWebViewRenderer.Xamarin"/> class.
+            </summary>
+            <param name="webHybrid">The web hybrid.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.Xamarin.Call(System.String)">
+            <summary>
+            Calls the specified function.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.HybridWebViewRenderer.ChromeClient">
+            <summary>
+            Class ChromeClient.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.ChromeClient.OnGeolocationPermissionsShowPrompt(System.String,Android.Webkit.GeolocationPermissions.ICallback)">
+            <summary>
+            Overrides the geolocation prompt and accepts the permission.
+            </summary>
+            <param name="origin">Origin of the prompt.</param>
+            <param name="callback">Permission callback.</param>
+            <remarks>Always grant permission since the app itself requires location
+            permission and the user has therefore already granted it.</remarks>
+        </member>
+        <member name="T:XLabs.Forms.Controls.HybridWebViewRenderer.NativeWebView">
+            <summary>
+            Class NativeWebView.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.HybridWebViewRenderer.NativeWebView.detector">
+            <summary>
+            The detector
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.NativeWebView.#ctor(XLabs.Forms.Controls.HybridWebViewRenderer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.HybridWebViewRenderer.NativeWebView"/> class.
+            </summary>
+            <param name="renderer">The renderer.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.NativeWebView.#ctor(System.IntPtr,Android.Runtime.JniHandleOwnership)">
+            <summary>
+            This is an Android specific constructor that sometimes needs to be called by the underlying
+            Xamarin ACW environment.
+            </summary>
+            <param name="ptr"></param>
+            <param name="handle"></param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.NativeWebView.OnTouchEvent(Android.Views.MotionEvent)">
+            <summary>
+            Implement this method to handle touch screen motion events.
+            </summary>
+            <param name="e">The motion event.</param>
+            <returns>To be added.</returns>
+            <since version="Added in API level 1" />
+            <remarks><para tool="javadoc-to-mdoc">Implement this method to handle touch screen motion events.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/View.html#onTouchEvent(android.view.MotionEvent)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="T:XLabs.Forms.Controls.HybridWebViewRenderer.NativeWebView.MyGestureListener">
+            <summary>
+            Class MyGestureListener.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.HybridWebViewRenderer.NativeWebView.MyGestureListener.SWIPE_MIN_DISTANCE">
+            <summary>
+            The swip e_ mi n_ distance
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.HybridWebViewRenderer.NativeWebView.MyGestureListener.SWIPE_MAX_OFF_PATH">
+            <summary>
+            The swip e_ ma x_ of f_ path
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.HybridWebViewRenderer.NativeWebView.MyGestureListener.SWIPE_THRESHOLD_VELOCITY">
+            <summary>
+            The swip e_ threshol d_ velocity
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.HybridWebViewRenderer.NativeWebView.MyGestureListener.webHybrid">
+            <summary>
+            The web hybrid
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.NativeWebView.MyGestureListener.#ctor(XLabs.Forms.Controls.HybridWebViewRenderer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.HybridWebViewRenderer.NativeWebView.MyGestureListener"/> class.
+            </summary>
+            <param name="renderer">The renderer.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HybridWebViewRenderer.NativeWebView.MyGestureListener.OnFling(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single)">
+            <summary>
+            Called when [fling].
+            </summary>
+            <param name="e1">The e1.</param>
+            <param name="e2">The e2.</param>
+            <param name="velocityX">The velocity x.</param>
+            <param name="velocityY">The velocity y.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.HyperLinkLabelRenderer">
+            <summary>
+            Class HyperLinkLabelRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.HyperLinkLabelRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{Xamarin.Forms.Label})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ImageButtonRenderer">
+            <summary>
+            Draws a button on the Android platform with the image shown in the right 
+            position with the right size.
+            </summary>
+            <summary>
+            Draws a button on the Android platform with the image shown in the right 
+            position with the right size.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.GetHandler(Xamarin.Forms.ImageSource)">
+            <summary>
+            Returns the proper <see cref="T:Xamarin.Forms.Platform.Android.IImageSourceHandler"/> based on the type of <see cref="T:Xamarin.Forms.ImageSource"/> provided.
+            </summary>
+            <param name="source">The <see cref="T:Xamarin.Forms.ImageSource"/> to get the handler for.</param>
+            <returns>The needed handler.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.GetWidth(System.Int32)">
+            <summary>
+            Gets the width based on the requested width, if request less than 0, returns 50.
+            </summary>
+            <param name="requestedWidth">The requested width.</param>
+            <returns>The width to use.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.GetHeight(System.Int32)">
+            <summary>
+            Gets the height based on the requested height, if request less than 0, returns 50.
+            </summary>
+            <param name="requestedHeight">The requested height.</param>
+            <returns>The height to use.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{Xamarin.Forms.Button})">
+            <summary>
+            Sets up the button including the image. 
+            </summary>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.SetImageSourceAsync(Android.Widget.Button,XLabs.Forms.Controls.ImageButton)">
+            <summary>
+            Sets the image source.
+            </summary>
+            <param name="targetButton">The target button.</param>
+            <param name="model">The model.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> for the awaited operation.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.GetBitmapAsync(Xamarin.Forms.ImageSource)">
+            <summary>
+            Gets a <see cref="T:Android.Graphics.Bitmap"/> for the supplied <see cref="T:Xamarin.Forms.ImageSource"/>.
+            </summary>
+            <param name="source">The <see cref="T:Xamarin.Forms.ImageSource"/> to get the image for.</param>
+            <returns>A loaded <see cref="T:Android.Graphics.Bitmap"/>.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Called when the underlying model's properties are changed.
+            </summary>
+            <param name="sender">The Model used.</param>
+            <param name="e">The event arguments.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.GetScaleDrawable(Android.Graphics.Drawables.Drawable,System.Int32,System.Int32)">
+            <summary>
+            Returns a <see cref="T:Android.Graphics.Drawables.Drawable"/> with the correct dimensions from an 
+            Android resource id.
+            </summary>
+            <param name="drawable">An android <see cref="T:Android.Graphics.Drawables.Drawable"/>.</param>
+            <param name="width">The width to scale to.</param>
+            <param name="height">The height to scale to.</param>
+            <returns>A scaled <see cref="T:Android.Graphics.Drawables.Drawable"/>.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageButtonRenderer.RequestToPixels(System.Int32)">
+            <summary>
+            Returns a drawable dimension modified according to the current display DPI.
+            </summary>
+            <param name="sizeRequest">The requested size in relative units.</param>
+            <returns>Size in pixels.</returns>
+        </member>
+        <member name="P:XLabs.Forms.Controls.ImageButtonRenderer.ImageButton">
+            <summary>
+            Gets the underlying control typed as an <see cref="P:XLabs.Forms.Controls.ImageButtonRenderer.ImageButton"/>.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.CustomTypefaceSpan">
+            <summary>
+            See http://stackoverflow.com/questions/6612316/how-set-spannable-object-font-with-custom-font
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.IconButtonRenderer.nativeBtn_AfterTextChanged(System.Object,Android.Text.AfterTextChangedEventArgs)">
+            <summary>
+            Since they are several over write of the Test property during layout we have to set this field as long as it is not definitly set
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.IconButtonRenderer.BuildRawTextString">
+            <summary>
+            Build the content string by concating icon and text according to control options
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.IconButtonRenderer.BuildSpannableString(System.String)">
+            <summary>
+            Build the spannable according to the computed text, meaning set the right font, color and size to the text and icon char index
+            </summary>
+            <param name="computedString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.IconButtonRenderer.TrySetFont(System.String)">
+            <summary>
+            Load the FA font from assets
+            </summary>
+            <param name="fontName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.IconLabelRenderer.SetText">
+            <summary>
+            Rebuild the all span in and set it into the label
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.IconLabelRenderer.BuildRawTextString">
+            <summary>
+            Build the content string by concating icon and text according to control options
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.IconLabelRenderer.BuildSpannableString(System.String)">
+            <summary>
+            Build the spannable according to the computed text, meaning set the right font, color and size to the text and icon char index
+            </summary>
+            <param name="computedString"></param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.IconLabelRenderer.TrySetFont(System.String)">
+            <summary>
+            Load the FA font from assets
+            </summary>
+            <param name="fontName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ImageGalleryRenderer">
+            <summary>
+            Class ImageGalleryRenderer.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ImageGalleryRenderer._gallery">
+            <summary>
+            The gallery
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ImageGalleryRenderer._source">
+            <summary>
+            The source
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{XLabs.Forms.Controls.ImageGallery})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.GetView(System.String,Android.Views.View,Android.Views.ViewGroup,System.Int32)">
+            <summary>
+            Gets the view.
+            </summary>
+            <param name="item">The item.</param>
+            <param name="convertView">The convert view.</param>
+            <param name="parent">The parent.</param>
+            <param name="position">The position.</param>
+            <returns>Android.Views.View.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.Bind(XLabs.Forms.Controls.ImageGallery)">
+            <summary>
+            Binds the specified new element.
+            </summary>
+            <param name="newElement">The new element.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.ElementPropertyChanging(System.Object,Xamarin.Forms.PropertyChangingEventArgs)">
+            <summary>
+            Elements the property changing.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:Xamarin.Forms.PropertyChangingEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.DataCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Datas the collection changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.ElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Elements the property changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.IsValidUrl(System.String)">
+            <summary>
+            Determines whether [is valid URL] [the specified URL string].
+            </summary>
+            <param name="urlString">The URL string.</param>
+            <returns><c>true</c> if [is valid URL] [the specified URL string]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.GetBitmapFromUrl(System.String)">
+            <summary>
+            Gets the bitmap from URL.
+            </summary>
+            <param name="url">The URL.</param>
+            <returns>Bitmap.</returns>
+        </member>
+        <member name="P:XLabs.Forms.Controls.ImageGalleryRenderer.Source">
+            <summary>
+            Gets the source.
+            </summary>
+            <value>The source.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.ImageGalleryRenderer.DataSource">
+            <summary>
+            Class DataSource.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.ImageGalleryRenderer.DataSource._galleryRenderer">
+            <summary>
+            The gallery renderer
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.DataSource.#ctor(XLabs.Forms.Controls.ImageGalleryRenderer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.ImageGalleryRenderer.DataSource"/> class.
+            </summary>
+            <param name="galleryRenderer">The gallery renderer.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.DataSource.GetItem(System.Int32)">
+            <summary>
+            To be added.
+            </summary>
+            <param name="position">To be added.</param>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.DataSource.GetItemId(System.Int32)">
+            <summary>
+            To be added.
+            </summary>
+            <param name="position">To be added.</param>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.ImageGalleryRenderer.DataSource.GetView(System.Int32,Android.Views.View,Android.Views.ViewGroup)">
+            <summary>
+            To be added.
+            </summary>
+            <param name="position">To be added.</param>
+            <param name="convertView">To be added.</param>
+            <param name="parent">To be added.</param>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="P:XLabs.Forms.Controls.ImageGalleryRenderer.DataSource.Count">
+            <summary>
+            To be added.
+            </summary>
+            <value>To be added.</value>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:XLabs.Forms.Controls.RadioButtonRenderer">
+            <summary>
+            Class RadioButtonRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.RadioButtonRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{XLabs.Forms.Controls.CustomRadioButton})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.RadioButtonRenderer.TrySetFont(System.String)">
+            <summary>
+                Tries the set font.
+            </summary>
+            <param name="fontName">Name of the font.</param>
+            <returns>Typeface.</returns>
+        </member>
+        <member name="M:XLabs.Forms.Controls.RadioButtonRenderer.UpdateTextColor">
+            <summary>
+            Updates the color of the text
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.SensorBarDroidView">
+            <summary>
+            Class SensorBarDroidView.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.SensorBarDroidView._positiveColor">
+            <summary>
+            The _positive color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.SensorBarDroidView._negativeColor">
+            <summary>
+            The _negative color
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.SensorBarDroidView._limit">
+            <summary>
+            The _limit
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.SensorBarDroidView._currentValue">
+            <summary>
+            The _current value
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SensorBarDroidView.#ctor(Android.Content.Context)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.SensorBarDroidView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SensorBarDroidView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.SensorBarDroidView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="attrs">The attrs.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SensorBarDroidView.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.SensorBarDroidView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="attrs">The attrs.</param>
+            <param name="defStyle">The definition style.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SensorBarDroidView.OnDraw(Android.Graphics.Canvas)">
+            <summary>
+            Implement this to do your drawing.
+            </summary>
+            <param name="canvas">the canvas on which the background will be drawn</param>
+            <since version="Added in API level 1" />
+            <remarks><para tool="javadoc-to-mdoc">Implement this to do your drawing.</para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/view/View.html#onDraw(android.graphics.Canvas)" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SensorBarDroidView.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="P:XLabs.Forms.Controls.SensorBarDroidView.CurrentValue">
+            <summary>
+            Gets or sets the current value.
+            </summary>
+            <value>The current value.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.SensorBarDroidView.Limit">
+            <summary>
+            Gets or sets the limit.
+            </summary>
+            <value>The limit.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.SensorBarDroidView.PositiveColor">
+            <summary>
+            Gets or sets the color of the positive.
+            </summary>
+            <value>The color of the positive.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.SensorBarDroidView.NegativeColor">
+            <summary>
+            Gets or sets the color of the negative.
+            </summary>
+            <value>The color of the negative.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.SensorBarViewRenderer">
+            <summary>
+            Class SensorBarViewRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SensorBarViewRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{XLabs.Forms.Controls.SensorBar.SensorBarView})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SensorBarViewRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SensorBarViewRenderer.SetProperties">
+            <summary>
+            Sets the properties.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.SeparatorDroidView">
+            <summary>
+                Class SeparatorDroidView.
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.SeparatorDroidView._orientation">
+            <summary>
+                The _orientation
+            </summary>
+        </member>
+        <member name="F:XLabs.Forms.Controls.SeparatorDroidView._dm">
+            <summary>
+                The dm
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SeparatorDroidView.#ctor(Android.Content.Context)">
+            <summary>
+                Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.SeparatorDroidView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SeparatorDroidView.#ctor(Android.Content.Context,Android.Util.IAttributeSet)">
+            <summary>
+                Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.SeparatorDroidView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="attrs">The attrs.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SeparatorDroidView.#ctor(Android.Content.Context,Android.Util.IAttributeSet,System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:XLabs.Forms.Controls.SeparatorDroidView"/> class.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="attrs">The attrs.</param>
+            <param name="defStyle">The definition style.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SeparatorDroidView.OnDraw(Android.Graphics.Canvas)">
+            <summary>
+                Implement this to do your drawing.
+            </summary>
+            <param name="canvas">the canvas on which the background will be drawn</param>
+            <since version="Added in API level 1" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">Implement this to do your drawing.</para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a href="http://developer.android.com/reference/android/view/View.html#onDraw(android.graphics.Canvas)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SeparatorDroidView.Initialize">
+            <summary>
+                Initializes this instance.
+            </summary>
+        </member>
+        <member name="P:XLabs.Forms.Controls.SeparatorDroidView.Thickness">
+            <summary>
+                Gets or sets the thickness.
+            </summary>
+            <value>The thickness.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.SeparatorDroidView.SpacingBefore">
+            <summary>
+                Gets or sets the spacing before.
+            </summary>
+            <value>The spacing before.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.SeparatorDroidView.SpacingAfter">
+            <summary>
+                Gets or sets the spacing after.
+            </summary>
+            <value>The spacing after.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.SeparatorDroidView.StrokeColor">
+            <summary>
+                Gets or sets the color of the stroke.
+            </summary>
+            <value>The color of the stroke.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.SeparatorDroidView.StrokeType">
+            <summary>
+                Gets or sets the type of the stroke.
+            </summary>
+            <value>The type of the stroke.</value>
+        </member>
+        <member name="P:XLabs.Forms.Controls.SeparatorDroidView.Orientation">
+            <summary>
+                Gets or sets the orientation.
+            </summary>
+            <value>The orientation.</value>
+        </member>
+        <member name="T:XLabs.Forms.Controls.SeparatorRenderer">
+            <summary>
+            Class SeparatorRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SeparatorRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{XLabs.Forms.Controls.Separator})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SeparatorRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Handles the <see cref="E:ElementPropertyChanged"/> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.SeparatorRenderer.SetProperties">
+            <summary>
+            Sets the properties.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Controls.WebImageRenderer">
+            <summary>
+            Class WebImageRenderer.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Controls.WebImageRenderer.OnElementChanged(Xamarin.Forms.Platform.Android.ElementChangedEventArgs{Xamarin.Forms.Image})">
+            <summary>
+            Called when [element changed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:XLabs.Forms.Controls.WebImageRenderer.GetImageFromWeb(System.String)">
+            <summary>
+            Gets the image from web.
+            </summary>
+            <param name="url">The URL.</param>
+            <returns>Bitmap.</returns>
+        </member>
+        <member name="P:XLabs.Forms.Controls.WebImageRenderer.WebImage">
+            <summary>
+            Gets the underlying control typed as an <see cref="P:XLabs.Forms.Controls.WebImageRenderer.WebImage"/>
+            </summary>
+            <value>The web image.</value>
+        </member>
+        <member name="T:XLabs.Forms.Extensions.AlignmentExtensions">
+            <summary>
+            Class AlignmentExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Extensions.AlignmentExtensions.ToDroidTextAlignment(Xamarin.Forms.TextAlignment)">
+            <summary>
+            To the droid text alignment.
+            </summary>
+            <param name="alignment">The alignment.</param>
+            <returns>DroidTextAlignment.</returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:XLabs.Forms.Extensions.AlignmentExtensions.ToDroidHorizontalGravity(Xamarin.Forms.TextAlignment)">
+            <summary>
+            To the droid horizontal gravity.
+            </summary>
+            <param name="alignment">The alignment.</param>
+            <returns>GravityFlags.</returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:XLabs.Forms.Extensions.AlignmentExtensions.ToDroidVerticalGravity(Xamarin.Forms.TextAlignment)">
+            <summary>
+            To the droid vertical gravity.
+            </summary>
+            <param name="alignment">The alignment.</param>
+            <returns>GravityFlags.</returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="T:XLabs.Forms.Extensions.ITypefaceCache">
+            <summary>
+            Interface of TypefaceCaches
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Extensions.ITypefaceCache.StoreTypeface(System.String,Android.Graphics.Typeface)">
+            <summary>
+            Removes typeface from cache
+            </summary>
+            <param name="key">Key.</param>
+            <param name="typeface">Typeface.</param>
+        </member>
+        <member name="M:XLabs.Forms.Extensions.ITypefaceCache.RemoveTypeface(System.String)">
+            <summary>
+            Removes the typeface.
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="M:XLabs.Forms.Extensions.ITypefaceCache.RetrieveTypeface(System.String)">
+            <summary>
+            Retrieves the typeface.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>Typeface.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Extensions.TypefaceCache">
+            <summary>
+            TypefaceCache caches used typefaces for performance and memory reasons. 
+            Typeface cache is singleton shared through execution of the application.
+            You can replace default implementation of the cache by implementing ITypefaceCache 
+            interface and setting instance of your cache to static property SharedCache of this class
+            </summary>
+        </member>
+        <member name="P:XLabs.Forms.Extensions.TypefaceCache.SharedCache">
+            <summary>
+            Returns the shared typeface cache.
+            </summary>
+            <value>The shared cache.</value>
+        </member>
+        <member name="T:XLabs.Forms.Extensions.DefaultTypefaceCache">
+            <summary>
+            Default implementation of the typeface cache.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.Extensions.FontExtensions">
+            <summary>
+            Andorid specific extensions for Font class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.Extensions.FontExtensions.ToExtendedTypeface(Xamarin.Forms.Font,Android.Content.Context)">
+            <summary>
+            This method returns typeface for given typeface using following rules:
+            1. Lookup in the cache
+            2. If not found, look in the assets in the fonts folder. Save your font under its FontFamily name. 
+            If no extension is written in the family name .ttf is asumed
+            3. If not found look in the files under fonts/ folder
+            If no extension is written in the family name .ttf is asumed
+            4. If not found, try to return typeface from Xamarin.Forms ToTypeface() method
+            5. If not successfull, return Typeface.Default
+            </summary>
+            <returns>The extended typeface.</returns>
+            <param name="font">Font</param>
+            <param name="context">Android Context</param>
+        </member>
+        <member name="M:XLabs.Forms.Extensions.FontExtensions.ToHasmapKey(Xamarin.Forms.Font)">
+            <summary>
+            Provides unique identifier for the given font.
+            </summary>
+            <returns>Unique string identifier for the given font</returns>
+            <param name="font">Font.</param>
+        </member>
+        <member name="T:XLabs.Forms.ViewExtensions">
+            <summary>
+            Class ViewExtensions.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.ViewExtensions.FindFormsViewFromAccessibilityId(Xamarin.Forms.View,Android.Views.View)">
+            <summary>
+            Finds the forms view from accessibility identifier.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="nativeView">The native view.</param>
+            <returns>View.</returns>
+        </member>
+        <member name="M:XLabs.Forms.ViewExtensions.GetInternalChildren(Xamarin.Forms.View)">
+            <summary>
+            Gets the internal children.
+            </summary>
+            <param name="view">The view.</param>
+            <returns>ObservableCollection&lt;Element&gt;.</returns>
+        </member>
+        <member name="M:XLabs.Forms.ViewExtensions.GetNativeContent(Xamarin.Forms.View)">
+            <summary>
+            Gets the content of the native.
+            </summary>
+            <param name="view">The view.</param>
+            <returns>NativeView.</returns>
+        </member>
+        <member name="T:XLabs.Forms.Pages.ExtendedMasterDetailRenderer">
+            <summary>
+            Class ExtendedMasterDetailRenderer.
+            </summary>
+        </member>
+        <member name="T:XLabs.Forms.XFormsApplicationDroid">
+            <summary>
+            Class XFormsApplicationDroid.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.XFormsApplicationDroid.OnDestroy">
+            <summary>
+            Called when [destroy].
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.XFormsApplicationDroid.OnPause">
+            <summary>
+            Called as part of the activity lifecycle when an activity is going into
+            the background, but has not (yet) been killed.
+            </summary>
+            <since version="Added in API level 1" />
+            <altmember cref="M:Android.App.Activity.OnResume" />
+            <altmember cref="M:Android.App.Activity.OnSaveInstanceState(Android.OS.Bundle)" />
+            <altmember cref="M:Android.App.Activity.OnStop" />
+            <remarks><para tool="javadoc-to-mdoc">Called as part of the activity lifecycle when an activity is going into
+            the background, but has not (yet) been killed.  The counterpart to
+            <c><see cref="M:Android.App.Activity.OnResume" /></c>.
+            </para>
+            <para tool="javadoc-to-mdoc">When activity B is launched in front of activity A, this callback will
+            be invoked on A.  B will not be created until A's <c><see cref="M:Android.App.Activity.OnPause" /></c> returns,
+            so be sure to not do anything lengthy here.
+            </para>
+            <para tool="javadoc-to-mdoc">This callback is mostly used for saving any persistent state the
+            activity is editing, to present a "edit in place" model to the user and
+            making sure nothing is lost if there are not enough resources to start
+            the new activity without first killing this one.  This is also a good
+            place to do things like stop animations and other things that consume a
+            noticeable amount of CPU in order to make the switch to the next activity
+            as fast as possible, or to close resources that are exclusive access
+            such as the camera.
+            </para>
+            <para tool="javadoc-to-mdoc">In situations where the system needs more memory it may kill paused
+            processes to reclaim resources.  Because of this, you should be sure
+            that all of your state is saved by the time you return from
+            this function.  In general <c><see cref="M:Android.App.Activity.OnSaveInstanceState(Android.OS.Bundle)" /></c> is used to save
+            per-instance state in the activity and this method is used to store
+            global persistent data (in content providers, files, etc.)
+            </para>
+            <para tool="javadoc-to-mdoc">After receiving this call you will usually receive a following call
+            to <c><see cref="M:Android.App.Activity.OnStop" /></c> (after the next activity has been resumed and
+            displayed), however in some cases there will be a direct call back to
+            <c><see cref="M:Android.App.Activity.OnResume" /></c> without going through the stopped state.
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <i>Derived classes must call through to the super class's
+            implementation of this method.  If they do not, an exception will be
+            thrown.</i>
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/app/Activity.html#onPause()" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.XFormsApplicationDroid.OnRestart">
+            <summary>
+            Called after <c><see cref="M:Android.App.Activity.OnStop" /></c> when the current activity is being
+            re-displayed to the user (the user has navigated back to it).
+            </summary>
+            <since version="Added in API level 1" />
+            <altmember cref="M:Android.App.Activity.OnStop" />
+            <altmember cref="M:Android.App.Activity.OnStart" />
+            <altmember cref="M:Android.App.Activity.OnResume" />
+            <remarks><para tool="javadoc-to-mdoc">Called after <c><see cref="M:Android.App.Activity.OnStop" /></c> when the current activity is being
+            re-displayed to the user (the user has navigated back to it).  It will
+            be followed by <c><see cref="M:Android.App.Activity.OnStart" /></c> and then <c><see cref="M:Android.App.Activity.OnResume" /></c>.
+            </para>
+            <para tool="javadoc-to-mdoc">For activities that are using raw <c><see cref="T:Android.Database.ICursor" /></c> objects (instead of
+            creating them through
+            <c><see cref="M:Android.App.Activity.ManagedQuery(Android.Net.Uri, System.String[], System.String[], System.String[], System.String[])" /></c>,
+            this is usually the place
+            where the cursor should be required (because you had deactivated it in
+            <c><see cref="M:Android.App.Activity.OnStop" /></c>.
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <i>Derived classes must call through to the super class's
+            implementation of this method.  If they do not, an exception will be
+            thrown.</i>
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/app/Activity.html#onRestart()" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.XFormsApplicationDroid.OnResume">
+            <summary>
+            Called after <c><see cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" /></c>, <c><see cref="M:Android.App.Activity.OnRestart" /></c>, or
+            <c><see cref="M:Android.App.Activity.OnPause" /></c>, for your activity to start interacting with the user.
+            </summary>
+            <since version="Added in API level 1" />
+            <altmember cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" />
+            <altmember cref="M:Android.App.Activity.OnRestart" />
+            <altmember cref="M:Android.App.Activity.OnPostResume" />
+            <altmember cref="M:Android.App.Activity.OnPause" />
+            <remarks><para tool="javadoc-to-mdoc">Called after <c><see cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" /></c>, <c><see cref="M:Android.App.Activity.OnRestart" /></c>, or
+            <c><see cref="M:Android.App.Activity.OnPause" /></c>, for your activity to start interacting with the user.
+            This is a good place to begin animations, open exclusive-access devices
+            (such as the camera), etc.
+            </para>
+            <para tool="javadoc-to-mdoc">Keep in mind that onResume is not the best indicator that your activity
+            is visible to the user; a system window such as the key guard may be in
+            front.  Use <c><see cref="M:Android.App.Activity.OnWindowFocusChanged(System.Boolean)" /></c> to know for certain that your
+            activity is visible to the user (for example, to resume a game).
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <i>Derived classes must call through to the super class's
+            implementation of this method.  If they do not, an exception will be
+            thrown.</i>
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/app/Activity.html#onResume()" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.XFormsApplicationDroid.OnStart">
+            <summary>
+            Called after <c><see cref="M:Android.App.Activity.OnCreate(Android.OS.Bundle)" /></c> or after <c><see cref="M:Android.App.Activity.OnRestart" /></c> when
+            the activity had been stopped, but is now again being displayed to the
+            user.
+            </summary>
+            <since version="Added in API level 1" />
+            <altmember cref="M:Android.App.Activity.OnCreate(Android.OS.Bundle)" />
+            <altmember cref="M:Android.App.Activity.OnStop" />
+            <altmember cref="M:Android.App.Activity.OnResume" />
+            <remarks><para tool="javadoc-to-mdoc">Called after <c><see cref="M:Android.App.Activity.OnCreate(Android.OS.Bundle)" /></c> or after <c><see cref="M:Android.App.Activity.OnRestart" /></c> when
+            the activity had been stopped, but is now again being displayed to the
+            user.  It will be followed by <c><see cref="M:Android.App.Activity.OnResume" /></c>.
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <i>Derived classes must call through to the super class's
+            implementation of this method.  If they do not, an exception will be
+            thrown.</i>
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/app/Activity.html#onStart()" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="M:XLabs.Forms.XFormsApplicationDroid.OnStop">
+            <summary>
+            Called when you are no longer visible to the user.
+            </summary>
+            <since version="Added in API level 1" />
+            <altmember cref="M:Android.App.Activity.OnRestart" />
+            <altmember cref="M:Android.App.Activity.OnResume" />
+            <altmember cref="M:Android.App.Activity.OnSaveInstanceState(Android.OS.Bundle)" />
+            <altmember cref="M:Android.App.Activity.OnDestroy" />
+            <remarks><para tool="javadoc-to-mdoc">Called when you are no longer visible to the user.  You will next
+            receive either <c><see cref="M:Android.App.Activity.OnRestart" /></c>, <c><see cref="M:Android.App.Activity.OnDestroy" /></c>, or nothing,
+            depending on later user activity.
+            </para>
+            <para tool="javadoc-to-mdoc">Note that this method may never be called, in low memory situations
+            where the system does not have enough memory to keep your activity's
+            process running after its <c><see cref="M:Android.App.Activity.OnPause" /></c> method is called.
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <i>Derived classes must call through to the super class's
+            implementation of this method.  If they do not, an exception will be
+            thrown.</i>
+            </para>
+            <para tool="javadoc-to-mdoc">
+              <format type="text/html">
+                <a href="http://developer.android.com/reference/android/app/Activity.html#onStop()" target="_blank">[Android Documentation]</a>
+              </format>
+            </para></remarks>
+        </member>
+        <member name="P:XLabs.Forms.XFormsApplicationDroid.Destroy">
+            <summary>
+            Gets or sets the destroy.
+            </summary>
+            <value>The destroy.</value>
+        </member>
+        <member name="P:XLabs.Forms.XFormsApplicationDroid.Pause">
+            <summary>
+            Gets or sets the pause.
+            </summary>
+            <value>The pause.</value>
+        </member>
+        <member name="P:XLabs.Forms.XFormsApplicationDroid.Restart">
+            <summary>
+            Gets or sets the restart.
+            </summary>
+            <value>The restart.</value>
+        </member>
+        <member name="P:XLabs.Forms.XFormsApplicationDroid.Resume">
+            <summary>
+            Gets or sets the resume.
+            </summary>
+            <value>The resume.</value>
+        </member>
+        <member name="P:XLabs.Forms.XFormsApplicationDroid.Start">
+            <summary>
+            Gets or sets the start.
+            </summary>
+            <value>The start.</value>
+        </member>
+        <member name="P:XLabs.Forms.XFormsApplicationDroid.Stop">
+            <summary>
+            Gets or sets the stop.
+            </summary>
+            <value>The stop event handler.</value>
+        </member>
+        <member name="T:XLabs.Forms.XFormsAppDroid">
+            <summary>
+            Class XFormsAppDroid.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.XFormsAppDroid.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.XFormsAppDroid"/> class.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.XFormsAppDroid.#ctor(XLabs.Forms.XFormsApplicationDroid)">
+            <summary>
+            Initializes a new instance of the <see cref="T:XLabs.Forms.XFormsAppDroid"/> class.
+            </summary>
+            <param name="app">The application.</param>
+        </member>
+        <member name="M:XLabs.Forms.XFormsAppDroid.RaiseBackPress">
+            <summary>
+            Raises the back press.
+            </summary>
+        </member>
+        <member name="M:XLabs.Forms.XFormsAppDroid.OnInit(XLabs.Forms.XFormsApplicationDroid,System.Boolean)">
+            <summary>
+            Called when [initialize].
+            </summary>
+            <param name="app">The application.</param>
+            <param name="initServices">Should initialize services.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Share.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Share.Abstractions.BrowserOptions">
+            <summary>
+            Platform specific Browser Options
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.BrowserOptions.UseSafariWebViewController">
+            <summary>
+            iOS: Gets or sets to use the SFSafariWebViewController on iOS 9+ (recommended).
+            Default is true.
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.BrowserOptions.UseSafariReaderMode">
+            <summary>
+            iOS: Gets or sets to use reader mode (good for markdown files).
+            Default is false.
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.BrowserOptions.SafariBarTintColor">
+            <summary>
+            iOS: Gets or sets the color to tint the background of the navigation bar and the toolbar (iOS 10+ only).
+            If null (default) the default color will be used.
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.BrowserOptions.SafariControlTintColor">
+            <summary>
+            iOS: Gets or sets the color to tint the control buttons on the navigation bar and the toolbar (iOS 10+ only).
+            If null (default) the default color will be used.
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.BrowserOptions.ChromeShowTitle">
+            <summary>
+            Android: Gets or sets to display title as well as url in chrome custom tabs.
+            Default is true
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.BrowserOptions.ChromeToolbarColor">
+            <summary>
+            Android: Gets or sets the toolbar color of the chrome custom tabs.
+            If null (default) the default color will be used.
+            </summary>
+        </member>
+        <member name="T:Plugin.Share.Abstractions.IShare">
+            <summary>
+            Interface for Share
+            </summary>
+        </member>
+        <member name="M:Plugin.Share.Abstractions.IShare.OpenBrowser(System.String,Plugin.Share.Abstractions.BrowserOptions)">
+            <summary>
+            Open a browser to a specific url
+            </summary>
+            <param name="url">Url to open</param>
+            <param name="options">Platform specific options</param>
+            <returns>True if the operation was successful, false otherwise</returns>
+        </member>
+        <member name="M:Plugin.Share.Abstractions.IShare.Share(Plugin.Share.Abstractions.ShareMessage,Plugin.Share.Abstractions.ShareOptions)">
+            <summary>
+            Share a message with compatible services
+            </summary>
+            <param name="message">Message to share</param>
+            <param name="options">Platform specific options</param>
+            <returns>True if the operation was successful, false otherwise</returns>
+        </member>
+        <member name="M:Plugin.Share.Abstractions.IShare.SetClipboardText(System.String,System.String)">
+            <summary>
+            Sets text of the clipboard
+            </summary>
+            <param name="text">Text to set</param>
+            <param name="label">Label to display (not required, Android only)</param>
+            <returns>True if the operation was successful, false otherwise</returns>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.IShare.SupportsClipboard">
+            <summary>
+            Gets if clipboard is supported
+            </summary>
+        </member>
+        <member name="T:Plugin.Share.Abstractions.ShareColor">
+            <summary>
+            RGB values of 0-255 for shared
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.ShareColor.A">
+            <summary>
+            Alpha 0-255
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.ShareColor.R">
+            <summary>
+            Red 0-255
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.ShareColor.G">
+            <summary>
+            Green 0-255
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.ShareColor.B">
+            <summary>
+            Blue 0-255
+            </summary>
+        </member>
+        <member name="M:Plugin.Share.Abstractions.ShareColor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plugin.Share.Abstractions.ShareColor"/> class with default values.
+            </summary>
+        </member>
+        <member name="M:Plugin.Share.Abstractions.ShareColor.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plugin.Share.Abstractions.ShareColor"/> class with the specified values. Alpha is set to 255 (fully opaque).
+            </summary>
+            <param name="r">Red 0-255</param>
+            <param name="g">Green 0-255</param>
+            <param name="b">Blue 0-255</param>
+        </member>
+        <member name="M:Plugin.Share.Abstractions.ShareColor.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plugin.Share.Abstractions.ShareColor"/> class with the specified values.
+            </summary>
+            <param name="r">Red 0-255</param>
+            <param name="g">Green 0-255</param>
+            <param name="b">Blue 0-255</param>
+            <param name="a">Alpha 0-255</param>
+        </member>
+        <member name="T:Plugin.Share.Abstractions.ShareMessage">
+            <summary>
+            Message object to share with compatible services
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.ShareMessage.Title">
+            <summary>
+            Gets or sets the title of the message. Used as email subject if sharing with mail apps.
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.ShareMessage.Text">
+            <summary>
+            Gets or sets the text of the message.
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.ShareMessage.Url">
+            <summary>
+            Gets or sets the link to include with the message.
+            </summary>
+        </member>
+        <member name="T:Plugin.Share.Abstractions.ShareOptions">
+            <summary>
+            Platform specific Share Options
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.ShareOptions.ChooserTitle">
+            <summary>
+            Android: Gets or sets the title of the app chooser popup.
+            If null (default) the system default title is used.
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.Abstractions.ShareOptions.ExcludedUIActivityTypes">
+            <summary>
+            iOS: Gets or sets the UIActivityTypes that should not be displayed.
+            If null (default) the value of <see cref="!:Plugin.Share.ShareImplementation.ExcludedUIActivityTypes"/> is used.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.AssignToContact">
+            <summary>
+            The object assigns the image to a contact.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.CopyToPasteboard">
+            <summary>
+            The object posts the provided content to the pasteboard.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.Mail">
+            <summary>
+            The object posts the provided content to a new email message.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.Message">
+            <summary>
+            The object posts the provided content to the Messages app.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.PostToFacebook">
+            <summary>
+            The object posts the provided content to the user’s wall on Facebook.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.PostToTwitter">
+            <summary>
+            The object posts the provided content to the user’s Twitter feed.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.PostToWeibo">
+            <summary>
+            The object posts the provided content to the user’s Weibo feed.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.Print">
+            <summary>
+            The object prints the provided content.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.SaveToCameraRoll">
+            <summary>
+            The object assigns the image or video to the user’s camera roll.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.AddToReadingList">
+            <summary>
+            The object adds the URL to Safari’s reading list.
+            Supported on iOS 7+ only.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.AirDrop">
+            <summary>
+            The object makes the provided content available via AirDrop.
+            Supported on iOS 7+ only.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.PostToFlickr">
+            <summary>
+            The object posts the provided image to the user’s Flickr account.
+            Supported on iOS 7+ only.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.PostToTencentWeibo">
+            <summary>
+            The object posts the provided content to the user’s Tencent Weibo feed.
+            Supported on iOS 7+ only.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.PostToVimeo">
+            <summary>
+            The object posts the provided video to the user’s Vimeo account.
+            Supported on iOS 7+ only.
+            </summary>
+        </member>
+        <member name="F:Plugin.Share.Abstractions.ShareUIActivityType.OpenInIBooks">
+            <summary>
+            Supported on iOS 9+ only.
+            </summary>
+        </member>
+    </members>
+</doc>

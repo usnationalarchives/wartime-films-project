@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Share</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Share.CrossShare">
+            <summary>
+            Cross platform Share implemenations
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.CrossShare.Current">
+            <summary>
+            Current settings to use
+            </summary>
+        </member>
+        <member name="T:Plugin.Share.ShareColorExtensions">
+            <summary>
+            Extension class used for color conversion
+            </summary>
+        </member>
+        <member name="M:Plugin.Share.ShareColorExtensions.ToUIColor(Plugin.Share.Abstractions.ShareColor)">
+            <summary>
+            Convert <see cref="T:Plugin.Share.Abstractions.ShareColor"/> object to native color
+            </summary>
+            <param name="color">The color to convert</param>
+            <returns>The converted color</returns>
+        </member>
+        <member name="T:Plugin.Share.ShareImplementation">
+            <summary>
+            Implementation for Share
+            </summary>
+        </member>
+        <member name="P:Plugin.Share.ShareImplementation.ExcludedUIActivityTypes">
+            <summary>
+            Gets or sets the UIActivityTypes that should not be displayed.
+            </summary>
+        </member>
+        <member name="M:Plugin.Share.ShareImplementation.OpenBrowser(System.String,Plugin.Share.Abstractions.BrowserOptions)">
+            <summary>
+            Open a browser to a specific url
+            </summary>
+            <param name="url">Url to open</param>
+            <param name="options">Platform specific options</param>
+            <returns>True if the operation was successful, false otherwise</returns>
+        </member>
+        <member name="M:Plugin.Share.ShareImplementation.Share(Plugin.Share.Abstractions.ShareMessage,Plugin.Share.Abstractions.ShareOptions)">
+            <summary>
+            Share a message with compatible services
+            </summary>
+            <param name="message">Message to share</param>
+            <param name="options">Platform specific options</param>
+            <returns>True if the operation was successful, false otherwise</returns>
+        </member>
+        <member name="M:Plugin.Share.ShareImplementation.Share(Plugin.Share.Abstractions.ShareMessage,Plugin.Share.Abstractions.ShareOptions,Foundation.NSString[])">
+            <summary>
+            Share a message with compatible services
+            </summary>
+            <param name="message">Message to share</param>
+            <param name="options">Platform specific options</param>
+            <param name="excludedActivityTypes">UIActivityTypes that should not be displayed</param>
+            <returns>True if the operation was successful, false otherwise</returns>
+        </member>
+        <member name="M:Plugin.Share.ShareImplementation.GetVisibleViewController">
+            <summary>
+            Gets the visible view controller.
+            </summary>
+            <returns>The visible view controller.</returns>
+        </member>
+        <member name="M:Plugin.Share.ShareImplementation.GetUIActivityType(Plugin.Share.Abstractions.ShareUIActivityType)">
+            <summary>
+            Converts the <see cref="T:Plugin.Share.Abstractions.ShareUIActivityType"/> to its native representation.
+            Returns null if the activity type is invalid or not supported on the current platform.
+            </summary>
+            <param name="type">The activity type</param>
+            <returns>The native representation of the activity type or null</returns>
+        </member>
+        <member name="M:Plugin.Share.ShareImplementation.SetClipboardText(System.String,System.String)">
+            <summary>
+            Sets text of the clipboard
+            </summary>
+            <param name="text">Text to set</param>
+            <param name="label">Label to display (not required, Android only)</param>
+            <returns>True if the operation was successful, false otherwise</returns>
+        </member>
+        <member name="P:Plugin.Share.ShareImplementation.SupportsClipboard">
+            <summary>
+            Gets if cliboard is supported
+            </summary>
+        </member>
+    </members>
+</doc>

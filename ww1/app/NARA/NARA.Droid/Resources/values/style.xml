@@ -7,7 +7,8 @@
   </style>
 
   <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light">
-    <item name="android:windowBackground">@drawable/splash_image</item>
+    <item name="android:windowBackground">@drawable/splashDR</item>
     <item name="android:windowNoTitle">true</item>
+    <item name="android:gravity">fill_horizontal|fill_vertical</item>
   </style>
 </resources>

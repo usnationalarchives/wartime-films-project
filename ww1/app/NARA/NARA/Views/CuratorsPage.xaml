@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:nara="clr-namespace:NARA;assembly=NARA"
+             x:Class="NARA.CuratorsPage" BackgroundColor="#1d1d1d">
+
+    <RelativeLayout x:Name="rl_Main">
+
+        <ContentView Padding="0,0,0,0">
+            <StackLayout  Orientation="Horizontal" x:Name="icons">
+                <Image x:Name="img_Previous" Source="previous.png" WidthRequest="60" Aspect="AspectFit" Opacity="0.6"></Image>
+            </StackLayout>
+        </ContentView>
+
+        <StackLayout RelativeLayout.WidthConstraint = "{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.25}" 
+                     RelativeLayout.YConstraint= "{ConstraintExpression Type=Constant,Constant=60}">
+            <ScrollView x:Name="scrollView_Navigation" VerticalOptions="Start" IsClippedToBounds="True">
+                <StackLayout x:Name="sl_ContentHolder" Padding="0,0,25,0" >
+
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" Padding="0,0,0,10">
+                        <BoxView x:Name="bv_OverView" VerticalOptions="FillAndExpand" WidthRequest="3" BackgroundColor="#e0665e"></BoxView>
+                        <Label x:Name="lbl_Overview" Text="Overview" FontSize="16" TextColor="White" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Margin="10,0,0,0"></Label>
+                    </StackLayout>
+                    
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+
+        <ScrollView x:Name="scrollView_Main" Orientation="Vertical"  VerticalOptions="FillAndExpand" HeightRequest="60" RelativeLayout.WidthConstraint = "{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.58}" RelativeLayout.HeightConstraint = 
+                        "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.2}">
+
+            <StackLayout x:Name="stack_Outer" VerticalOptions="FillAndExpand">
+
+                <StackLayout  Grid.Row="1" Grid.Column="0" x:Name="stack_Text" VerticalOptions="FillAndExpand">
+
+                    <ContentView  Padding="40,20,10,20">
+                        <Label Text="For Institutions" x:Name="lbl_ForCurators" FontFamily="Orpheus Pro" TextColor="White" FontSize="60"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label x:Name="lbl_Text2" Text="The Remembering WWI app provides local institutions with simple tools for sharing locally-resonant stories about World War I and its aftermath. Using freely reusable films and images from the US National Archives and Records Administration (NARA) and partners as a basis for enrichment and narrative-building, you can create collections in a way that complements your existing WWI programming." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label x:Name="lbl_Text33" Text="How can my institution use this app?" FontFamily="TrebuchetMS" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Here are a few ideas for how you might use the app:" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="●	Create collections using NARA and partner content on themes you'd like to explore in a WWI exhibit and encourage your community to engage with" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="●	Use NARA curated collections in exhibits and museum tours" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="●	Download photos for reuse in museum programming" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="What types of sources can I browse and use in my collections?" FontFamily="TrebuchetMS" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="A majority of the primary source content within the app is from two of NARA's major WWI repositories: Historical Films, ca. 1914–ca. 1936, and the American Unofficial Collection of World War I Photographs, 1917–1918. We have also segmented the films into short clips to take advantage of varying subject matter and geographical locations. All sources can be enlarged to more closely examine details, and you may reuse any of this content in your own collections." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="My museum or institution has local WWI collections to share. Can I add these into the app?" FontFamily="TrebuchetMS" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="FillAndExpand">
+                        <Label Text="Yes. If you're interested in adding in a curated selection of your museum, institution, or community group's content into the app, please email rememberingwwi@nara.gov for more information." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="How can I search?" FontFamily="TrebuchetMS" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="FillAndExpand">
+                        <Label Text="When entering the app, use the search icon at the top of the page to do a keyword search. Additionally, to search for local content, find your state listed alphabetically in the Tags section." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+
+                    <ContentView x:Name="cv1" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img1" BorderColor="White" BorderWidth="2" Source="tags.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="Search icon at the top of the Archive page, and example states [Alabama, Alaska] on the Tags list." FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Do I need to register?" FontFamily="TrebuchetMS" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="No. But in order to start creating collections in the app using NARA and partner content, you must first register an account by choosing 'Sign-Up' from the Welcome screen. You may use an email or an existing Facebook login. We recommend signing-up with an email accessible to multiple members of your staff for increased editing capabilities." TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Your 'Username' can be the name of your museum or institution." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Can I download app content?" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Yes. Tap on the download icon on any item in slideshow mode to download it to your tablet. You do not need to be signed in to use this feature." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView x:Name="cv55" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img1123" BorderColor="White" BorderWidth="2" Source="downloading.png" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="The download icon" FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Creating collections with NARA and partner content" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Create a collection by visiting the 'My Collections' page when logged in (via your profile icon) and clicking 'Add Collection.'" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView x:Name="cv2" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img2" BorderColor="White" BorderWidth="2" Source="mycollections1.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="Getting to the My Collections page by clicking your profile icon." FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+                    <ContentView x:Name="cv3" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img3" BorderColor="White" BorderWidth="2" Source="addcollection1.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="The 'Add a Collection' button on the My Collections page." FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Use the tools on the edit page to add chapters, add items through an inline search, and add new captions to any item you add to your collection." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView x:Name="cv33" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img33" BorderColor="White" BorderWidth="2" Source="editor.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="The collection edit page. Get started by adding a Collection title and chapter, then add app items or additional chapters using the button at the bottom of the page. You can delete items or chapters at any time once these are added." FontAttributes="Italic" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="You can also add NARA and other institutional content to your collections by clicking the 'plus' on any item in the app. You will be able to select 'Add collection' to start a collection with the item you choose, or add items to an existing collection by selecting your collection from the drop-down list." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView x:Name="cv4" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img4" BorderColor="White" BorderWidth="2" Source="addcollection11.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="Click the plus sign on any item in the app to add it to your collection, or create a new collection with that item." FontAttributes="Italic" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <!--<ContentView x:Name="cv44" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img44" BorderColor="White" BorderWidth="2" Source="addcollection111.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="Pop-up menu to save an item to a collection." FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>-->
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="How do I edit my collection?" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="From the 'My Collections' page, click on the collection you want to edit, and click ''' in the top right-hand corner." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Make your collection 'Private' at any time while you work on it, and make it 'Public' when you're ready to share it." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView x:Name="cv5" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img5" BorderColor="White" BorderWidth="2" Source="makepublic1.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="From within your collections, the buttons to make your collection 'Private' or 'Public' and to 'Edit.'" FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="View stats" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="On the collection landing page, you'll find statistics for how many times a collection has been viewed." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView x:Name="cv6" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img6" BorderColor="White" BorderWidth="2" Source="views1.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="Location of view stats for a collection within the app." FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="In addition, there are stats for the collective views of all your collections on the 'My Collections' page." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Adding items to your notes" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Tap on the 'Share icon' use the iOS or Android controls to select 'Add to Notes' or 'Memo' feature to start a list of items you might add to a collection." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView x:Name="cv7" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img7" BorderColor="White" BorderWidth="2" Source="notes1.jpg" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="The 'Share' button (right) and the 'Add to Notes' feature in the share pop-out. If you have the Twitter and Facebook apps installed on your tablet, these will appear as share options as well." FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="Community discussion space" TextColor="#e0665e" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label Text="We have provided a space on NARA's new History Hub where you can connect with other institutions using the app, and discuss methods for best using the app to engage your local community. You can also use this space to ask general questions, report bugs, and more." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+                        <Label x:Name="lbl_Link" Text="https://historyhub.archives.gov/groups/remembering-ww1" FontFamily="TrebuchetMS" TextColor="#559FE3" FontSize="20"></Label>
+                    </ContentView>
+
+                    <ContentView x:Name="cv8" Padding="40,0,40,5">
+                        <nara:BorderedImageCustom x:Name="img8" BorderColor="White" BorderWidth="2" Source="rememberingww1link.png" Aspect="AspectFit" ></nara:BorderedImageCustom>
+                    </ContentView>
+                    <ContentView Padding="40,0,10,30" VerticalOptions="StartAndExpand">
+                        <Label Text="The Remembering WWI discussion space on NARA's History Hub." FontAttributes="Italic" TextColor="White"></Label>
+                    </ContentView>
+
+
+
+
+                    <!--<ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="There are no pre-made activities or lessons within this app - we’ve provided the basic tools for collection-creation in a way that highlights the rarely-seen WWI content being digitized by NARA, and allows you as teachers to formulate relevant historical questions. This focus on the reuse and enrichment of primary sources allows for flexibility in creating new historical narratives." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="A spotlight on geography" FontAttributes="Italic" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="All content added to this app must have a location attributed to it, whether that is a state, region, or even country. By adding a geo-spatial element to this primary source content, you can help students view the war through a geographical lens, exploring the global reaches of the war and its different arenas. In addition, this gives teachers the option of exploring or adding more localized content, and spotlighting on community WWI stories." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Is this app primarily for teachers or for students?" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="When asking teachers how they would use this app in the classroom, the easiest route suggested was for teachers themselves to use the app to curate collections and have students explore what they’ve created. Considering the time restraints in teaching WWI, this option allows teachers to first and foremost focus on content. Another option for teachers who would like to see their students more involved with collection-creation is to create collections with vetted primary sources that students can then use to create their own collections." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="What type of primary sources can I browse and use in my collections?" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="A majority of the primary source content within the app are from two of NARA’s major WWI repositories: Historical Films, ca. 1914 - ca. 1936 and the American Unofficial Collection of World War I Photographs, 1917 - 1918.  We have done our best to map out to their most clearly identifiable locations for better discoverability. We have also segmented the films into short clips to take advantage of varying subject-matter and geographical locations. You may reuse any of this content in your own collections, as well as those added by other users." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="We have grouped a number of these sources into searchable thematic collections for inspiration, informed by WWI themes that our teacher focus groups would like to see surfaced in the app. These speak to diversity in people and places, with subjects including:" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="FillAndExpand">
+            <StackLayout>
+              <Label Text="- Nationalism	" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+              <Label Text="- Women’s roles	" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+              <Label Text="- Imperialism	" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+              <Label Text="- Minority roles  	" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+              <Label Text="- Colonialism 	" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+              <Label Text="- Revolution (technological, political, social)	" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+              <Label Text="- Wartime propaganda 	" FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+            </StackLayout>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="In addition to film and photographic sources, you may also add images of objects, letters, etc. to further enrich the story being told." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="Registering" TextColor="White" FontSize="20"></Label>
+          </ContentView>
+
+          <ContentView Padding="40,0,10,20" VerticalOptions="StartAndExpand">
+            <Label Text="In order to start creating collections, you must first register an account. You may use an email, or an existing Facebook or Google+/Gmail login.  Upon sign-up, you will be able to indicate if you are a teacher, by checking the box next to “I’m a teacher.” [coming soon] This will allow users to filter by user-type within the “Curators” section of the app, so you can separate-out collections created by fellow teachers." FontFamily="TrebuchetMS" TextColor="White" FontSize="20"></Label>
+          </ContentView>-->
+
+
+                    <nara:LabelCustom HorizontalOptions="Center" WidthRequest="220" Margin="0,50,0,40"  Grid.Column="0" FontSize="15" x:Name="lbl_SignInOnBottom" Text="SIGN UP FOR FREE" LetterSpacing="1" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="46" BorderWidth="2" BorderRadius="23" BorderColor="#E0665E" BackgroundColor="Transparent"></nara:LabelCustom>
+
+                </StackLayout>
+
+
+                <!--<Grid Grid.Column="1" Padding="0,50,0,0" x:Name="grid_Logos" Grid.Row="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="120"></RowDefinition>
+            <RowDefinition Height="250"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="170"></RowDefinition>
+          </Grid.RowDefinitions>
+
+          <ContentView Padding="40,70,10,0" Grid.Row="0">
+            <Label Text="COORDINATED BY"  VerticalOptions="Center" HorizontalOptions="Center" FontFamily="TrebuchetMS" TextColor="#e0665e" FontSize="20"></Label>
+          </ContentView>
+
+
+          <ContentView Padding="40,10,10,20" Grid.Row="1">
+            <Image VerticalOptions="CenterAndExpand" Source="bs1.png" Aspect="AspectFit" ></Image>
+          </ContentView>
+
+
+          <ContentView Padding="40,20,10,20" Grid.Row="2">
+            <Label Text="IN PARTNERSHIP WITH" VerticalOptions="Center" HorizontalOptions="Center" FontFamily="TrebuchetMS" TextColor="#e0665e" FontSize="20"></Label>
+          </ContentView>
+
+
+          <ContentView Grid.Row="3">
+
+            <ContentView Padding="40,20,10,20" Grid.Row="1">
+              <Image Source="bs2.png" Aspect="AspectFit"></Image>
+            </ContentView>
+
+          </ContentView>
+
+          <ContentView Padding="0,20,0,20" Grid.Row="4">
+            <StackLayout HorizontalOptions="CenterAndExpand" Spacing="50">
+              <Image Source="national.png" HorizontalOptions="CenterAndExpand" WidthRequest="200" Opacity="0.8" Aspect="AspectFit"></Image>
+              <Image Source="centennialLogo.png" HorizontalOptions="CenterAndExpand" WidthRequest="200" Opacity="0.8" Aspect="AspectFit"></Image>
+              <Image Source="AASLHLogo.png" HorizontalOptions="CenterAndExpand" WidthRequest="200" Opacity="0.8" Aspect="AspectFit"></Image>
+            </StackLayout>
+          </ContentView>
+
+        </Grid>-->
+            </StackLayout>
+
+        </ScrollView>
+
+        <StackLayout x:Name="upperToolbar" HorizontalOptions="End" Padding="0,10,10,0" RelativeLayout.WidthConstraint = "{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.22}" RelativeLayout.HeightConstraint = 
+                        "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" RelativeLayout.XConstraint= "{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.78}">
+
+            <Grid HorizontalOptions="End">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <nara:LabelCustom HorizontalOptions="End" Grid.Column="0" FontSize="15" x:Name="lbl_SignIn" Text="SIGN IN" LetterSpacing="1" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="90" HeightRequest="36" BorderWidth="2" BorderRadius="19" BorderColor="#E0665E" BackgroundColor="Transparent"></nara:LabelCustom>
+                <Label Grid.Column="1" Text="or" TextColor="White" FontSize="15" FontAttributes="Italic" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="FillAndExpand"></Label>
+                <nara:LabelCustom HorizontalOptions="Start" FontSize="15" Grid.Column="2" x:Name="lbl_SignUp" RequestedHeight="1" Text="SIGN UP" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="90" HeightRequest="36" BorderWidth="2" BorderRadius="19" BorderColor="#E0665E"></nara:LabelCustom>
+
+            </Grid>
+
+        </StackLayout>
+
+    </RelativeLayout>
+</ContentPage>

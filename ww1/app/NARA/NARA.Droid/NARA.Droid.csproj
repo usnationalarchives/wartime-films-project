@@ -58,16 +58,16 @@
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
     <BundleAssemblies>False</BundleAssemblies>
     <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
-    <Debugger>Xamarin</Debugger>
     <AotAssemblies>False</AotAssemblies>
     <EnableLLVM>False</EnableLLVM>
     <AndroidEnableMultiDex>False</AndroidEnableMultiDex>
     <EnableProguard>False</EnableProguard>
     <DebugSymbols>True</DebugSymbols>
+    <Debugger>.Net (Xamarin)</Debugger>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.168\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.231\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ImageCircle.Forms.Plugin.Abstractions, Version=1.8.0.5, Culture=neutral, processorArchitecture=MSIL">
@@ -141,12 +141,12 @@
       <HintPath>..\..\packages\Plugin.Permissions.1.2.1\lib\MonoAndroid10\Plugin.Permissions.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Plugin.Share, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Plugin.Share.4.0.3\lib\MonoAndroid10\Plugin.Share.dll</HintPath>
+    <Reference Include="Plugin.Share, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.Share.5.0.0\lib\MonoAndroid10\Plugin.Share.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Plugin.Share.Abstractions, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Plugin.Share.4.0.3\lib\MonoAndroid10\Plugin.Share.Abstractions.dll</HintPath>
+    <Reference Include="Plugin.Share.Abstractions, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.Share.5.0.0\lib\MonoAndroid10\Plugin.Share.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Refractored.GifImageView, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -181,6 +181,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Json" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="Validation, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2fc06f0d701809a7, processorArchitecture=MSIL">
@@ -228,19 +229,19 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.168\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.231\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.168\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.231\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform.Android, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.168\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.231\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Xamarin.Forms.2.3.3.168\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.231\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -248,6 +249,8 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="PlatformSpecific.cs" />
+    <Compile Include="Renderers\BorderedImageRenderer.cs" />
+    <Compile Include="Renderers\ButtonCustomRenderer.cs" />
     <Compile Include="Renderers\EntryCustomRenderer.cs" />
     <Compile Include="Renderers\ImageCustomRenderer.cs" />
     <Compile Include="Renderers\ImageViewCustomRenderer.cs" />
@@ -256,11 +259,12 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplashActivity.cs" />
-    <Compile Include="WebViewCustomRenderer.cs" />
+    <Compile Include="Renderers\WebViewCustomRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <AndroidAsset Include="Assets\Loading.zip" />
+    <AndroidAsset Include="Assets\freightsans.otf" />
     <None Include="Content\css\.DS_Store" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
@@ -268,12 +272,14 @@
     <AndroidAsset Include="Assets\OrpheusPro.otf" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\NARA.Common_p\NARA.Common_p.csproj">
+    <ProjectReference Include="..\..\NARA.Common_p\NARA.Common.csproj">
       <Project>{069e16a6-8609-42cb-a35c-ff122ba6c968}</Project>
-      <Name>NARA.Common_p</Name>
+      <Name>NARA.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\NARA\NARA.csproj">
       <Name>NARA</Name>
@@ -343,6 +349,39 @@
     <Content Include="Embedded\loader.gif" />
     <AndroidResource Include="Resources\drawable\next.png" />
     <AndroidResource Include="Resources\drawable\previous.png" />
+    <AndroidResource Include="Resources\drawable\forum.png" />
+    <AndroidResource Include="Resources\drawable\editor.jpg" />
+    <AndroidResource Include="Resources\drawable\coverpage.jpg" />
+    <AndroidResource Include="Resources\drawable\archiveview.jpg" />
+    <AndroidResource Include="Resources\drawable\anzacs.jpg" />
+    <AndroidResource Include="Resources\drawable\animation.gif" />
+    <AndroidResource Include="Resources\drawable\anima.gif" />
+    <AndroidResource Include="Resources\drawable\anim.gif" />
+    <AndroidResource Include="Resources\drawable\addcollection111.jpg" />
+    <AndroidResource Include="Resources\drawable\addcollection11.jpg" />
+    <AndroidResource Include="Resources\drawable\addcollection1.jpg" />
+    <AndroidResource Include="Resources\drawable\itemview.jpg" />
+    <AndroidResource Include="Resources\drawable\itemviewmore.jpg" />
+    <AndroidResource Include="Resources\drawable\makepublic1.jpg" />
+    <AndroidResource Include="Resources\drawable\menu.png" />
+    <AndroidResource Include="Resources\drawable\mycollections.jpg" />
+    <AndroidResource Include="Resources\drawable\mycollections1.jpg" />
+    <AndroidResource Include="Resources\drawable\national.png" />
+    <AndroidResource Include="Resources\drawable\notes.jpg" />
+    <AndroidResource Include="Resources\drawable\notes1.jpg" />
+    <AndroidResource Include="Resources\drawable\plane.jpg" />
+    <AndroidResource Include="Resources\drawable\portrait.jpg" />
+    <AndroidResource Include="Resources\drawable\profile.jpg" />
+    <AndroidResource Include="Resources\drawable\rememberingww1link.png" />
+    <AndroidResource Include="Resources\drawable\s_bg.png" />
+    <AndroidResource Include="Resources\drawable\search2.jpg" />
+    <AndroidResource Include="Resources\drawable\search.png" />
+    <AndroidResource Include="Resources\drawable\tags.jpg" />
+    <AndroidResource Include="Resources\drawable\views1.jpg" />
+    <AndroidResource Include="Resources\drawable\favoriting.jpg" />
+    <AndroidResource Include="Resources\drawable\plussign.jpg" />
+    <AndroidResource Include="Resources\drawable\no_borders.xml" />
+    <AndroidResource Include="Resources\drawable\downloading.png" />
     <EmbeddedResource Include="Resources\drawable\loaderc.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
@@ -353,10 +392,10 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\SQLitePCL.raw.0.8.6\build\MonoAndroid\SQLitePCL.raw.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\SQLitePCL.raw.0.8.6\build\MonoAndroid\SQLitePCL.raw.targets'))" />
     <Error Condition="!Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets'))" />
-    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.3.168\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.3.168\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
   </Target>
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
-  <Import Project="..\..\packages\Xamarin.Forms.2.3.3.168\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.168\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
